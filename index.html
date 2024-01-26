@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="./script.js" defer></script>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" defer></script>
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js" defer></script>
+
+    <script src="./script.js" defer></script>
   </head>
   <body>
-    <div id="map" style="height: 100%; width: 100%"></div>
+    <div class="mainContainer">
+      <div id="map"></div>
+      <div id="tooltips">
+        <div class="tooltipsSwipeContainer" id="tooltipsSwipeButton">
+          <div class="tooltipsSwipeButton"></div>
+        </div>
+
+        <div class="placeInfo" id="placeInfo"></div>
+      </div>
+    </div>
   </body>
 </html>
