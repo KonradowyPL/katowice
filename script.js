@@ -1,33 +1,23 @@
-var map = L.map("map").setView([51.505, -0.09], 14);
+const map = L.map("map").setView([51.505, -0.09], 14);
 var UserPosition;
 
-var converter = new showdown.Converter({
-    emoji: true,
-    noHeaderId: true,
-    omitExtraWLInCodeBlocks: true,
-    openLinksInNewWindow: true,
-    parseImgDimensions: true,
-    strikethrough: true,
-    tables: true,
-    underline: true,
-  }),
-  text = "# hello, markdown!",
-  html = converter.makeHtml(text);
+const converter = new showdown.Converter({
+  smartIndentationFix: true,
+  emoji: true,
+  noHeaderId: true,
+  openLinksInNewWindow: true,
+  parseImgDimensions: true,
+  strikethrough: true,
+  tables: true,
+  underline: true,
+});
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
-  minZoom: 14,
+  minZoom: 11,
 }).addTo(map);
 
-var userPosIcon = new L.Icon({
-  iconUrl: "./userPos.svg",
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41],
-});
-
-var userPosMarker = L.marker([51.5, -0.09], { icon: userPosIcon }).addTo(map);
+const userPosMarker = L.marker([51.5, -0.09], { icon: userPosIcon }).addTo(map);
 
 const localisationError = () => alert("Please turn on localization to use app.");
 
@@ -49,9 +39,11 @@ navigator.geolocation.getCurrentPosition((position) => {
 
 var swiping = false;
 var swipingStart;
+var swipingFix;
 
 tooltipsSwipeButton.ontouchstart = (e) => {
   swipingStart = 1 - e.changedTouches[0].clientY / document.documentElement.scrollHeight;
+  swipingFix = swipingStart - parseFloat(tooltips.style.height) * 0.01;
   swiping = true;
 };
 
@@ -59,16 +51,49 @@ document.ontouchend = (e) => {
   if (swiping) {
     const height = 1 - e.changedTouches[0].clientY / document.documentElement.scrollHeight;
 
-    tooltips.style.height = height > swipingStart ? "90%" : "20%";
-    tooltips.style.transition = "300ms";
+    if (height > 0.1) {
+      tooltips.style.transition = "300ms";
+
+      if (height > swipingStart) {
+        tooltips.style.height = "90%";
+      } else {
+        tooltips.style.height = "10%";
+        placeInfo.scrollTop = 0;
+      }
+    } else {
+      tooltips.style.height = "0%";
+      tooltips.style.transition = "100ms";
+    }
   }
 
   swiping = false;
 };
+
 document.ontouchmove = (e) => {
   if (swiping) {
-    const height = 1 - e.changedTouches[0].clientY / document.documentElement.scrollHeight;
+    const height = 1 - e.changedTouches[0].clientY / document.documentElement.scrollHeight - swipingFix;
     tooltips.style.transition = "0ms";
-    tooltips.style.height = Math.max(height * 100, 10) + "%";
+    tooltips.style.height = height * 100 + "%";
   }
 };
+
+for (let [key, place] of Object.entries(places)) {
+  const markerPopup = L.popup().setContent(`Odwiedź <b>${place.name}</b>, aby poznać o nim ciekawostki!`);
+  const marker = L.marker([place.lat, place.lon], { icon: markers[place.icon] }).bindPopup(markerPopup).addTo(map);
+  places[key].marker = marker;
+  places[key].popup = markerPopup;
+  marker.on("click", function () {
+    displayPlace(key);
+  });
+}
+
+function displayPlace(key) {
+  if (places[key]?.locked) {
+    places[key].marker.openPopup();
+  } else {
+    places[key].marker.closePopup();
+    placeInfo.innerHTML = converter.makeHtml(places[key].discreption);
+    tooltips.style.height = "90%";
+    tooltips.style.transition = "300ms";
+  }
+}

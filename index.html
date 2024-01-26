@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
 
@@ -10,18 +10,21 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" defer></script>
     <script src="https://unpkg.com/showdown/dist/showdown.min.js" defer></script>
 
+    <script src="./markers.js" defer></script>
+    <script src="./placeData.js" defer></script>
     <script src="./script.js" defer></script>
   </head>
   <body>
     <div class="mainContainer">
       <div id="map"></div>
-      <div id="tooltips">
+      <div id="tooltips" style="height: 0%; transition: 300ms">
         <div class="tooltipsSwipeContainer" id="tooltipsSwipeButton">
           <div class="tooltipsSwipeButton"></div>
         </div>
 
         <div class="placeInfo" id="placeInfo"></div>
       </div>
+      <div id="backButton"></div>
     </div>
   </body>
 </html>
