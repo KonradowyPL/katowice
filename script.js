@@ -96,3 +96,7 @@ function displayPlace(key) {
     tooltips.style.transition = "300ms";
   }
 }
+
+menucontainer.onscroll = (e) => {
+  appTitle.style.setProperty("--scale", Math.min(menucontainer.scrollTop / backgroundMapImage.clientHeight, 1));
+};

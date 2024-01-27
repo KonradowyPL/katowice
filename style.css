@@ -10,8 +10,8 @@ body {
 }
 
 :root {
-  --bgcolor1: #444;
-  --bgcolor2: #777;
+  --bgcolor1: 68, 68, 68;
+  --bgcolor2: 119, 119, 119;
   --accent: #1d740b;
 }
 
@@ -36,7 +36,7 @@ body {
 }
 
 #tooltips {
-  background-color: var(--bgcolor1);
+  background-color: rgb(var(--bgcolor1));
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   overflow: hidden;
@@ -52,7 +52,7 @@ body {
 }
 
 .tooltipsSwipeButton {
-  background-color: var(--bgcolor2);
+  background-color: rgb(var(--bgcolor2));
   height: 100%;
   width: 100%;
   border-radius: 10px;
@@ -107,7 +107,7 @@ a {
   height: 100%;
   position: absolute;
   overflow: hidden;
-  background-color: var(--bgcolor1);
+  background-color: rgb(var(--bgcolor1));
   box-sizing: border-box;
 
   display: flex;
@@ -124,7 +124,7 @@ a {
   width: 100%;
   aspect-ratio: calc(529 / 339 * 2);
   filter: grayscale(100%);
-  background-image: linear-gradient(to top, var(--bgcolor1) 10%, transparent 55%), url("./mapBg.png");
+  background-image: linear-gradient(to top, rgb(var(--bgcolor1)) 10%, transparent 55%), url("./mapBg.png");
 }
 
 .appTitle {
@@ -150,7 +150,18 @@ a {
 }
 
 .menucontainer {
-  position: relative;
   max-height: 100%;
   overflow: hidden scroll;
+}
+
+.appTitle {
+  background-color: rgba(var(--bgcolor1), calc(var(--scale)));
+  font-size: calc(var(--scale) * -1em + 2em);
+  padding: calc(var(--scale) * -15px + 20px);
+  border-bottom: rgba(var(--bgcolor2), calc(var(--scale))) solid calc(var(--scale) * 2px);
+}
+
+.appTitle > svg {
+  width: calc(var(--scale) * -40px + 70px);
+  height: calc(var(--scale) * -40px + 70px);
 }
