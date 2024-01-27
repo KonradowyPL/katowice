@@ -14,7 +14,7 @@ const places = {
     *bold*
     ~~strikethrough~~
     __underline__ :smile:
-    [google.com](https://www.google.com)
+    [google.com](javascript:u('https://www.google.com')) [2](javascript:u('#mainmenu'))
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio labore aperiam molestias at, praesentium porro veniam reiciendis ipsam id possimus, velit ipsum.
     Labore eum voluptatibus aperiam necessitatibus a nisi quibusdam? Tenetur quas velit quidem a assumenda sapiente eum perferendis voluptate facilis, vel
     voluptates laudantium? Repellat eligendi magni, nostrum at, ipsa animi ut autem, consectetur doloremque eum aperiam asperiores sapiente voluptate. Quisquam

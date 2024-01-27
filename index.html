@@ -10,6 +10,7 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" defer></script>
     <script src="https://unpkg.com/showdown/dist/showdown.min.js" defer></script>
 
+    <script src="./urlMenager.js" defer></script>
     <script src="./markers.js" defer></script>
     <script src="./placeData.js" defer></script>
     <script src="./script.js" defer></script>
@@ -17,6 +18,9 @@
   <body>
     <div class="mainContainer">
       <div id="map"></div>
+      <a id="backButton" href="javascript:u('#mainmenu')">
+        <div class="backButtonInner"></div>
+      </a>
       <div id="tooltips" style="height: 0%; transition: 300ms">
         <div class="tooltipsSwipeContainer" id="tooltipsSwipeButton">
           <div class="tooltipsSwipeButton"></div>
@@ -24,7 +28,27 @@
 
         <div class="placeInfo" id="placeInfo"></div>
       </div>
-      <div id="backButton"></div>
+    </div>
+
+    <div id="mainmenu" class="hidden">
+      <a href="javascript:u('#map')" class="backgroundMapImage"></a>
+      <a href="javascript:u('#map')" class="appTitle">
+        <span>Ciekawostki!</span>
+        <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 6H12.01M9 20L3 17V4L5 5M9 20L15 17M9 20V14M15 17L21 20V7L19 6M15 17V14M15 6.2C15 7.96731 13.5 9.4 12 11C10.5 9.4 9 7.96731 9 6.2C9 4.43269 10.3431 3 12 3C13.6569 3 15 4.43269 15 6.2Z"
+            stroke="currentcolor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+
+      <div class="userinfo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut optio labore autem quisquam ipsa voluptatem id ab quia expedita, aliquid omnis maiores
+        deleniti neque. Commodi nemo numquam sequi voluptates aperiam.
+      </div>
     </div>
   </body>
 </html>

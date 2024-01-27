@@ -5,7 +5,6 @@ const converter = new showdown.Converter({
   smartIndentationFix: true,
   emoji: true,
   noHeaderId: true,
-  openLinksInNewWindow: true,
   parseImgDimensions: true,
   strikethrough: true,
   tables: true,
