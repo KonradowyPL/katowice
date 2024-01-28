@@ -23,8 +23,9 @@ body {
   flex-grow: 1;
 }
 
-.leaflet-control-container {
-  display: none;
+.leaflet-control-container > .leaflet-top.leaflet-left {
+  right: 10px;
+  left: unset;
 }
 
 .mainContainer {

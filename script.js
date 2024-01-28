@@ -80,7 +80,7 @@ document.ontouchmove = (e) => {
 };
 
 for (let [key, place] of Object.entries(places)) {
-  const markerPopup = L.popup().setContent(`Odwiedź <b>${place?.name2 || place.name}</b>, aby poznać o nim ciekawostki!`);
+  const markerPopup = L.popup().setContent(`Odwiedź <b>${place?.name2 || place.name}</b>, aby poznać o ${place?.nn || "nim"} ciekawostki!`);
   const marker = L.marker([place.lat, place.lon], { icon: markers[place.icon] }).bindPopup(markerPopup).addTo(map);
   places[key].marker = marker;
   places[key].popup = markerPopup;
