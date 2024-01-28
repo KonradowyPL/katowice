@@ -146,6 +146,7 @@ function updateNonVisited() {
 
   nonVisited.innerHTML = ele;
 }
+loadLocked();
 updateVisited();
 
 function checkLocked() {
@@ -158,7 +159,20 @@ function checkLocked() {
 
       if (distance < 200) {
         place.locked = false;
+        var unlocked = JSON.parse(localStorage.getItem("unlocked")) || [];
+        unlocked.push(key);
+        localStorage.setItem("unlocked", JSON.stringify(unlocked));
       }
+    }
+  });
+}
+
+function loadLocked() {
+  var unlocked = JSON.parse(localStorage.getItem("unlocked")) || [];
+  unlocked.forEach((e) => {
+    var place = places[e];
+    if (place) {
+      place.locked = false;
     }
   });
 }
