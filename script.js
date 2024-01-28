@@ -100,3 +100,16 @@ function displayPlace(key) {
 menucontainer.onscroll = (e) => {
   appTitle.style.setProperty("--scale", Math.min(menucontainer.scrollTop / backgroundMapImage.clientHeight, 1));
 };
+
+function updateVisited() {
+  var ele = "";
+  Object.keys(places).forEach((key, i) => {
+    const place = places[key];
+    if (!place?.locked) {
+      ele += `<li><a href="#map:${key}">${place.name}</a></li>`;
+    }
+  });
+  visited.innerHTML = ele;
+}
+
+updateVisited();

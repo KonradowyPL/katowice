@@ -18,10 +18,10 @@
   <body>
     <div class="mainContainer">
       <div id="map"></div>
-      <a id="backButton" href="javascript:u('#mainmenu')">
+      <a id="backButton" href="#mainmenu">
         <div class="backButtonInner"></div>
       </a>
-      <div id="tooltips" style="height: 0%; transition: 300ms">
+      <div id="tooltips" style="height: 0; transition: 300ms">
         <div class="tooltipsSwipeContainer" id="tooltipsSwipeButton">
           <div class="tooltipsSwipeButton"></div>
         </div>
@@ -32,8 +32,8 @@
 
     <div id="mainmenu" class="hidden">
       <div class="menucontainer" id="menucontainer">
-        <a href="javascript:u('#map')" class="backgroundMapImage" id="backgroundMapImage"></a>
-        <a href="javascript:u('#map')" class="appTitle" id="appTitle" style="--scale: 0">
+        <a href="#map" class="backgroundMapImage" id="backgroundMapImage"></a>
+        <a href="#map" class="appTitle" id="appTitle" style="--scale: 0">
           <span>Ciekawostki!</span>
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -55,9 +55,7 @@
         <div class="userinfo">
           <section class="visited">
             <div class="sectionTitle">Miejsca, które odwiedziłeś:</div>
-            <ul>
-              <li>Śltzn</li>
-            </ul>
+            <ul id="visited"></ul>
           </section>
         </div>
       </div>

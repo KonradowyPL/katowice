@@ -1,48 +1,192 @@
 const places = {
-  SLTZN: {
-    name: "ŚlTZN",
-    lat: 50.26446056740474,
-    lon: 19.01521819434125,
-    icon: "gold",
-
-    discreption: `
-# ŚlTZN
-## lorem
-### lorem
-#### lorem
-*italic*
-*bold*
-~~strikethrough~~
-__underline__ :smile:
-[google.com](javascript:u('https://www.google.com')) [2](javascript:u('#mainmenu'))
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio labore aperiam molestias at, praesentium porro veniam reiciendis ipsam id possimus, velit ipsum.
-Labore eum voluptatibus aperiam necessitatibus a nisi quibusdam? Tenetur quas velit quidem a assumenda sapiente eum perferendis voluptate facilis, vel
-voluptates laudantium? Repellat eligendi magni, nostrum at, ipsa animi ut autem, consectetur doloremque eum aperiam asperiores sapiente voluptate. Quisquam
-expedita illo rerum dolorem magni corporis a rem consectetur. Alias, animi, nemo laboriosam fuga perspiciatis nisi a reiciendis reprehenderit aperiam quia cum
-exercitationem tenetur nostrum quibusdam nulla quod pariatur. Totam sint aut ad corporis delectus numquam nemo, alias, aliquam nostrum, cumque doloremque nihil
-voluptas dignissimos reiciendis exercitationem blanditiis maxime labore voluptatem eum deleniti velit error molestias nam? Vel, animi! Unde perferendis, dolore
-pariatur voluptatem sequi nisi excepturi quos atque ad vero non laudantium consectetur consequuntur. Aut blanditiis voluptatibus, commodi provident eos qui
-labore aperiam, maxime nesciunt in reprehenderit aliquid. 
-    `,
-  },
-  RYNEK: {
-    name: "rynek w Katowicach",
-    lat: 50.25936535005445,
-    lon: 19.02217101449051,
-    icon: "gold",
-    locked: true,
-
-    discreption: `
-      # Rynek w Katowicach
-      `,
-  },
   NIKISZOWIEC: {
     name: "Nikiszowiec",
-    lat: 50.2477668091858,
-    lon: 19.07117217403435,
+    lat: 50.2437359922774,
+    lon: 19.08208185760909,
     icon: "gold",
 
-    discreption: `# Nikiszowiec
-To jedno z najciekawszych miejsc jakie udało nam się odwiedzić podczas wizyty w Katowicach. Nikiszowiec to zabytkowe górnicze osiedle, którego klimat mocno przypadł nam do gustu. Osiedle wybudowano w latach 1908-1918, więc jego historia się już ponad 100 lat! Całość zachowana została w zabytkowym stylu tamtych lat. Centralnym punktem osiedla jest plac Wyzwolenia i to właśnie tutaj ulokowano sklepy, restauracje, kawiarnie i kościół.`,
+    discreption: `
+    # Nikoszowiec 
+    To jedno z najciekawszych miejsc jakie udało nam się odwiedzić podczas wizyty w Katowicach. Nikiszowiec to zabytkowe górnicze osiedle, którego klimat mocno przypadł nam do gustu. Osiedle wybudowano w latach 1908-1918, więc jego historia się już ponad 100 lat! Całość zachowana została w zabytkowym stylu tamtych lat. Centralnym punktem osiedla jest plac Wyzwolenia i to właśnie tutaj ulokowano sklepy, restauracje, kawiarnie i kościół.
+    `,
+  },
+
+  OGRODZOOLOGICZNY: {
+    name: "Śląski Ogród Zoologiczny w Katowicach",
+    lat: 50.280767115863185,
+    lon: 18.990875799859605,
+    icon: "gold",
+
+    discreption: `
+    # ŚląskiOgródZoologicznywChorzowie
+    Ogród Zoologiczny zlokalizowany jest w Chorzowie na terenie Parku Śląskiego przy Promenadzie gen. Jerzego Ziętka. Pierwszy ogród zoologiczny powstał na Górnym Śląsku w 1898 roku w Bytomiu, a kolejny w Katowicach, w 1946 roku. Podczas budowy dawnego Wojewódzkiego Parku Kultury i Wypoczynku podjęto decyzję o utworzeniu jednego, dużego obiektu w Chorzowie. Pierwsze zwierzęta sprowadzono w 1954 roku do prowizorycznego ZOO przy restauracji „Łania”, a oficjalne otwarcie nastąpiło w 1958 roku. Przez lata ogród zoologiczny stale się rozbudowywał.
+    Śląski Ogród Zoologiczny jest jednym z młodszych w Polsce, a jednocześnie jednym z większych pod względem powierzchni i liczby zwierząt. Zajmuje obszar prawie 48 ha, a żyje w nim ponad 300 gatunków świata fauny. Najliczniejszą grupę stanowią ryby (ponad 1200 osobników) i ptaki (ponad 600) - z ciekawszych należy wymienić: puchacze, żurawie, strusie afrykańskie, nandu, flamingi, pelikany. Są też gady, płazy i bezkręgowce. Wśród ssaków znajdują się m.in. hipopotamy, słonie afrykańskie, nosorożce białe, niedźwiedzie, bizony, tygrysy syberyjskie, różne gatunki antylop, gerezy abisyńskie, lemury. ZOO może się pochwalić jedną z większych kolekcji zwierząt afrykańskich. 
+    `,
+  },
+
+  MUZEUMSLASKIE: {
+    name: "Muzeum Śląskie w Katowicach",
+    lat: 50.26354948981424,
+    lon: 19.034268844087595,
+    icon: "gold",
+
+    discreption: `
+    # Muzeum Śląskie w Katowicach
+    Muzeum Śląskie to fantastyczny, nowoczesny kompleks turystyczny, który ma siedzibę w dawnej kopalni Katowice. Świetnie zrewitalizowana i zaprojektowana przestrzeń pozwala docenić zabytek techniki, cieszyć się z zielonej przestrzeni wokół, a dodatkowo poznawać wystawy przybliżające historię i sztukę regionu. Muzeum Śląskie to absolutny top na turystycznej mapie Katowic. Znajduje się na terenie dawnej kopalni, jego koncepcja nawiązuje do przemysłowej historii Śląska. Wystawa przeprowadzi zwiedzających przez historię górnictwa i regionu, a dzieci odkryją wiele pasjonujących historii za pomocą najnowszych technologii. To bowiem jedno z nowocześniejszych muzeów w Polsce.
+    Muzeum Śląskie było wielokrotnie wyróżniane w wielu konkursach. Jego mottem jest inspiracja dziedzictwem Śląska, jego intelektualnym i artystycznym dorobekiem oraz bogatą tradycją wielokulturowości. Usytuowanie muzeum na terenie związanym niegdyś z górnictwem przypomina o znaczącej w regionie roli przemysłu. Bez niego nie byłoby Śląska jaki znamy. Zwiedzającym udostępniono bogate i różnorodne kolekcje na głębokości 14 metrów pod powierzchnią terenu.
+    Znajdują się tam Galeria sztuki polskiej 1800 -1945, Galeria sztuki polskiej po 1945, Galeria śląskiej sztuki sakralnej oraz Galeria plastyki nieprofesjonalnej. Ogromne emocje i zainteresowanie wzbudza niezwykle ciekawa wystawa „Światło historii. Górny Śląsk na przestrzeni dziejów”. Wyjątkową w skali kraju kolekcję scenografii teatralnej i filmowej prezentuje Centrum Scenografii Polskiej na wystawie „Laboratorium przestrzeni teatralnych. Przeszłość w teraźniejszości”.
+    Pod ziemią mieszczą się również sale edukacyjne, biblioteka, kącik edukacyjny dla dzieci oraz przeznaczoną na wystawy czasowe wyjątkową przestrzeń o wysokości 12,5 m. Kolejną atrakcją turystyczną muzeum jest wieża widokowa. Można z niej spojrzeć na Katowice z innej perspektywy. Taras wieży widokowej znajduje się na wysokości 40 metrów. Z dawnego szybu wyciągowego „Warszawa II” można podziwiać Strefę Kultury oraz panoramę miasta. Po intensywnym zwiedzaniu można skorzystać z  punktów gastronomicznych. Zarezerwujcie dużo czasu na odwiedziny w Muzeum Śląskim w Katowicach. 
+    `,
+  },
+
+  BAJKAPANAKLEKSA: {
+    name: "Bajka Pana Kleksa",
+    lat: 50.25516855940788,
+    lon: 19.06158792751241,
+    icon: "gold",
+
+    discreption: `
+    # Bajka Pana Kleksa 
+    Bajka Pana Kleksa” to świetna atrakcja rodzinna, która od 2019 roku dostępna jest w dawnej Fabryce Porcelany w Katowicach. Miejsce na wspaniałą, rodzinną przygodę. Odwiedzający to miejsce przeniosą się do czasów dzieciństwa i do kultowej powieści Jana Brzechwy "Akademia Pana Kleksa". Poznają Ostatni Rezerwat Przyrody, Bajdocję, Krainę Szpaka Mateusza i Planetę Fantazję. 
+    `,
+  },
+
+  TRZYSTAWY: {
+    name: "Dolina Trzech Stawów",
+    lat: 50.248544876321304,
+    lon: 19.046759611669568,
+    icon: "gold",
+
+    discreption: `
+    # Dolina Trzech Stawów
+    Dolina Trzech Stawów w Katowicach to przepiękne tereny zielone, liczące aż 65 ha. Dolina położona jest w jednej z dzielnic Katowic - Muchowcu. To jedno z wyjątkowych miejsc, które przyciąga zarówno mieszkańców, jak i turystów odwiedzających miasto. To miejsce doskonałe dla wielbicieli rowerowych przygód, znajdują się tu bowiem ścieżki rowerowe oraz ciekawe trasy dla rolkarzy. Dolina Trzech Stawów to jednak przede wszystkim zbiorniki wodne, gdzie znajduje się przystań wodna i duża plaża wraz z kąpieliskiem.
+    `,
+  },
+
+  MUZEUMSOLIDARNOSCI: {
+    name: "Śląskie Muzeum Wolności i Solidarności",
+    lat: 50.24419020226595,
+    lon: 18.9900517803838,
+    icon: "gold",
+
+    discreption: `
+    # Śląskie Muzeum Wolności i Solidarności
+    Śląskie Muzeum Wolności i Solidarności położone jest na terenie Kopalni Węgla Kamiennego „Wujek” w dzielnicy Brynów w Katowicach. Muzeum poświęcone jest pamięci pacyfikacji kopalni, która miejsce 16 grudnia 1981 roku. Wystawa poświęcona tym wydarzeniom została udostępniona na trzech poziomach budynku Centrum. Co ciekawe, w przeszłości był to kopalniany magazyn odzieżowy. 
+    `,
+  },
+
+  MUZEUMGITARY: {
+    name: "Muzeum Historii Gitary",
+    lat: 50.25556272317484,
+    lon: 19.016724839370212,
+    icon: "gold",
+
+    discreption: `
+    # Muzeum Historii Gitary
+    Kolejne muzeum jest idealne dla wszystkich osób poszukujących mniej popularnych rozrywek w Katowicach. Muzeum Historii Gitary to bowiem niewielkie miejsce, założone przez dwóch miłośników muzycznych sprzętów, którzy w ciągu swojego życia zebrali ponad 70 lutni z całego świata. Od 2015 roku dzielą się oni z innymi swoimi zbiorami, pozwalając dotknąć każdego instrumentu, a nawet na nim zagrać.
+    Muzeum jest dostępne dla turystów tylko po wcześniejszej rezerwacji. Osobom zwiedzającym towarzyszy również przewodnik opisujący dokładnie historię każdego instrumentu.
+    `,
+  },
+
+  SZYBWILSON: {
+    name: "Galeria Szyb Wilson",
+    lat: 50.2507461765957,
+    lon: 19.083637114777282,
+    icon: "gold",
+
+    discreption: `
+    # Galeria Szyb Wilson
+    Galeria szyb to dosyć nietypowy artystyczny punkt na mapie Katowic. Prace młodych artystów – malarzy, grafików, fotografów i performerów – są bowiem wystawiane na terenie byłego szybu kopalnianego „Wieczorek” powstałego jeszcze w drugiej dekadzie XIX wieku. Na powierzchni 2,5 tys. m2 są prezentowane m.in. dzieła Karola Wieczorka, Lecha Kołodziejczyka czy Marka Kamieńskiego.
+    Galeria Szyb Wilson jest przeznaczana również na liczne koncerty, festiwale, wykłady i spektakle. Niedawno wystąpiła tu m.in. Agnieszka Chylińska ze swoją muzyczną trasą.
+    `,
+  },
+
+  TEATRWYSPIANSKI: {
+    name: "Teatr Śląski imienia Stanisława Wyspiańskiego",
+    lat: 50.2597749980549,
+    lon: 19.02280199943527,
+    icon: "gold",
+
+    discreption: `
+    # Teatr Śląski imienia Stanisława Wyspiańskiego
+    Teatr Śląski jest głównym punktem kulturalnym na mapie miasta, a także największą sceną dramatyczną na terenie całego Górnego Śląska. Wybudowano go w głównej części Katowic, dzięki czemu łatwo do niego trafić z wielu miejsc noclegowych. Na przykład Teatr Śląski i Novotel Katowice Centrum dzieli zaledwie 1 km. W środku obiektu znajdują się dwie sceny – Duża (na 447 osób) oraz Kameralna (na 88 widzów). Na deskach teatru swoje premiery miały dramaty stworzone w dialekcie śląskim i adaptacje śląskich tekstów w reżyserii np. Tadeusza Bradeckiego czy Roberta Talarczyka.
+    `,
+  },
+
+  WIEZASPADOCHRONOWA: {
+    name: "Wieża spadochronowa",
+    lat: 50.24639530793225,
+    lon: 19.007726312927698,
+    icon: "gold",
+
+    discreption: `
+    # Wieża spadochronowa
+    Wieża spadochronowa w Katowicach to stalowa budowla mająca 35 metrów wysokości powstała w 1937 r. W tamtym czasie liczyła 50 metrów i była największym tego typu obiektem wykorzystywanym w trakcie szkoleń lotniczych – z jej szczytów skakali początkujący piloci i skoczkowie spadochronowi. Z katowicką wieżą jest również związana pewna legenda. Podobno na samym początku II wojny światowej młodzi harcerze próbowali bronić z niej miasto przed oddziałami Wehrmachtu.
+    Wieża widoczna dzisiaj nie jest tym samym obiektem, co budynek powstały przed wojną. 4 września 1939 roku została ona ostrzelana przez żołnierzy Wehrmachtu, a w latach 40. XX wieku – rozebrana i przetopiona. Na odbudowę obiektu zdecydowano się dekadę później, jednak tym razem zrezygnowano ze stawiania tak wysokiego budynku, ograniczając się do 35 m wysokości. Obecnie wieża jest zamknięta dla zwiedzających i ćwiczących skoki ze spadochronem. Można jednak ją obserwować z terenu pobliskiego parku im. Tadeusza Kościuszki.
+    `,
+  },
+
+  CENTRUMKONGRESOWE: {
+    name: "Międzynarodowe Centrum Kongresowe",
+    lat: 50.266256984988914,
+    lon: 19.027734858956293,
+    icon: "gold",
+
+    discreption: `
+    # Międzynarodowe Centrum Kongresowe
+    To wyjątkowy obiekt na mapie miejsc dedykowanych biznesowym wydarzeniom w Polsce. Oddany do użytku w 2015 roku wyróżnia się industrialną estetyką oraz designem. Miejsce to łączy funkcje konferencyjne, wystawiennicze, targowe i widowiskowe. Odbywają się tu m.in. Śląski Festiwal Nauki, Targi rzeczy Ładnych czy Wigilia dla Samotnych
+    `,
+  },
+
+  JUMPCITYKatowice: {
+    name: "JUMPCITY Katowice",
+    lat: 50.22490472935739,
+    lon: 18.98982183447279,
+    icon: "gold",
+
+    discreption: `
+    # JUMPCITY Katowice
+    Jumpcity to nic innego jak park trampolin, w którym można spełnić marzenia o lataniu. Jeśli cierpisz na brak energii, doskwiera ci melancholia lub po prostu potrzebujesz zastrzyku endorfin – to jest odpowiednie miejsce.  Są tu olbrzymie baseny z gąbkami, arena z koszami do ćwiczenia wsadów, ścieżki akrobatyczne, trampoliny sportowe czy arena dodgeball przeznaczona do gry w zbijaka. 
+    `,
+  },
+
+  SPODEK: {
+    name: "Katowicki Spodek",
+    lat: 50.2661678296663,
+    lon: 19.02556763415931,
+    icon: "gold",
+
+    discreption: `
+    # Katowicki Spodek
+    Slash, Leonard Cohen, Rammstein, Green Day, Metallica… to nieliczne z gwiazd światowej muzyki, które zagrały na scenie tej największej w regionie hali widowiskowo-sportowej. To właśnie tu odbywają się największe imprezy sportowe, a na co dzień funkcjonuje tu basen i lodowisko. Jeśli lubisz być tam, gdzie dzieją się rzeczy wielkie, nie możesz tak po prostu pominąć Spodka.   
+    `,
+  },
+
+  KATEDRA: {
+    name: "Katedra Chrystusa Króla w Katowicach",
+    lat: 50.251538432860315,
+    lon: 19.019647703133682,
+    icon: "gold",
+
+    discreption: `
+    # Katedra Chrystusa Króla w Katowicach
+    Katedra, jako kościół biskupa diecezjalnego, stanowiąc centrum życia religijnego każdej diecezji, nazywana jest matką wszystkich jej kościołów. Tak też jest z katowicką katedrą Chrystusa Króla. Historia jej, obejmująca wydarzenia doniosłe i dramatyczne, jest częścią historii Kościoła, Polski i Śląska od czasu odzyskania niepodległości po latach narodowej niewoli. Szczególny jest jej kształt i znaczenie w krajobrazie Katowic.
+    Jest ona największą katedrą w Polsce. W niej 20 czerwca 1983 roku modlił się Ojciec Święty Jan Paweł II. Tu dokonano otwarcia i zakończenia Pierwszego Synodu Diecezji Katowickiej, konsekrowano biskupów diecezjalnych i pomocniczych, wyświęcono kilkuset kapłanów.
+    Patronem świątyni jest Jezus Chrystus Król Wszechświata. Uroczystość patronalna (odpust) przypada zawsze w ostatnią niedzielę roku kościelnego, czyli pod koniec listopada.
+    Dnia 25 marca 1992 roku, gdy diecezja katowicka została podniesiona do rangi archidiecezji, katedra Chrystusa Króla stała się kościołem metropolitalnym. Metropolita Górnośląski Arcybiskup Wiktor Skworc często zaprasza tutaj swoich diecezjan, sprawując dla nich i z nimi uroczyste Msze św.
+    Dwa razy w roku młodzież rozmodlona i rozśpiewana wypełnia katedrę w liczbie 2 - 3 tysięcy.
+    `,
+  },
+
+  POMNIKPOWSTANCOW: {
+    name: "Pomnik Powstańców Śląskich",
+    lat: 50.263656863533356,
+    lon: 19.023947636217816,
+    icon: "gold",
+
+    discreption: `
+    # Pomnik Powstańców Śląskich
+    Trzy orle skrzydła wzniesione ku niebu – to jeden z charakterystycznych symboli miasta. Pomnik, który mieści się w centrum miasta, tuż obok Spodka. Symbolizuje trzy śląskie powstania i czynną walkę mieszkańców  o przyłączenie Śląska do Polski.
+    `,
   },
 };

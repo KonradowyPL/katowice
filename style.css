@@ -41,6 +41,7 @@ body {
   border-top-left-radius: 5px;
   overflow: hidden;
   position: relative;
+  max-height: min-content;
 }
 
 .tooltipsSwipeContainer {
@@ -164,4 +165,23 @@ a {
 .appTitle > svg {
   width: calc(var(--scale) * -40px + 70px);
   height: calc(var(--scale) * -40px + 70px);
+}
+
+.visited {
+}
+
+.sectionTitle {
+  font-size: 1.25em;
+}
+.visited > ul {
+  margin: 2px;
+  padding-inline-start: 40px;
+}
+.visited > ul > li {
+  list-style-image: url("marker.svg");
+}
+
+.visited > ul > li > a {
+  text-decoration: none;
+  color: white;
 }

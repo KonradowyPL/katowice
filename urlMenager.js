@@ -9,6 +9,23 @@ const u = (url) => {
     }
     if (url.startsWith("#map")) {
       mainmenu.classList.add("hidden");
+      url = trimPrefix(url, "#map:");
+      place = places[url];
+      if (place) {
+        map.setView(new L.LatLng(place.lat, place.lon), 19);
+        displayPlace(url);
+      }
     }
   }
 };
+window.addEventListener("popstate", function () {
+  u(window.location.hash);
+});
+
+function trimPrefix(str, prefix) {
+  if (str.startsWith(prefix)) {
+    return str.slice(prefix.length);
+  } else {
+    return str;
+  }
+}
