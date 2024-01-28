@@ -15,9 +15,12 @@ const u = (url) => {
         map.setView(new L.LatLng(place.lat, place.lon), 19);
         displayPlace(url);
       }
+    } else {
+      tooltips.style.height = "0%";
     }
   }
 };
+
 window.addEventListener("popstate", function () {
   u(window.location.hash);
 });

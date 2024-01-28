@@ -167,7 +167,10 @@ a {
   height: calc(var(--scale) * -40px + 70px);
 }
 
-.visited {
+.visited:has(ul:empty)::after {
+  content: "Nie odwiedziłeś jeszcze żadnych miejsc. Podejdź do danego miejsca na, aby uzyskać o nim ciekawostki!";
+  font-size: 0.9em;
+  opacity: 0.7;
 }
 
 .sectionTitle {
@@ -184,4 +187,22 @@ a {
 .visited > ul > li > a {
   text-decoration: none;
   color: white;
+}
+
+.nonVisited > ul > li > a {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.nonVisited > ul > li > a > span:nth-child(2) {
+  text-align: end;
+  min-width: fit-content;
+  opacity: 0.5;
+}
+
+.nonVisited:has(ul:empty)::after {
+  content: "Gratulacje użytkowniku: Odwiedziłeś wszystkie miejsca!";
+  font-size: 0.9em;
+  opacity: 0.7;
 }

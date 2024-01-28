@@ -4,6 +4,7 @@ const places = {
     lat: 50.2437359922774,
     lon: 19.08208185760909,
     icon: "gold",
+    locked: true,
 
     discreption: `
     # Nikoszowiec 
@@ -16,6 +17,7 @@ const places = {
     lat: 50.280767115863185,
     lon: 18.990875799859605,
     icon: "gold",
+    locked: true,
 
     discreption: `
     # ŚląskiOgródZoologicznywChorzowie
@@ -29,6 +31,7 @@ const places = {
     lat: 50.26354948981424,
     lon: 19.034268844087595,
     icon: "gold",
+    locked: true,
 
     discreption: `
     # Muzeum Śląskie w Katowicach
@@ -44,6 +47,8 @@ const places = {
     lat: 50.25516855940788,
     lon: 19.06158792751241,
     icon: "gold",
+    locked: true,
+    name2: "Bajkę Pana Kleska",
 
     discreption: `
     # Bajka Pana Kleksa 
@@ -56,6 +61,8 @@ const places = {
     lat: 50.248544876321304,
     lon: 19.046759611669568,
     icon: "gold",
+    locked: true,
+    name2: "Dolinę Trzech Stawów",
 
     discreption: `
     # Dolina Trzech Stawów
@@ -68,6 +75,7 @@ const places = {
     lat: 50.24419020226595,
     lon: 18.9900517803838,
     icon: "gold",
+    locked: true,
 
     discreption: `
     # Śląskie Muzeum Wolności i Solidarności
@@ -80,6 +88,7 @@ const places = {
     lat: 50.25556272317484,
     lon: 19.016724839370212,
     icon: "gold",
+    locked: true,
 
     discreption: `
     # Muzeum Historii Gitary
@@ -93,6 +102,8 @@ const places = {
     lat: 50.2507461765957,
     lon: 19.083637114777282,
     icon: "gold",
+    locked: true,
+    name2: "Galerię Szyb Wilson",
 
     discreption: `
     # Galeria Szyb Wilson
@@ -106,6 +117,7 @@ const places = {
     lat: 50.2597749980549,
     lon: 19.02280199943527,
     icon: "gold",
+    locked: true,
 
     discreption: `
     # Teatr Śląski imienia Stanisława Wyspiańskiego
@@ -118,6 +130,8 @@ const places = {
     lat: 50.24639530793225,
     lon: 19.007726312927698,
     icon: "gold",
+    locked: true,
+    name2: "Wieżę spadochronową",
 
     discreption: `
     # Wieża spadochronowa
@@ -131,6 +145,7 @@ const places = {
     lat: 50.266256984988914,
     lon: 19.027734858956293,
     icon: "gold",
+    locked: true,
 
     discreption: `
     # Międzynarodowe Centrum Kongresowe
@@ -143,6 +158,7 @@ const places = {
     lat: 50.22490472935739,
     lon: 18.98982183447279,
     icon: "gold",
+    locked: true,
 
     discreption: `
     # JUMPCITY Katowice
@@ -155,6 +171,7 @@ const places = {
     lat: 50.2661678296663,
     lon: 19.02556763415931,
     icon: "gold",
+    locked: true,
 
     discreption: `
     # Katowicki Spodek
@@ -167,6 +184,8 @@ const places = {
     lat: 50.251538432860315,
     lon: 19.019647703133682,
     icon: "gold",
+    locked: true,
+    name2: "Katedrę Chrystusa Króla w Katowicach",
 
     discreption: `
     # Katedra Chrystusa Króla w Katowicach
@@ -183,6 +202,7 @@ const places = {
     lat: 50.263656863533356,
     lon: 19.023947636217816,
     icon: "gold",
+    locked: true,
 
     discreption: `
     # Pomnik Powstańców Śląskich

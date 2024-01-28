@@ -24,6 +24,9 @@ updateUserPos = (position) => {
   UserPosition = position;
   var newLatLng = new L.LatLng(UserPosition.coords.latitude, UserPosition.coords.longitude);
   userPosMarker.setLatLng(newLatLng);
+  checkLocked();
+  updateNonVisited();
+  updateVisited();
 };
 
 // update user pos every 5s
@@ -77,7 +80,7 @@ document.ontouchmove = (e) => {
 };
 
 for (let [key, place] of Object.entries(places)) {
-  const markerPopup = L.popup().setContent(`Odwiedź <b>${place.name}</b>, aby poznać o nim ciekawostki!`);
+  const markerPopup = L.popup().setContent(`Odwiedź <b>${place?.name2 || place.name}</b>, aby poznać o nim ciekawostki!`);
   const marker = L.marker([place.lat, place.lon], { icon: markers[place.icon] }).bindPopup(markerPopup).addTo(map);
   places[key].marker = marker;
   places[key].popup = markerPopup;
@@ -112,4 +115,50 @@ function updateVisited() {
   visited.innerHTML = ele;
 }
 
+function updateNonVisited() {
+  var ele = "";
+  const distances = [];
+  Object.keys(places).forEach((key, i) => {
+    const place = places[key];
+    if (place?.locked) {
+      const userPos = userPosMarker.getLatLng();
+      const markerPos = place.marker.getLatLng();
+      const distance = userPos.distanceTo(markerPos);
+      distances.push({ name: key, distance });
+    }
+  });
+
+  distances.sort((a, b) => a.distance - b.distance);
+
+  for (let i = 0; i < 4; i++) {
+    const dst = distances[i];
+    const place = places[dst.name];
+    const distance = dst.distance;
+    var roundedDistance;
+    if (distance > 1000) {
+      roundedDistance = (distance / 1000).toFixed(1) + " km";
+    } else {
+      roundedDistance = (distance / 20).toFixed(0) * 20 + " m";
+    }
+
+    ele += `<li><a href="#map:${dst.name}"><span>${place.name}</span><span>${roundedDistance}</span></a></li>`;
+  }
+
+  nonVisited.innerHTML = ele;
+}
 updateVisited();
+
+function checkLocked() {
+  Object.keys(places).forEach((key, i) => {
+    const place = places[key];
+    if (place?.locked) {
+      const userPos = userPosMarker.getLatLng();
+      const markerPos = place.marker.getLatLng();
+      const distance = userPos.distanceTo(markerPos);
+
+      if (distance < 200) {
+        place.locked = false;
+      }
+    }
+  });
+}
