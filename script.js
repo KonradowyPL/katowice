@@ -18,9 +18,10 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 const userPosMarker = L.marker([50.2661678296663, 19.02556763415931], { icon: userPosIcon }).addTo(map);
 
-const localisationError = () => alert("Please turn on localization to use app.");
+const localisationError = () => (locationBox.style.display = "flex");
 
 updateUserPos = (position) => {
+  locationBox.style.display = "none";
   UserPosition = position;
   var newLatLng = new L.LatLng(UserPosition.coords.latitude, UserPosition.coords.longitude);
   userPosMarker.setLatLng(newLatLng);

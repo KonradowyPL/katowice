@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>Document</title>
+    <title>Ciekawe Katowice - zanurz się w historii</title>
     <link rel="stylesheet" href="style.css" />
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
@@ -53,6 +53,8 @@
           </svg>
         </a>
         <div class="userinfo">
+          <section id="locationBox">Uwaga: Aplikacja wymaga posiadania włączonej lokalizacji, aby działać poprawnie!</section>
+
           <section class="visited">
             <div class="sectionTitle">Miejsca, które odwiedziłeś:</div>
             <ul id="visited"></ul>
@@ -73,6 +75,13 @@
               <li color="blue">Muzea</li>
               <li color="red">Atrakcje i inne</li>
             </ul>
+          </section>
+          <section class="info">
+            <div>
+              Ta strona używa map <a href="https://www.openstreetmap.org" target="_blank">openstreetmap.org</a>
+              <a href="https://www.openstreetmap.org/about">Dowiedz się więcej</a>
+            </div>
+            <div>Zrobione na projekt na BIZ kompletnie za darmo.</div>
           </section>
         </div>
       </div>
