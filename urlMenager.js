@@ -1,3 +1,4 @@
+var silent = false;
 const u = (url) => {
   if (url.startsWith("http")) {
     var win = window.open(url, "_blank");
@@ -22,7 +23,10 @@ const u = (url) => {
 };
 
 window.addEventListener("popstate", function () {
-  u(window.location.hash);
+  if (!silent) {
+    u(window.location.hash);
+  }
+  silent = false;
 });
 
 function trimPrefix(str, prefix) {

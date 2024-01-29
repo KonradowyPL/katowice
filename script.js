@@ -1,4 +1,4 @@
-const map = L.map("map").setView([51.505, -0.09], 14);
+const map = L.map("map").setView([50.2661678296663, 19.02556763415931], 14);
 var UserPosition;
 
 const converter = new showdown.Converter({
@@ -16,7 +16,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   minZoom: 11,
 }).addTo(map);
 
-const userPosMarker = L.marker([51.5, -0.09], { icon: userPosIcon }).addTo(map);
+const userPosMarker = L.marker([50.2661678296663, 19.02556763415931], { icon: userPosIcon }).addTo(map);
 
 const localisationError = () => alert("Please turn on localization to use app.");
 
@@ -86,6 +86,8 @@ for (let [key, place] of Object.entries(places)) {
   places[key].marker = marker;
   places[key].popup = markerPopup;
   marker.on("click", function () {
+    silent = true;
+    window.location.hash = `#map:${key}`;
     displayPlace(key);
   });
 }
@@ -131,7 +133,7 @@ function updateNonVisited() {
 
   distances.sort((a, b) => a.distance - b.distance);
 
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < Math.min(4, distances.length); i++) {
     const dst = distances[i];
     const place = places[dst.name];
     const distance = dst.distance;
@@ -216,6 +218,9 @@ function loadRoutes() {
   routesObj.innerHTML = ele;
 }
 
-clearInterval(1);
-
 u(window.location.hash);
+
+const unlockAll = function () {
+  let unlocked = Object.keys(places);
+  localStorage.setItem("unlocked", JSON.stringify(unlocked));
+};
