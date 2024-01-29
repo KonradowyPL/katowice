@@ -27,6 +27,7 @@ updateUserPos = (position) => {
   checkLocked();
   updateNonVisited();
   updateVisited();
+  loadRoutes();
 };
 
 // update user pos every 5s
@@ -147,6 +148,7 @@ function updateNonVisited() {
   nonVisited.innerHTML = ele;
 }
 loadLocked();
+loadRoutes();
 updateVisited();
 
 function checkLocked() {
@@ -176,3 +178,44 @@ function loadLocked() {
     }
   });
 }
+
+function loadRoutes() {
+  ele = "";
+  Object.keys(routes).forEach((key, i) => {
+    const route = routes[key];
+    let completed = 0;
+    thisEle = "";
+    toend = "";
+    // ele += `<div class="route visited nonVisited"><div class="routeTitle">${route.name}</div><div class="routeDiscreption">${route.discreption}</div><ul>`;
+    route.destonations.forEach((e) => {
+      const place = places[e];
+      if (place?.locked) {
+        const userPos = userPosMarker.getLatLng();
+        const markerPos = place.marker.getLatLng();
+        const distance = userPos.distanceTo(markerPos);
+        var roundedDistance;
+        if (distance > 1000) {
+          roundedDistance = (distance / 1000).toFixed(1) + " km";
+        } else {
+          roundedDistance = (distance / 20).toFixed(0) * 20 + " m";
+        }
+
+        thisEle += `<li><a href="#map:${e}"><span>${place.name}</span><span>${roundedDistance}</span></a></li>`;
+      } else {
+        toend += `<li><a href="#map:${e}"><span>${place.name}</span><span class="checkmark"></span></a></li>`;
+        completed++;
+      }
+    });
+    ele +=
+      `<div class="route visited nonVisited"><div class="routeTitle"><span>${route.name}</span><span>${completed}/${route.destonations.length}</span></div><div class="routeDiscreption">${route.discreption}</div><ul>` +
+      thisEle +
+      toend +
+      "</ul></div>";
+  });
+
+  routesObj.innerHTML = ele;
+}
+
+clearInterval(1);
+
+u(window.location.hash);

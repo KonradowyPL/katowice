@@ -207,3 +207,29 @@ a {
   font-size: 0.9em;
   opacity: 0.7;
 }
+
+.routeTitle {
+  display: flex;
+  font-size: 1.125em;
+  justify-content: space-between;
+}
+.routeDiscreption {
+  margin-left: 0.5em;
+  /* font-size: 0.8em; */
+  opacity: 0.7;
+}
+
+.routeTitle > span:nth-child(2) {
+  opacity: 0.6;
+}
+
+.route {
+  margin-left: 0.5em;
+}
+
+.checkmark {
+  height: 1em;
+  /* opacity: 0.5 !important; */
+  aspect-ratio: 1;
+  background-image: url(./checkmark.svg);
+}

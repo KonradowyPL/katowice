@@ -25,8 +25,6 @@ window.addEventListener("popstate", function () {
   u(window.location.hash);
 });
 
-u(window.location.hash);
-
 function trimPrefix(str, prefix) {
   if (str.startsWith(prefix)) {
     return str.slice(prefix.length);

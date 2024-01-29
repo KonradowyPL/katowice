@@ -277,7 +277,7 @@ Kościół Mariacki, nazywany też Kościołem Niepokalanego Poczęcia NMP jest 
 Bazylika św. Ludwika Króla i Wniebowzięcia Najświętszej Maryi Panny – neoromański kościół klasztorny w Katowicach-Panewnikach z początku XX wieku, centrum pielgrzymkowe w okresie Bożego Narodzenia ze względu na budowaną rokrocznie szopkę. Wraz z przyległą kalwarią miejsce kultu Męki Pańskiej. Jest kościołem parafialnym dla prowadzonej przez franciszkanów z Prowincji Wniebowzięcia NMP Zakonu Braci Mniejszych w Katowicach parafii.`,
   },
 
-  BazylikaŚwSzczepanaiMatkiBoskiejBoguckiejwKatowicach: {
+  KOSCIOLSZCZEPAN: {
     name: "Bazylika św. Szczepana i Matki Boskiej Boguckiej w Katowicach",
     lat: 50.26944737281261,
     lon: 19.038603891858664,
@@ -295,3 +295,18 @@ Ta bazylika została wybudowana przy skrzyżowaniu dróg Leopolda, Markiefki i K
 // museum: blue
 // statue: grey
 // attraction: red
+
+const routes = {
+  KOSCIOLY: {
+    name: "Kościoły w katowicach",
+    discreption: `
+    Odkryj Szlak Kościołów i Bazylik w Katowicach. Idealny dla miłośników spokoju i wierzących. Ogromne wnętrza, atmosfera modlitwy. Ślady historii i wiary czekają!`,
+    destonations: ["KATEDRA", "KOSCIONSWPAWEL", "KOSCIOLSWANNA", "KOSCIOLMARIACKI", "KOSCIOLLUDWIG", "KOSCIOLSZCZEPAN"],
+  },
+  MUZEA: {
+    name: "Muzea w Katowicach",
+    discreption: `
+    Odkryj Szlaki Muzealne w Katowicach – idealne dla miłośników kultury. Fascynujące zbiory, tajemnicze skarby. Niepowtarzalna podróż dla ciekawych umysłów. Zapraszamy do odkrywania!`,
+    destonations: ["MUZEUMGITARY", "MUZEUMSLASKIE", "MUZEUMSOLIDARNOSCI"],
+  },
+};
