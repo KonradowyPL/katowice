@@ -72,7 +72,7 @@ const f = (h) => {
         tooltips.style.height = "90%";
       } else {
         tooltips.style.height = "10%";
-        placeInfo.scrollTop = 0;
+        placeData.scrollTop = 0;
       }
     } else {
       tooltips.style.height = "0%";
@@ -115,12 +115,13 @@ var currentPlace = "";
 
 function displayPlace(key) {
   currentPlace = key;
-  placeInfo.scrollTop = 0;
+  placeData.scrollTop = 0;
   if (places[key]?.locked) {
     places[key].marker.openPopup();
   } else {
     places[key].marker.closePopup();
     placeInfo.innerHTML = converter.makeHtml(places[key].discreption);
+    document.title = `${places[key].name} - Ciekawe Katowice`;
     tooltips.style.height = "90%";
     tooltips.style.transition = "300ms";
   }
