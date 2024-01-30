@@ -115,6 +115,7 @@ var currentPlace = "";
 
 function displayPlace(key) {
   currentPlace = key;
+  placeInfo.scrollTop = 0;
   if (places[key]?.locked) {
     places[key].marker.openPopup();
   } else {
