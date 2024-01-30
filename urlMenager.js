@@ -25,8 +25,8 @@ const u = (url) => {
 };
 
 window.addEventListener("popstate", function () {
-  u(window.location.hash);
   if (!silent) {
+    u(window.location.hash);
   }
 });
 
