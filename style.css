@@ -18,7 +18,6 @@ body {
 }
 
 #map {
-  width: 100%;
   overflow: hidden;
 
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -48,6 +47,7 @@ body {
 }
 
 .tooltipsSwipeContainer {
+  cursor: pointer;
   height: 30px;
   box-sizing: border-box;
   padding: 10px;
@@ -103,7 +103,7 @@ a {
 }
 
 #mainmenu {
-  z-index: 9999999999999999999999999;
+  z-index: 20;
   transition: 300ms;
   top: 0;
   left: 0;
@@ -203,6 +203,12 @@ a {
   text-align: end;
   min-width: fit-content;
   color: rgb(255, 255, 255, 0.5);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .nonVisited:has(ul:empty)::after {
@@ -218,12 +224,17 @@ a {
 }
 .routeDiscreption {
   margin-left: 0.5em;
-  /* font-size: 0.8em; */
   color: rgb(255, 255, 255, 0.7);
 }
 
 .routeTitle > span:nth-child(2) {
   color: rgb(255, 255, 255, 0.6);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .route {
@@ -276,6 +287,12 @@ a {
 .info {
   border-top: 2px solid rgb(var(--bgcolor2));
   padding-top: 20px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .info a {
@@ -301,6 +318,13 @@ a {
 }
 
 .share {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   display: flex;
   font-size: 20px;
   justify-content: space-evenly;
@@ -348,15 +372,15 @@ a {
   display: none;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 700px) {
   .mainContainer {
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
   #tooltips {
     transition: 0ms !important;
     border-radius: 0;
-    width: 50vw;
-    min-width: 300px;
+    width: 500px;
+    box-sizing: content-box;
   }
   #tooltips {
     height: 100% !important;
@@ -379,15 +403,23 @@ a {
   }
 
   #mainmenu {
-    position: static;
-    translate: 0 0 !important;
-    width: 33vw;
-    min-width: 400px;
+    width: 400px;
   }
   #backButton {
-    display: none;
+    transition: 300ms;
+    left: 410px;
+    z-index: 9999999;
   }
   #tooltips:has(#placeInfo:empty) {
     display: none;
   }
+  body:has(#mainmenu.hidden) #backButton {
+    translate: -400px;
+  }
+}
+
+html,
+body,
+* {
+  overscroll-behavior: none;
 }

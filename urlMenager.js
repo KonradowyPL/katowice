@@ -9,8 +9,11 @@ const u = (url) => {
   if (url.startsWith("#")) {
     if (url.startsWith("#mainmenu")) {
       mainmenu.classList.remove("hidden");
+      backButton.href = "#map";
     }
     if (url.startsWith("#map")) {
+      backButton.href = "#mainmenu";
+
       mainmenu.classList.add("hidden");
       url = trimPrefix(url, "#map:");
       place = places[url];

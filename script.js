@@ -46,15 +46,24 @@ var swiping = false;
 var swipingStart;
 var swipingFix;
 
+tooltipsSwipeButton.onmousedown = (e) => {
+  swipingStart = 1 - e.clientY / document.documentElement.scrollHeight;
+  swipingFix = swipingStart - parseFloat(tooltips.style.height) * 0.01;
+  swiping = true;
+};
+
 tooltipsSwipeButton.ontouchstart = (e) => {
   swipingStart = 1 - e.changedTouches[0].clientY / document.documentElement.scrollHeight;
   swipingFix = swipingStart - parseFloat(tooltips.style.height) * 0.01;
   swiping = true;
 };
 
-document.ontouchend = (e) => {
+document.onmouseup = (e) => f(e.clientY);
+document.ontouchend = (e) => f(e.changedTouches[0].clientY);
+
+const f = (h) => {
   if (swiping) {
-    const height = 1 - e.changedTouches[0].clientY / document.documentElement.scrollHeight;
+    const height = 1 - h / document.documentElement.scrollHeight;
 
     if (height > 0.1) {
       tooltips.style.transition = "300ms";
@@ -72,6 +81,14 @@ document.ontouchend = (e) => {
   }
 
   swiping = false;
+};
+
+document.onmousemove = (e) => {
+  if (swiping) {
+    const height = 1 - e.clientY / document.documentElement.scrollHeight - swipingFix;
+    tooltips.style.transition = "0ms";
+    tooltips.style.height = height * 100 + "%";
+  }
 };
 
 document.ontouchmove = (e) => {
