@@ -16,7 +16,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   minZoom: 11,
 }).addTo(map);
 
-const userPosMarker = L.marker([50.2661678296663, 19.02556763415931], { icon: userPosIcon }).addTo(map);
+const userPosMarker = L.marker([50.2661678296663, 19.02556763415931], { icon: userPosIcon }).setZIndexOffset(9999999).addTo(map);
 
 const localisationError = () => (locationBox.style.display = "flex");
 

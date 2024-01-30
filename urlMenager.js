@@ -28,6 +28,7 @@ window.addEventListener("popstate", function () {
   if (!silent) {
     u(window.location.hash);
   }
+  silent = false;
 });
 
 function trimPrefix(str, prefix) {
