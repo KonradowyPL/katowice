@@ -418,8 +418,8 @@ a {
   }
 }
 
-html,
-body,
-* {
+html:has(#mainmenu.hidden),
+body:has(#mainmenu.hidden),
+*:has(#mainmenu.hidden) {
   overscroll-behavior: none;
 }
