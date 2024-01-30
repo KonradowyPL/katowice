@@ -62,9 +62,11 @@ body {
 
 .placeInfo {
   padding: 10px;
-  max-height: calc(100% - 60px);
+  height: calc(100% - 80px);
   overflow: hidden scroll;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,
@@ -238,7 +240,7 @@ a {
   background-image: url(./checkmark.svg);
 }
 
-.placeInfo img {
+#placeInfo img {
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -300,4 +302,29 @@ a {
   height: 2em;
   aspect-ratio: 1;
   background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiB3aWR0aD0iMmVtIiBoZWlnaHQ9IjJlbSIgdmlld0JveD0iMCAwIDY0IDY0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQoNCiAgICA8cGF0aA0KICAgICAgICBkPSJNMzIuNDI3LDcuOTg3YzIuMTgzLDAuMTI0IDQsMS4xNjUgNS4wOTYsMy4yODFsMTcuOTM2LDM2LjIwOGMxLjczOSwzLjY2IC0wLjk1NCw4LjU4NSAtNS4zNzMsOC42NTZsLTM2LjExOSwwYy00LjAyMiwtMC4wNjQgLTcuMzIyLC00LjYzMSAtNS4zNTIsLTguNjk2bDE4LjI3MSwtMzYuMjA3YzAuMzQyLC0wLjY1IDAuNDk4LC0wLjgzOCAwLjc5MywtMS4xNzljMS4xODYsLTEuMzc1IDIuNDgzLC0yLjExMSA0Ljc0OCwtMi4wNjNabS0wLjI5NSwzLjk5N2MtMC42ODcsMC4wMzQgLTEuMzE2LDAuNDE5IC0xLjY1OSwxLjAxN2MtNi4zMTIsMTEuOTc5IC0xMi4zOTcsMjQuMDgxIC0xOC4zMDEsMzYuMjY3Yy0wLjU0NiwxLjIyNSAwLjM5MSwyLjc5NyAxLjc2MiwyLjg2M2MxMi4wNiwwLjE5NSAyNC4xMjUsMC4xOTUgMzYuMTg1LDBjMS4zMjUsLTAuMDY0IDIuMzIxLC0xLjU4NCAxLjc2OSwtMi44NWMtNS43OTMsLTEyLjE4NCAtMTEuNzY1LC0yNC4yODYgLTE3Ljk2NiwtMzYuMjY3Yy0wLjM2NiwtMC42NTEgLTAuOTAzLC0xLjA0MiAtMS43OSwtMS4wM00zMy42MzEsNDAuNTgxbC0zLjM0OCwwbC0wLjM2OCwtMTYuNDQ5bDQuMSwwbC0wLjM4NCwxNi40NDlabS0zLjgyOCw1LjAzYzAsLTAuNjA5IDAuMTk3LC0xLjExMyAwLjU5MiwtMS41MTRjMC4zOTYsLTAuNCAwLjkzNSwtMC42MDEgMS42MTgsLTAuNjAxYzAuNjg0LDAgMS4yMjMsMC4yMDEgMS42MTgsMC42MDFjMC4zOTUsMC40MDEgMC41OTMsMC45MDUgMC41OTMsMS41MTRjMCwwLjU4NyAtMC4xOTMsMS4wNzggLTAuNTc3LDEuNDczYy0wLjM4NSwwLjM5NSAtMC45MjksMC41OTMgLTEuNjM0LDAuNTkzYy0wLjcwNSwwIC0xLjI0OSwtMC4xOTggLTEuNjM0LC0wLjU5M2MtMC4zODQsLTAuMzk1IC0wLjU3NiwtMC44ODYgLTAuNTc2LC0xLjQ3M1oiIC8+DQoNCjwvc3ZnPg==);
+}
+
+.share {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(var(--bgcolor2), 0.1);
+  margin-top: auto;
+  border-radius: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+}
+
+.share img {
+  background-color: rgba(var(--bgcolor2), 0.1);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.mainContainer .share {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

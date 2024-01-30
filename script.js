@@ -93,7 +93,10 @@ for (let [key, place] of Object.entries(places)) {
   });
 }
 
+var currentPlace = "";
+
 function displayPlace(key) {
+  currentPlace = key;
   if (places[key]?.locked) {
     places[key].marker.openPopup();
   } else {
@@ -224,4 +227,48 @@ u(window.location.hash);
 const unlockAll = function () {
   let unlocked = Object.keys(places);
   localStorage.setItem("unlocked", JSON.stringify(unlocked));
+};
+
+var counter = 0;
+dev.onclick = (e) => {
+  counter++;
+
+  if (counter > 6) {
+    alert("unlocked all!");
+    counter = -2137;
+    unlockAll();
+    loadLocked();
+    checkLocked();
+    updateNonVisited();
+    updateVisited();
+    loadRoutes();
+  }
+
+  setTimeout(() => counter--, 5000);
+};
+
+const share = async () => {
+  const shareData = {
+    title: places[currentPlace].name,
+    text: `Odwiedź ${places[currentPlace]?.name2 || places[currentPlace].name} i inne ciekawe miejsca w katowicach!`,
+    url: window.location.href.replace(/[\?#].*$/, "") + "#map:" + currentPlace,
+  };
+  try {
+    await navigator.share(shareData);
+  } catch (err) {
+    console.error(`Error: ${err}`);
+  }
+};
+
+const shareApp = async () => {
+  const shareData = {
+    title: "Ciekawe Katowice - Zanurz się w historii",
+    text: `Odwiedź ciekawe miejsca w katowicach!`,
+    url: window.location.href.replace(/[\?#].*$/, ""),
+  };
+  try {
+    await navigator.share(shareData);
+  } catch (err) {
+    console.error(`Error: ${err}`);
+  }
 };

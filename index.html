@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>Ciekawe Katowice - zanurz się w historii</title>
     <link rel="stylesheet" href="style.css" />
-
+    <link
+      rel="shortcut icon"
+      href="data:image/svg+xml;base64,ICAgICAgICAgIDxzdmcgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KICAgICAgICAgICAgPHBhdGgNCiAgICAgICAgICAgICAgZD0iTTkgMjBMMyAxN1Y0TDUgNU05IDIwTDE1IDE3TTkgMjBWMTRNMTUgMTdMMjEgMjBWN0wxOSA2TTE1IDE3VjE0TTE1IDYuMkMxNSA3Ljk2NzMxIDEzLjUgOS40IDEyIDExQzEwLjUgOS40IDkgNy45NjczMSA5IDYuMkM5IDQuNDMyNjkgMTAuMzQzMSAzIDEyIDNDMTMuNjU2OSAzIDE1IDQuNDMyNjkgMTUgNi4yWiINCiAgICAgICAgICAgICAgc3Ryb2tlPSJjdXJyZW50Y29sb3IiDQogICAgICAgICAgICAgIHN0cm9rZS13aWR0aD0iMiINCiAgICAgICAgICAgICAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIg0KICAgICAgICAgICAgICBzdHJva2UtbGluZWpvaW49InJvdW5kIg0KICAgICAgICAgICAgLz4NCiAgICAgICAgICAgIDxwYXRoDQogICAgICAgICAgICAgIGQ9Ik0xMiA2SDEyLjAxTTE1IDYuMkMxNSA3Ljk2NzMxIDEzLjUgOS40IDEyIDExQzEwLjUgOS40IDkgNy45NjczMSA5IDYuMkM5IDQuNDMyNjkgMTAuMzQzMSAzIDEyIDNDMTMuNjU2OSAzIDE1IDQuNDMyNjkgMTUgNi4yWiINCiAgICAgICAgICAgICAgc3Ryb2tlPSIjYmMyNzI3Ig0KICAgICAgICAgICAgICBzdHJva2Utd2lkdGg9IjIiDQogICAgICAgICAgICAgIHN0cm9rZS1saW5lY2FwPSJyb3VuZCINCiAgICAgICAgICAgICAgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCINCiAgICAgICAgICAgIC8+DQogICAgICAgICAgPC9zdmc+"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" defer></script>
     <script src="https://unpkg.com/showdown/dist/showdown.min.js" defer></script>
-
     <script src="./placeData.js" defer></script>
     <script src="./markers.js" defer></script>
     <script src="./urlMenager.js" defer></script>
@@ -18,18 +21,18 @@
   <body>
     <div class="mainContainer">
       <div id="map"></div>
-      <a id="backButton" href="#mainmenu">
-        <div class="backButtonInner"></div>
-      </a>
+      <a id="backButton" href="#mainmenu"> <div class="backButtonInner"></div> </a>
       <div id="tooltips" style="height: 0; transition: 300ms">
-        <div class="tooltipsSwipeContainer" id="tooltipsSwipeButton">
-          <div class="tooltipsSwipeButton"></div>
-        </div>
-
-        <div class="placeInfo" id="placeInfo"></div>
+        <div class="tooltipsSwipeContainer" id="tooltipsSwipeButton"><div class="tooltipsSwipeButton"></div></div>
+        <div class="placeInfo">
+          <div id="placeInfo"></div>
+          <a class="share" href="javascript:share()">
+            <div>Udostępnij!</div>
+            <img src="./share.svg" width="20px" height="20px" />
+            <img src="./copy.svg" width="20px" height="20px" />
+          </a>
       </div>
     </div>
-
     <div id="mainmenu" class="hidden">
       <div class="menucontainer" id="menucontainer">
         <a href="#map" class="backgroundMapImage" id="backgroundMapImage"></a>
@@ -54,7 +57,6 @@
         </a>
         <div class="userinfo">
           <section id="locationBox">Uwaga: Aplikacja wymaga posiadania włączonej lokalizacji, aby działać poprawnie!</section>
-
           <section class="visited">
             <div class="sectionTitle">Miejsca, które odwiedziłeś:</div>
             <ul id="visited"></ul>
@@ -76,12 +78,18 @@
               <li color="red">Atrakcje i inne</li>
             </ul>
           </section>
+          <a class="share" href="javascript:shareApp()">
+            <div>Udostępnij!</div>
+            <img src="./share.svg" width="20px" height="20px" />
+            <img src="./copy.svg" width="20px" height="20px" />
+          </a>
           <section class="info">
             <div>
               Ta strona używa map <a href="https://www.openstreetmap.org" target="_blank">openstreetmap.org</a>
               <a href="https://www.openstreetmap.org/about">Dowiedz się więcej</a>
             </div>
-            <div>Zrobione na projekt na BIZ kompletnie za darmo.</div>
+            <div id="dev">Zrobione na projekt na BIZ kompletnie za darmo.</div>
+            
           </section>
         </div>
       </div>
