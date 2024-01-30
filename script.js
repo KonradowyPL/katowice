@@ -38,6 +38,7 @@ const localisationUpdateInterval = setInterval(() => {
 
 navigator.geolocation.getCurrentPosition((position) => {
   map.setView([position.coords.latitude, position.coords.longitude]);
+  u(window.location.hash);
   updateUserPos(position);
 }, localisationError);
 

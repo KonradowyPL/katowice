@@ -103,6 +103,7 @@ a {
 }
 
 #mainmenu {
+  z-index: 9999999999999999999999999;
   transition: 300ms;
   top: 0;
   left: 0;
@@ -345,4 +346,48 @@ a {
 
 .leaflet-control-attribution {
   display: none;
+}
+
+@media (min-width: 1500px) {
+  .mainContainer {
+    flex-direction: row-reverse;
+  }
+  #tooltips {
+    transition: 0ms !important;
+    border-radius: 0;
+    width: 50vw;
+    min-width: 300px;
+  }
+  #tooltips {
+    height: 100% !important;
+  }
+
+  .tooltipsSwipeContainer {
+    display: none;
+  }
+
+  .placeInfo {
+    height: calc(100% - 20px);
+    overflow: hidden auto;
+  }
+
+  .share {
+    padding: 0;
+  }
+  .tooltips {
+    width: 0;
+  }
+
+  #mainmenu {
+    position: static;
+    translate: 0 0 !important;
+    width: 33vw;
+    min-width: 400px;
+  }
+  #backButton {
+    display: none;
+  }
+  #tooltips:has(#placeInfo:empty) {
+    display: none;
+  }
 }
