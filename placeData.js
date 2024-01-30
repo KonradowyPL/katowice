@@ -290,6 +290,8 @@ Kościół Mariacki, nazywany też Kościołem Niepokalanego Poczęcia NMP jest 
     lon: 18.962526495843715,
     icon: "violet",
     locked: true,
+    name2: "Bazylikę św. Ludwika Króla i Wniebowzięcia NMP w Katowicach",
+    nn: "niej",
 
     discreption: `
 # Bazylika św. Ludwika Króla i Wniebowzięcia NMP w Katowicach
@@ -303,6 +305,8 @@ Bazylika św. Ludwika Króla i Wniebowzięcia Najświętszej Maryi Panny – neo
     lon: 19.038603891858664,
     icon: "violet",
     locked: true,
+    name: "Bazylika św. Szczepana i Matki Boskiej Boguckiej w Katowicach",
+    nn: "niej",
 
     discreption: `
 # Bazylika św. Szczepana i Matki Boskiej Boguckiej w Katowicach
