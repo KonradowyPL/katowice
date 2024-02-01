@@ -31,10 +31,8 @@ updateUserPos = (position) => {
   loadRoutes();
 };
 
-// update user pos every 5s
-const localisationUpdateInterval = setInterval(() => {
-  navigator.geolocation.getCurrentPosition(updateUserPos, localisationError);
-}, 5000);
+const localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError);
+
 
 navigator.geolocation.getCurrentPosition((position) => {
   map.setView([position.coords.latitude, position.coords.longitude]);
