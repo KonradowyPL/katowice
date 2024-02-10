@@ -305,7 +305,7 @@ Bazylika św. Ludwika Króla i Wniebowzięcia Najświętszej Maryi Panny – neo
     lon: 19.038603891858664,
     icon: "violet",
     locked: true,
-    name: "Bazylika św. Szczepana i Matki Boskiej Boguckiej w Katowicach",
+    name: "Bazylikę św. Szczepana i Matki Boskiej Boguckiej w Katowicach",
     nn: "niej",
 
     discreption: `
@@ -388,6 +388,6 @@ Odkryj Szlaki Muzealne w Katowicach – idealne dla miłośników kultury. Fascy
   ATRAKCJE: {
     name: "Atrakcje turystyczne w Katowicach",
     discreption: `Szukasz rozwki albo pięknych widoków? Ten szlak jest dla ciebie!`,
-    destonations: ["SPODEK", "WIEZASPADOCHRONOWA", "JUMPCITYKatowice"],
+    destonations: ["SPODEK", "WIEZASPADOCHRONOWA", "JUMPCITYKatowice", "BAJKAPANAKLEKSA","OGRODZOOLOGICZNY"],
   },
 };
