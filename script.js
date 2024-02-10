@@ -1,4 +1,8 @@
-const map = L.map("map", { tap: false }).setView([50.2661678296663, 19.02556763415931], 14);
+const map = L.map("map", {
+  tap: false,
+  zoomDelta: 1,
+  zoomSnap: 0
+}).setView([50.2661678296663, 19.02556763415931], 14);
 var UserPosition;
 
 const converter = new showdown.Converter({
