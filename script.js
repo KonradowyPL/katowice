@@ -1,7 +1,7 @@
 const map = L.map("map", {
   tap: false,
   zoomDelta: 1,
-  zoomSnap: 0
+  zoomSnap: 0,
 }).setView([50.2661678296663, 19.02556763415931], 14);
 var UserPosition;
 
@@ -36,7 +36,6 @@ updateUserPos = (position) => {
 };
 
 const localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError);
-
 
 navigator.geolocation.getCurrentPosition((position) => {
   map.setView([position.coords.latitude, position.coords.longitude]);
@@ -214,7 +213,6 @@ function loadRoutes() {
     let completed = 0;
     thisEle = "";
     toend = "";
-    // ele += `<div class="route visited nonVisited"><div class="routeTitle">${route.name}</div><div class="routeDiscreption">${route.discreption}</div><ul>`;
     route.destonations.forEach((e) => {
       const place = places[e];
       if (place?.locked) {
@@ -294,3 +292,5 @@ const shareApp = async () => {
     console.error(`Error: ${err}`);
   }
 };
+
+new ResizeObserver((entries) => entries.forEach((entry) => map.invalidateSize())).observe(document.getElementById("map"));
