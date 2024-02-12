@@ -21,6 +21,9 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 const userPosMarker = L.marker([50.2661678296663, 19.02556763415931], { icon: userPosIcon }).setZIndexOffset(9999999).addTo(map);
+userPosMarker.setOpacity(0);
+userPosMarker.options.interactive = false;
+
 
 const localisationError = () => {
   locationBox.style.display = "flex";
@@ -41,13 +44,14 @@ updateUserPos = (position) => {
   loadRoutes();
 };
 
-const localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError);
 
 navigator.geolocation.getCurrentPosition((position) => {
   map.setView([position.coords.latitude, position.coords.longitude]);
   u(window.location.hash);
   updateUserPos(position);
 }, localisationError);
+
+var localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError);
 
 var swiping = false;
 var swipingStart;
@@ -300,3 +304,11 @@ const shareApp = async () => {
 };
 
 new ResizeObserver((entries) => entries.forEach((entry) => map.invalidateSize())).observe(document.getElementById("map"));
+
+navigator.permissions.query({ name: 'geolocation' })
+  .then(permissionStatus => {
+    permissionStatus.onchange = () => {
+      navigator.geolocation.clearWatch(localisationUpdateInterval);
+      localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError)
+    };
+  })
