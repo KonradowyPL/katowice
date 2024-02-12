@@ -22,10 +22,16 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 const userPosMarker = L.marker([50.2661678296663, 19.02556763415931], { icon: userPosIcon }).setZIndexOffset(9999999).addTo(map);
 
-const localisationError = () => (locationBox.style.display = "flex");
+const localisationError = () => {
+  locationBox.style.display = "flex";
+  userPosMarker.setOpacity(0);
+  userPosMarker.options.interactive = false;
+};
 
 updateUserPos = (position) => {
   locationBox.style.display = "none";
+  userPosMarker.setOpacity(1);
+  userPosMarker.options.interactive = true;
   UserPosition = position;
   var newLatLng = new L.LatLng(UserPosition.coords.latitude, UserPosition.coords.longitude);
   userPosMarker.setLatLng(newLatLng);
