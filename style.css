@@ -24,7 +24,7 @@ body {
   flex-grow: 1;
 }
 
-.leaflet-control-container > .leaflet-top.leaflet-left {
+.leaflet-control-container>.leaflet-top.leaflet-left {
   right: 10px;
   left: unset;
 }
@@ -148,6 +148,7 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+
 .userinfo {
   padding: 10px;
   padding-bottom: 70px;
@@ -167,7 +168,7 @@ a {
   border-bottom: rgba(var(--bgcolor2), calc(var(--scale))) solid calc(var(--scale) * 2px);
 }
 
-.appTitle > svg {
+.appTitle>svg {
   width: calc(var(--scale) * -40px + 70px);
   height: calc(var(--scale) * -40px + 70px);
 }
@@ -183,26 +184,28 @@ a {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.visited > ul {
+
+.visited>ul {
   margin: 2px;
   padding-inline-start: 40px;
 }
-.visited > ul > li {
+
+.visited>ul>li {
   list-style-image: url("marker.svg");
 }
 
-.visited > ul > li > a {
+.visited>ul>li>a {
   text-decoration: none;
   color: white;
 }
 
-.nonVisited > ul > li > a {
+.nonVisited>ul>li>a {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
-.nonVisited > ul > li > a > span:nth-child(2) {
+.nonVisited>ul>li>a>span:nth-child(2) {
   text-align: end;
   min-width: fit-content;
   color: rgb(255, 255, 255, 0.5);
@@ -224,12 +227,13 @@ a {
   font-size: 1.125em;
   justify-content: space-between;
 }
+
 .routeDiscreption {
   margin-left: 0.5em;
   color: rgb(255, 255, 255, 0.7);
 }
 
-.routeTitle > span:nth-child(2) {
+.routeTitle>span:nth-child(2) {
   color: rgb(255, 255, 255, 0.6);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -257,13 +261,14 @@ a {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.appTitle > span {
+
+.appTitle>span {
   max-height: 1em;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.appTitle > span > span:nth-child(2) {
+.appTitle>span>span:nth-child(2) {
   opacity: calc(var(--scale) * var(--scale));
 }
 
@@ -278,9 +283,11 @@ a {
 .discreption li[color="blue"] {
   list-style-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgd2lkdGg9IjE4cHgiIGhlaWdodD0iMThweCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KICAgIDxwYXRoDQogICAgICAgIGQ9Ik0xMiAxMi41QzEzLjY1NjkgMTIuNSAxNSAxMS4xNTY5IDE1IDkuNUMxNSA3Ljg0MzE1IDEzLjY1NjkgNi41IDEyIDYuNUMxMC4zNDMxIDYuNSA5IDcuODQzMTUgOSA5LjVDOSAxMS4xNTY5IDEwLjM0MzEgMTIuNSAxMiAxMi41TTEyIDIyQzE0IDE4IDIwIDE1LjQxODMgMjAgMTBDMjAgNS41ODE3MiAxNi40MTgzIDIgMTIgMkM3LjU4MTcyIDIgNCA1LjU4MTcyIDQgMTBDNCAxNS40MTgzIDEwIDE4IDEyIDIyWiINCiAgICAgICAgc3Ryb2tlPSIjMmM1OGRkIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgLz4NCjwvc3ZnPg==);
 }
+
 .discreption li[color="red"] {
   list-style-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgd2lkdGg9IjE4cHgiIGhlaWdodD0iMThweCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KICAgIDxwYXRoDQogICAgICAgIGQ9Ik0xMiAxMi41QzEzLjY1NjkgMTIuNSAxNSAxMS4xNTY5IDE1IDkuNUMxNSA3Ljg0MzE1IDEzLjY1NjkgNi41IDEyIDYuNUMxMC4zNDMxIDYuNSA5IDcuODQzMTUgOSA5LjVDOSAxMS4xNTY5IDEwLjM0MzEgMTIuNSAxMiAxMi41TTEyIDIyQzE0IDE4IDIwIDE1LjQxODMgMjAgMTBDMjAgNS41ODE3MiAxNi40MTgzIDIgMTIgMkM3LjU4MTcyIDIgNCA1LjU4MTcyIDQgMTBDNCAxNS40MTgzIDEwIDE4IDEyIDIyWiINCiAgICAgICAgc3Ryb2tlPSIjZTA0NzNjIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgLz4NCjwvc3ZnPg==);
 }
+
 .discreption ul {
   margin-top: 0;
   margin-left: 0.5em;
@@ -377,12 +384,14 @@ a {
   .mainContainer {
     flex-direction: row;
   }
+
   #tooltips {
     transition: 0ms !important;
     border-radius: 0;
     width: 500px;
     box-sizing: content-box;
   }
+
   #tooltips {
     height: 100% !important;
   }
@@ -399,6 +408,7 @@ a {
   .share {
     padding: 0;
   }
+
   .tooltips {
     width: 0;
   }
@@ -406,14 +416,17 @@ a {
   #mainmenu {
     width: 400px;
   }
+
   #backButton {
     transition: 300ms;
     left: 410px;
     z-index: 9999999;
   }
+
   #tooltips:has(#placeInfo:empty) {
     display: none;
   }
+
   body:has(#mainmenu.hidden) #backButton {
     translate: -400px;
   }
@@ -427,10 +440,17 @@ body:has(#mainmenu.hidden),
 
 section,
 #mainmenu .share,
-.route {
+.route,
+.qr-code {
   background-color: rgb(var(--bgcolor2), 0.1);
   background-color: rgb(var(--bgcolor2), 0.1);
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 10px;
+}
+
+.qr-code {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
 }
