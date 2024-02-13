@@ -91,10 +91,12 @@ const f = (h) => {
       } else {
         tooltips.style.height = "10%";
         placeData.scrollTop = 0;
+        window.location.hash = "#map";
       }
     } else {
       tooltips.style.height = "0%";
       tooltips.style.transition = "100ms";
+      window.location.hash = "#map";
     }
   }
 
