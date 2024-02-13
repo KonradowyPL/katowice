@@ -83,7 +83,6 @@ document.ontouchend = (e) => f(e.changedTouches[0].clientY);
 const f = (h) => {
   if (swiping) {
     const height = 1 - h / document.documentElement.scrollHeight - swipingFix;
-    console.log({ height, swipingStart }, "reset!");
     if (height > 0.1) {
       tooltips.style.transition = "300ms";
 
@@ -122,7 +121,6 @@ document.ontouchmove = (e) => {
         placeData.scrollTop = 0;
       }
     }
-    console.log({ height, swipingStart });
     tooltips.style.transition = "0ms";
     tooltips.style.height = height * 100 + "%";
   }
