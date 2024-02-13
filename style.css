@@ -24,7 +24,7 @@ body {
   flex-grow: 1;
 }
 
-.leaflet-control-container>.leaflet-top.leaflet-left {
+.leaflet-control-container > .leaflet-top.leaflet-left {
   right: 10px;
   left: unset;
 }
@@ -168,7 +168,7 @@ a {
   border-bottom: rgba(var(--bgcolor2), calc(var(--scale))) solid calc(var(--scale) * 2px);
 }
 
-.appTitle>svg {
+.appTitle > svg {
   width: calc(var(--scale) * -40px + 70px);
   height: calc(var(--scale) * -40px + 70px);
 }
@@ -185,27 +185,27 @@ a {
   margin-bottom: 5px;
 }
 
-.visited>ul {
+.visited > ul {
   margin: 2px;
   padding-inline-start: 40px;
 }
 
-.visited>ul>li {
+.visited > ul > li {
   list-style-image: url("marker.svg");
 }
 
-.visited>ul>li>a {
+.visited > ul > li > a {
   text-decoration: none;
   color: white;
 }
 
-.nonVisited>ul>li>a {
+.nonVisited > ul > li > a {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
-.nonVisited>ul>li>a>span:nth-child(2) {
+.nonVisited > ul > li > a > span:nth-child(2) {
   text-align: end;
   min-width: fit-content;
   color: rgb(255, 255, 255, 0.5);
@@ -233,7 +233,7 @@ a {
   color: rgb(255, 255, 255, 0.7);
 }
 
-.routeTitle>span:nth-child(2) {
+.routeTitle > span:nth-child(2) {
   color: rgb(255, 255, 255, 0.6);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -262,13 +262,13 @@ a {
   margin-bottom: 10px;
 }
 
-.appTitle>span {
+.appTitle > span {
   max-height: 1em;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.appTitle>span>span:nth-child(2) {
+.appTitle > span > span:nth-child(2) {
   opacity: calc(var(--scale) * var(--scale));
 }
 
@@ -452,5 +452,6 @@ section,
 .qr-code {
   box-sizing: border-box;
   width: 100%;
+  aspect-ratio: 1;
   padding: 0;
 }

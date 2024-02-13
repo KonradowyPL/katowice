@@ -24,7 +24,6 @@ const userPosMarker = L.marker([50.2661678296663, 19.02556763415931], { icon: us
 userPosMarker.setOpacity(0);
 userPosMarker.options.interactive = false;
 
-
 const localisationError = () => {
   locationBox.style.display = "flex";
   userPosMarker.setOpacity(0);
@@ -33,25 +32,24 @@ const localisationError = () => {
 
 updateUserPos = (position) => {
   locationBox.style.display = "none";
-  userPosMarker.setOpacity(1);
-  userPosMarker.options.interactive = true;
   UserPosition = position;
   var newLatLng = new L.LatLng(UserPosition.coords.latitude, UserPosition.coords.longitude);
   userPosMarker.setLatLng(newLatLng);
+  userPosMarker.setOpacity(1);
+  userPosMarker.options.interactive = true;
   checkLocked();
   updateNonVisited();
   updateVisited();
   loadRoutes();
 };
 
+var localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError);
 
 navigator.geolocation.getCurrentPosition((position) => {
   map.setView([position.coords.latitude, position.coords.longitude]);
   u(window.location.hash);
   updateUserPos(position);
 }, localisationError);
-
-var localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError);
 
 var swiping = false;
 var swipingStart;
@@ -85,7 +83,6 @@ document.ontouchend = (e) => f(e.changedTouches[0].clientY);
 const f = (h) => {
   if (swiping) {
     const height = 1 - h / document.documentElement.scrollHeight - swipingFix;
-    swipingStart -= swipingFix * 0.5;
     console.log({ height, swipingStart }, "reset!");
     if (height > 0.1) {
       tooltips.style.transition = "300ms";
@@ -326,10 +323,9 @@ const shareApp = async () => {
 
 new ResizeObserver((entries) => entries.forEach((entry) => map.invalidateSize())).observe(document.getElementById("map"));
 
-navigator.permissions.query({ name: 'geolocation' })
-  .then(permissionStatus => {
-    permissionStatus.onchange = () => {
-      navigator.geolocation.clearWatch(localisationUpdateInterval);
-      localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError)
-    };
-  })
+navigator.permissions.query({ name: "geolocation" }).then((permissionStatus) => {
+  permissionStatus.onchange = () => {
+    navigator.geolocation.clearWatch(localisationUpdateInterval);
+    localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError);
+  };
+});
