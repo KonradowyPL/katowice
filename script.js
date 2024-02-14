@@ -238,35 +238,46 @@ function loadLocked() {
 }
 
 function loadRoutes() {
-  ele = "";
+  var ele = "";
   Object.keys(routes).forEach((key, i) => {
     const route = routes[key];
-    let completed = 0;
-    thisEle = "";
-    toend = "";
-    route.destonations.forEach((e) => {
-      const place = places[e];
-      if (place?.locked) {
-        const userPos = userPosMarker.getLatLng();
-        const markerPos = place.marker.getLatLng();
-        const distance = userPos.distanceTo(markerPos);
-        var roundedDistance;
-        if (distance > 1000) {
-          roundedDistance = (distance / 1000).toFixed(1) + " km";
-        } else {
-          roundedDistance = (distance / 20).toFixed(0) * 20 + " m";
-        }
+    var thisele = "";
+    var completed = 0;
+    const distances = [];
+    route.destonations.forEach((key, i) => {
+      const place = places[key];
 
-        thisEle += `<li><a href="#map:${e}"><span>${place.name}</span><span>${roundedDistance}</span></a></li>`;
+      const userPos = userPosMarker.getLatLng();
+      const markerPos = place.marker.getLatLng();
+      const distance = userPos.distanceTo(markerPos);
+      distances.push({ name: key, distance: distance + (!place?.locked * Infinity || 0) });
+      //                                                                 ^^^^^^^^^^^^^ wft?
+    });
+
+    distances.sort((a, b) => a.distance - b.distance);
+
+    distances.forEach((e) => {
+      const place = places[e.name];
+      const distance = e.distance;
+      console.log(e);
+      var roundedDistance;
+      if (distance > 1000) {
+        roundedDistance = (distance / 1000).toFixed(1) + " km";
       } else {
-        toend += `<li><a href="#map:${e}"><span>${place.name}</span><span class="checkmark"></span></a></li>`;
+        roundedDistance = (distance / 20).toFixed(0) * 20 + " m";
+      }
+
+      if (place?.locked) {
+        thisele += `<li><a href="#map:${e}"><span>${place.name}</span><span>${roundedDistance}</span></a></li>`;
+      } else {
+        thisele += `<li><a href="#map:${e}"><span>${place.name}</span><span class="checkmark"></span></a></li>`;
         completed++;
       }
     });
+
     ele +=
       `<div class="route visited nonVisited"><div class="routeTitle"><span>${route.name}</span><span>${completed}/${route.destonations.length}</span></div><div class="routeDiscreption">${route.discreption}</div><ul>` +
-      thisEle +
-      toend +
+      thisele +
       "</ul></div>";
   });
 
