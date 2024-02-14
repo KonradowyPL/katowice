@@ -430,6 +430,9 @@ a {
   body:has(#mainmenu.hidden) #backButton {
     translate: -400px;
   }
+  .qr-code-link {
+    font-size: 1em !important;
+  }
 }
 
 html:has(#mainmenu.hidden),
@@ -465,11 +468,11 @@ section,
   font-weight: bold;
   text-align: center;
   box-sizing: border-box;
-  padding: 5px;
   padding-bottom: 15px;
   padding-top: 0;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  font-size: clamp(0.1em, 4vw, 5em);
 }
 
 .qr-code-section {
