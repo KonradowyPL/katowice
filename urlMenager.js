@@ -17,9 +17,12 @@ const u = (url) => {
       mainmenu.classList.add("hidden");
       url = trimPrefix(url, "#map:");
       place = places[url];
+      console.log(place);
       if (place) {
         map.setView(new L.LatLng(place.lat, place.lon), 19);
         displayPlace(url);
+      } else {
+        tooltips.style.height = "0%";
       }
     } else {
       tooltips.style.height = "0%";

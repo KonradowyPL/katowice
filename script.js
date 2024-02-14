@@ -91,6 +91,8 @@ const f = (h) => {
       } else {
         tooltips.style.height = "10%";
         placeData.scrollTop = 0;
+        silent = true;
+
         window.location.hash = "#map";
       }
     } else {
@@ -147,6 +149,7 @@ function displayPlace(key) {
   placeData.scrollTop = 0;
   if (places[key]?.locked) {
     places[key].marker.openPopup();
+    window.location.hash = "#map";
   } else {
     places[key].marker.closePopup();
     placeInfo.innerHTML = converter.makeHtml(places[key].discreption);

@@ -454,4 +454,31 @@ section,
   width: 100%;
   aspect-ratio: 1;
   padding: 0;
+
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 0;
+}
+.qr-code-link {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 5px;
+  padding-bottom: 15px;
+  padding-top: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.qr-code-section {
+  display: flex;
+  flex-direction: column;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
