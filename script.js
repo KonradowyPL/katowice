@@ -259,7 +259,6 @@ function loadRoutes() {
     distances.forEach((e) => {
       const place = places[e.name];
       const distance = e.distance;
-      console.log(e);
       var roundedDistance;
       if (distance > 1000) {
         roundedDistance = (distance / 1000).toFixed(1) + " km";
@@ -268,9 +267,9 @@ function loadRoutes() {
       }
 
       if (place?.locked) {
-        thisele += `<li><a href="#map:${e}"><span>${place.name}</span><span>${roundedDistance}</span></a></li>`;
+        thisele += `<li><a href="#map:${e.name}"><span>${place.name}</span><span>${roundedDistance}</span></a></li>`;
       } else {
-        thisele += `<li><a href="#map:${e}"><span>${place.name}</span><span class="checkmark"></span></a></li>`;
+        thisele += `<li><a href="#map:${e.name}"><span>${place.name}</span><span class="checkmark"></span></a></li>`;
         completed++;
       }
     });
