@@ -239,6 +239,7 @@ function loadLocked() {
 
 function loadRoutes() {
   var ele = "";
+  var badges = []
   Object.keys(routes).forEach((key, i) => {
     const route = routes[key];
     var thisele = "";
@@ -273,14 +274,34 @@ function loadRoutes() {
         completed++;
       }
     });
+    if (route.destonations.length == completed) {
+      badges.push(key)
+    }
 
     ele +=
       `<div class="route visited nonVisited"><div class="routeTitle"><span>${route.name}</span><span>${completed}/${route.destonations.length}</span></div><div class="routeDiscreption">${route.discreption}</div><ul>` +
       thisele +
       "</ul></div>";
   });
-
   routesObj.innerHTML = ele;
+  const sel = document.querySelector("#badges .selected")?.src
+  document.getElementById("badges").innerHTML = ""
+  badges.forEach((e) => {
+    const ele = document.createElement("img")
+    ele.src = e + ".svg"
+    if (sel == ele.src) {
+      ele.classList.add("selected")
+    }
+
+    ele.onclick = (event) => {
+      Array.from(document.getElementById("badges").children).forEach(e => e.classList.remove("selected"))
+      ele.classList.add("selected")
+
+      badgeInfo.innerHTML = `Odznaka za odwiedzenie wszystkich miejsc na szlaku <b>${routes[e]?.nn || routes[e]?.name}</b>.`
+    }
+
+    document.getElementById("badges").appendChild(ele)
+  })
 }
 
 u(window.location.hash);

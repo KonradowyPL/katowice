@@ -368,26 +368,30 @@ Przedwojenni harcerze wstępowali do Związku Walki Zbrojnej, następnie do Armi
 
 const routes = {
   KOSCIOLY: {
-    name: "Kościoły w katowicach",
+    name: "Kościoły w Katowicach",
+    nn: "Kościołów w Katowicach",
     discreption: `
 Odkryj Szlak Kościołów i Bazylik w Katowicach. Idealny dla miłośników spokoju i wierzących. Ogromne wnętrza, atmosfera modlitwy. Ślady historii i wiary czekają!`,
     destonations: ["KATEDRA", "KOSCIONSWPAWEL", "KOSCIOLSWANNA", "KOSCIOLMARIACKI", "KOSCIOLLUDWIG", "KOSCIOLSZCZEPAN"],
   },
   MUZEA: {
     name: "Muzea w Katowicach",
+    nn: "Muzeów w Katowicach",
     discreption: `
 Odkryj Szlaki Muzealne w Katowicach – idealne dla miłośników kultury. Fascynujące zbiory, tajemnicze skarby. Niepowtarzalna podróż dla ciekawych umysłów. Zapraszamy do odkrywania!`,
     destonations: ["MUZEUMGITARY", "MUZEUMSLASKIE", "MUZEUMSOLIDARNOSCI"],
   },
   POMNIKI: {
     name: "Pomniki w Katowicach",
+    nn: "Pomników w Katowicach",
     discreption: `
     Odkryj Szlaki Pomników w Katowicach – dla miłośników historii i dziedzictwa. Fascynujące opowieści o przeszłości. Podążaj śladami symboli miasta. Niezwykła podróż w otoczeniu pomników. Zapraszamy do fascynującej wędrówki!`,
     destonations: ["POMNIKHARCEZE", "POMNIKPILSUCKI", "POMNIKPOWSTANCOW", "POMNIKWIECZOREK", "POMNIKWUJEK"],
   },
   ATRAKCJE: {
     name: "Atrakcje turystyczne w Katowicach",
+    nn: "Atrakcji w Katowicach",
     discreption: `Szukasz rozwki albo pięknych widoków? Ten szlak jest dla ciebie!`,
-    destonations: ["SPODEK", "WIEZASPADOCHRONOWA", "JUMPCITYKatowice", "BAJKAPANAKLEKSA","OGRODZOOLOGICZNY"],
+    destonations: ["SPODEK", "WIEZASPADOCHRONOWA", "JUMPCITYKatowice", "BAJKAPANAKLEKSA", "OGRODZOOLOGICZNY"],
   },
 };

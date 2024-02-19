@@ -1,118 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>Ciekawe Katowice - zanurz się w historii</title>
-    <meta content="Ciekawe Katowice - zanurz się w historii" name="title" />
-    <meta
-      content="Katowice w jednym miejscu: mapa turystyczna, historia, kulturę, zabytki i wiele innych. Znajdź ciekawostki, planuj trasy i odkrywaj nieznane zakątki miasta. Idealne dla miłośników historii i turystów poszukujących nowych wrażeń."
-      name="description"
-    />
 
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="shortcut icon"
-      href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogICAgPHBhdGgNCiAgICAgICAgZD0iTTkgMjBMMyAxN1Y0TDUgNU05IDIwTDE1IDE3TTkgMjBWMTRNMTUgMTdMMjEgMjBWN0wxOSA2TTE1IDE3VjE0TTE1IDYuMkMxNSA3Ljk2NzMxIDEzLjUgOS40IDEyIDExQzEwLjUgOS40IDkgNy45NjczMSA5IDYuMkM5IDQuNDMyNjkgMTAuMzQzMSAzIDEyIDNDMTMuNjU2OSAzIDE1IDQuNDMyNjkgMTUgNi4yWiINCiAgICAgICAgc3Ryb2tlPSIjMWQ3NDBiIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgLz4NCiAgICA8cGF0aA0KICAgICAgICBkPSJNMTIgNkgxMi4wMU0xNSA2LjJDMTUgNy45NjczMSAxMy41IDkuNCAxMiAxMUMxMC41IDkuNCA5IDcuOTY3MzEgOSA2LjJDOSA0LjQzMjY5IDEwLjM0MzEgMyAxMiAzQzEzLjY1NjkgMyAxNSA0LjQzMjY5IDE1IDYuMloiDQogICAgICAgIHN0cm9rZT0iI2JjMjcyNyIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIC8+DQo8L3N2Zz4="
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" defer></script>
-    <script src="https://unpkg.com/showdown/dist/showdown.min.js" defer></script>
-    <script src="./placeData.js" defer></script>
-    <script src="./markers.js" defer></script>
-    <script src="./urlMenager.js" defer></script>
-    <script src="./script.js" defer></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Ciekawe Katowice - zanurz się w historii</title>
+  <meta content="Ciekawe Katowice - zanurz się w historii" name="title" />
+  <meta
+    content="Katowice w jednym miejscu: mapa turystyczna, historia, kulturę, zabytki i wiele innych. Znajdź ciekawostki, planuj trasy i odkrywaj nieznane zakątki miasta. Idealne dla miłośników historii i turystów poszukujących nowych wrażeń."
+    name="description" />
 
-  <body>
-    <div class="mainContainer">
-      <div id="mainmenu" class="hidden">
-        <div class="menucontainer" id="menucontainer">
-          <a href="#map" class="backgroundMapImage" id="backgroundMapImage"></a>
-          <a href="#map" class="appTitle" id="appTitle" style="--scale: 0">
-            <span><span>Ciekawe Katowice</span> <span>- zanurz się w historii</span></span>
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M9 20L3 17V4L5 5M9 20L15 17M9 20V14M15 17L21 20V7L19 6M15 17V14M15 6.2C15 7.96731 13.5 9.4 12 11C10.5 9.4 9 7.96731 9 6.2C9 4.43269 10.3431 3 12 3C13.6569 3 15 4.43269 15 6.2Z"
-                stroke="currentcolor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M12 6H12.01M15 6.2C15 7.96731 13.5 9.4 12 11C10.5 9.4 9 7.96731 9 6.2C9 4.43269 10.3431 3 12 3C13.6569 3 15 4.43269 15 6.2Z"
-                stroke="#bc2727"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
-          <div class="userinfo">
-            <section id="locationBox">Uwaga: Aplikacja wymaga posiadania włączonej lokalizacji, aby działać poprawnie!</section>
-            <section class="visited">
-              <div class="sectionTitle">Miejsca, które odwiedziłeś:</div>
-              <ul id="visited"></ul>
-            </section>
-            <section class="nonVisited visited">
-              <div class="sectionTitle">Miejsca, o których możesz nie wiedzieć:</div>
-              <ul id="nonVisited"></ul>
-            </section>
-            <section class="routes">
-              <div class="sectionTitle">Trasy i więcej:</div>
-              <div id="routesObj"></div>
-            </section>
-            <section class="discreption">
-              <div class="sectionTitle">Oznaczenia kolorów pinezek na mapie:</div>
-              <ul>
-                <li color="gray">Pomniki</li>
-                <li color="violet">Kościoły i Katedry</li>
-                <li color="blue">Muzea</li>
-                <li color="red">Atrakcje i inne</li>
-              </ul>
-            </section>
-            <section class="qr-code-section">
-              <a class="share" href="javascript:shareApp()">
-                <div>Udostępnij!</div>
-                <img src="./share.svg" width="20px" height="20px" />
-                <img src="./copy.svg" width="20px" height="20px" />
-              </a>
-              <img class="qr-code" src="./qr-code.png" alt="" />
-              <div class="qr-code-link">https://konradowypl.github.io/katowice</div>
-            </section>
-            <section class="info">
-              <div>
-                Ta strona używa map <a href="https://www.openstreetmap.org" target="_blank">openstreetmap.org</a>
-                <a href="https://www.openstreetmap.org/about">Dowiedz się więcej</a>
-              </div>
-              <div id="dev">Zrobione na projekt na BIZ kompletnie za darmo.</div>
-            </section>
-          </div>
-        </div>
-      </div>
-      <div id="map"></div>
-      <a id="backButton" href="#mainmenu">
-        <svg width="100%" height="100%" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="80">
-          <path
-            d="M669.6 849.6c8.8 8 22.4 7.2 30.4-1.6s7.2-22.4-1.6-30.4l-309.6-280c-8-7.2-8-17.6 0-24.8l309.6-270.4c8.8-8 9.6-21.6 2.4-30.4-8-8.8-21.6-9.6-30.4-2.4L360.8 480.8c-27.2 24-28 64-0.8 88.8l309.6 280z"
-            fill=""
-          ></path>
-        </svg>
-      </a>
-      <div id="tooltips" style="height: 0; transition: 300ms">
-        <div class="tooltipsSwipeContainer" id="tooltipsSwipeButton">
-          <div class="tooltipsSwipeButton"></div>
-        </div>
-        <div class="placeInfo" id="placeData">
-          <div id="placeInfo"></div>
-          <a class="share" href="javascript:share()">
-            <div>Udostępnij!</div>
-            <img src="./share.svg" width="20px" height="20px" />
-            <img src="./copy.svg" width="20px" height="20px" />
-          </a>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon"
+    href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogICAgPHBhdGgNCiAgICAgICAgZD0iTTkgMjBMMyAxN1Y0TDUgNU05IDIwTDE1IDE3TTkgMjBWMTRNMTUgMTdMMjEgMjBWN0wxOSA2TTE1IDE3VjE0TTE1IDYuMkMxNSA3Ljk2NzMxIDEzLjUgOS40IDEyIDExQzEwLjUgOS40IDkgNy45NjczMSA5IDYuMkM5IDQuNDMyNjkgMTAuMzQzMSAzIDEyIDNDMTMuNjU2OSAzIDE1IDQuNDMyNjkgMTUgNi4yWiINCiAgICAgICAgc3Ryb2tlPSIjMWQ3NDBiIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgLz4NCiAgICA8cGF0aA0KICAgICAgICBkPSJNMTIgNkgxMi4wMU0xNSA2LjJDMTUgNy45NjczMSAxMy41IDkuNCAxMiAxMUMxMC41IDkuNCA5IDcuOTY3MzEgOSA2LjJDOSA0LjQzMjY5IDEwLjM0MzEgMyAxMiAzQzEzLjY1NjkgMyAxNSA0LjQzMjY5IDE1IDYuMloiDQogICAgICAgIHN0cm9rZT0iI2JjMjcyNyIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIC8+DQo8L3N2Zz4="
+    type="image/x-icon" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" defer></script>
+  <script src="https://unpkg.com/showdown/dist/showdown.min.js" defer></script>
+  <script src="./placeData.js" defer></script>
+  <script src="./markers.js" defer></script>
+  <script src="./urlMenager.js" defer></script>
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <div class="mainContainer">
+    <div id="mainmenu" class="hidden">
+      <div class="menucontainer" id="menucontainer">
+        <a href="#map" class="backgroundMapImage" id="backgroundMapImage"></a>
+        <a href="#map" class="appTitle" id="appTitle" style="--scale: 0">
+          <span><span>Ciekawe Katowice</span> <span>- zanurz się w historii</span></span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9 20L3 17V4L5 5M9 20L15 17M9 20V14M15 17L21 20V7L19 6M15 17V14M15 6.2C15 7.96731 13.5 9.4 12 11C10.5 9.4 9 7.96731 9 6.2C9 4.43269 10.3431 3 12 3C13.6569 3 15 4.43269 15 6.2Z"
+              stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M12 6H12.01M15 6.2C15 7.96731 13.5 9.4 12 11C10.5 9.4 9 7.96731 9 6.2C9 4.43269 10.3431 3 12 3C13.6569 3 15 4.43269 15 6.2Z"
+              stroke="#bc2727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <div class="userinfo">
+          <section id="locationBox">Uwaga: Aplikacja wymaga posiadania włączonej lokalizacji, aby działać poprawnie!
+          </section>
+          <section class="badges">
+            <div id="badges"></div>
+            <div id="badgeInfo"></div>
+          </section>
+          <section class="visited">
+            <div class="sectionTitle">Miejsca, które odwiedziłeś:</div>
+            <ul id="visited"></ul>
+          </section>
+          <section class="nonVisited visited">
+            <div class="sectionTitle">Miejsca, o których możesz nie wiedzieć:</div>
+            <ul id="nonVisited"></ul>
+          </section>
+          <section class="routes">
+            <div class="sectionTitle">Trasy i więcej:</div>
+            <div id="routesObj"></div>
+          </section>
+          <section class="discreption">
+            <div class="sectionTitle">Oznaczenia kolorów pinezek na mapie:</div>
+            <ul>
+              <li color="gray">Pomniki</li>
+              <li color="violet">Kościoły i Katedry</li>
+              <li color="blue">Muzea</li>
+              <li color="red">Atrakcje i inne</li>
+            </ul>
+          </section>
+          <section class="qr-code-section">
+            <a class="share" href="javascript:shareApp()">
+              <div>Udostępnij!</div>
+              <img src="./share.svg" width="20px" height="20px" />
+              <img src="./copy.svg" width="20px" height="20px" />
+            </a>
+            <img class="qr-code" src="./qr-code.png" alt="Tu powinienen być kod QR. Spróbuj odświerzyć stronę." />
+            <div class="qr-code-link">https://konradowypl.github.io/katowice</div>
+          </section>
+          <section class="info">
+            <div>
+              Ta strona używa map <a href="https://www.openstreetmap.org" target="_blank">openstreetmap.org</a>
+              <a href="https://www.openstreetmap.org/about">Dowiedz się więcej</a>
+            </div>
+            <div id="dev">Zrobione na projekt na BIZ kompletnie za darmo.</div>
+          </section>
         </div>
       </div>
     </div>
-  </body>
+    <div id="map"></div>
+    <a id="backButton" href="#mainmenu">
+      <svg width="100%" height="100%" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"
+        stroke-width="80">
+        <path
+          d="M669.6 849.6c8.8 8 22.4 7.2 30.4-1.6s7.2-22.4-1.6-30.4l-309.6-280c-8-7.2-8-17.6 0-24.8l309.6-270.4c8.8-8 9.6-21.6 2.4-30.4-8-8.8-21.6-9.6-30.4-2.4L360.8 480.8c-27.2 24-28 64-0.8 88.8l309.6 280z"
+          fill=""></path>
+      </svg>
+    </a>
+    <div id="tooltips" style="height: 0; transition: 300ms">
+      <div class="tooltipsSwipeContainer" id="tooltipsSwipeButton">
+        <div class="tooltipsSwipeButton"></div>
+      </div>
+      <div class="placeInfo" id="placeData">
+        <div id="placeInfo"></div>
+        <a class="share" href="javascript:share()">
+          <div>Udostępnij!</div>
+          <img src="./share.svg" width="20px" height="20px" />
+          <img src="./copy.svg" width="20px" height="20px" />
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
