@@ -24,7 +24,7 @@ body {
   flex-grow: 1;
 }
 
-.leaflet-control-container>.leaflet-top.leaflet-left {
+.leaflet-control-container > .leaflet-top.leaflet-left {
   right: 10px;
   left: unset;
 }
@@ -169,7 +169,7 @@ a {
   border-bottom: rgba(var(--bgcolor2), calc(var(--scale))) solid calc(var(--scale) * 2px);
 }
 
-.appTitle>svg {
+.appTitle > svg {
   width: calc(var(--scale) * -40px + 70px);
   height: calc(var(--scale) * -40px + 70px);
 }
@@ -186,27 +186,27 @@ a {
   margin-bottom: 5px;
 }
 
-.visited>ul {
+.visited > ul {
   margin: 2px;
   padding-inline-start: 40px;
 }
 
-.visited>ul>li {
+.visited > ul > li {
   list-style-image: url("marker.svg");
 }
 
-.visited>ul>li>a {
+.visited > ul > li > a {
   text-decoration: none;
   color: white;
 }
 
-.nonVisited>ul>li>a {
+.nonVisited > ul > li > a {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
-.nonVisited>ul>li>a>span:nth-child(2) {
+.nonVisited > ul > li > a > span:nth-child(2) {
   text-align: end;
   min-width: fit-content;
   color: rgb(255, 255, 255, 0.5);
@@ -234,7 +234,7 @@ a {
   color: rgb(255, 255, 255, 0.7);
 }
 
-.routeTitle>span:nth-child(2) {
+.routeTitle > span:nth-child(2) {
   color: rgb(255, 255, 255, 0.6);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -264,15 +264,14 @@ a {
   margin-bottom: 10px;
 }
 
-.appTitle>span {
+.appTitle > span {
   max-height: 1em;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.appTitle>span>span:nth-child(2) {
-  /* opacity: calc(var(--scale) * var(--scale)); */
-  opacity: 1;
+.appTitle > span > span:nth-child(2) {
+  opacity: calc(var(--scale) * var(--scale));
 }
 
 .discreption li[color="gray"] {
@@ -500,14 +499,14 @@ section,
   display: flex;
   flex-direction: row;
   gap: 10px;
-  justify-content: space-around
+  justify-content: space-around;
 }
 
 .badges img {
   height: 40px;
   width: 40px;
   background-color: rgb(var(--bgcolor2), 0.1);
-  border-radius: 50%;
+  clip-path: circle();
   padding: 10px;
   margin-bottom: 10px;
 }
@@ -517,12 +516,24 @@ section,
 }
 
 #badges .selected {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
   margin-bottom: 0px;
   padding-bottom: 20px;
+  clip-path: none;
 }
 
 #badgeInfo {
   margin-bottom: 0;
+}
+
+.route img {
+  width: 3lh;
+  aspect-ratio: 1;
+  shape-outside: margin-box;
+  float: left;
+  background-color: rgb(var(--bgcolor1), 0.3);
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
 }
