@@ -1,8 +1,6 @@
 export { loadRoutes };
 
-const routesData = await fetch("./PLACES/routes.json").then((res) =>
-  res.json()
-);
+const routesData = await fetch("./PLACES/routes.json").then((res) => res.json());
 
 function loadRoutes(places, userPos) {
   const routes = {};
@@ -74,14 +72,10 @@ function loadRoutes(places, userPos) {
     }
 
     ele.onclick = (event) => {
-      Array.from(document.getElementById("badges").children).forEach((e) =>
-        e.classList.remove("selected")
-      );
+      Array.from(document.getElementById("badges").children).forEach((e) => e.classList.remove("selected"));
       ele.classList.add("selected");
       const data = routesData.find((data) => data.id == e);
-      badgeInfo.innerHTML = `Odznaka za odwiedzenie wszystkich <b>${
-        data.nn || data.name
-      }</b>.`;
+      badgeInfo.innerHTML = `Odznaka za odwiedzenie wszystkich <b>${data.nn || data.name}</b>.`;
     };
 
     document.getElementById("badges").appendChild(ele);

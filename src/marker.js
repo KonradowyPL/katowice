@@ -1,3 +1,5 @@
+export { collapse };
+
 function collapse(places, map, currentPlace) {
   places.forEach((place, i) => {
     const marker = place.marker;
@@ -48,8 +50,6 @@ function collapse(places, map, currentPlace) {
     });
   });
 }
-
-export { collapse };
 
 function pitagoras(a, b) {
   const diff = {

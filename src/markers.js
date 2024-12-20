@@ -1,3 +1,5 @@
+export { userPosIcon };
+
 var userPosIcon = new L.Icon({
   iconUrl: "./assets/userPos.svg",
   iconSize: [25, 41],
@@ -5,5 +7,3 @@ var userPosIcon = new L.Icon({
   popupAnchor: [1, -34],
   shadowSize: [41, 41],
 });
-
-export { userPosIcon };

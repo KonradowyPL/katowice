@@ -1,4 +1,5 @@
 export { u, urlMenager_get };
+
 var places = [];
 var displayPlace = undefined;
 

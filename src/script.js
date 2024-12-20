@@ -33,8 +33,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 21,
   maxNativeZoom: 19,
   minZoom: 11,
-  attribution:
-    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
 
 const userPosMarker = L.marker([50.2661678296663, 19.02556763415931], {
@@ -54,10 +53,7 @@ const localisationError = () => {
 const updateUserPos = (position) => {
   locationBox.style.display = "none";
   UserPosition = position;
-  var newLatLng = new L.LatLng(
-    UserPosition?.coords?.latitude,
-    UserPosition?.coords?.longitude
-  );
+  var newLatLng = new L.LatLng(UserPosition?.coords?.latitude, UserPosition?.coords?.longitude);
   userPosMarker.setLatLng(newLatLng);
   userPosMarker.setOpacity(1);
   userPosMarker.options.interactive = true;
@@ -67,10 +63,7 @@ const updateUserPos = (position) => {
   loadRoutes(places, userPosMarker.getLatLng());
 };
 
-var localisationUpdateInterval = navigator.geolocation.watchPosition(
-  updateUserPos,
-  localisationError
-);
+var localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError);
 
 navigator.geolocation.getCurrentPosition((position) => {
   map.setView([position.coords.latitude, position.coords.longitude]);
@@ -89,8 +82,7 @@ tooltipsSwipeButton.onmousedown = (e) => {
 };
 
 tooltipsSwipeButton.ontouchstart = (e) => {
-  swipingStart =
-    1 - e.changedTouches[0].clientY / document.documentElement.scrollHeight;
+  swipingStart = 1 - e.changedTouches[0].clientY / document.documentElement.scrollHeight;
   swipingFix = swipingStart - parseFloat(tooltips.style.height) * 0.01;
   swiping = true;
 };
@@ -99,8 +91,7 @@ tooltips.ontouchmove = (e) => {
   if (placeData.scrollTop == 0 && !swiping) {
     swiping = true;
     tabswiping = true;
-    swipingStart =
-      e.changedTouches[0].clientY / document.documentElement.scrollHeight;
+    swipingStart = e.changedTouches[0].clientY / document.documentElement.scrollHeight;
     swipingFix = 1 - parseFloat(tooltips.style.height) * 0.01 - swipingStart;
   }
 };
@@ -135,8 +126,7 @@ const f = (h) => {
 
 document.onmousemove = (e) => {
   if (swiping) {
-    const height =
-      1 - e.clientY / document.documentElement.scrollHeight - swipingFix;
+    const height = 1 - e.clientY / document.documentElement.scrollHeight - swipingFix;
     tooltips.style.transition = "0ms";
     tooltips.style.height = height * 100 + "%";
     placeData.scrollTop = 0;
@@ -145,10 +135,7 @@ document.onmousemove = (e) => {
 
 document.ontouchmove = (e) => {
   if (swiping) {
-    var height =
-      1 -
-      e.changedTouches[0].clientY / document.documentElement.scrollHeight -
-      swipingFix;
+    var height = 1 - e.changedTouches[0].clientY / document.documentElement.scrollHeight - swipingFix;
     if (tabswiping) {
       if (height > 0.9) {
         height = 0.9;
@@ -232,16 +219,13 @@ async function displayPlace(key, move) {
   placeContact.innerHTML = contact;
   placeShort.innerHTML = place.short;
   placeSummary.innerHTML = place.summary;
-  placeInfo.innerHTML = placeDat.unlocked 
+  placeInfo.innerHTML = placeDat.unlocked
     ? place.discreption + "<br>"
     : "<div class='locked'>Odwiedź to miejsce aby dowiedzieć się więcej!</div>";
 }
 
 menucontainer.onscroll = (e) => {
-  appTitle.style.setProperty(
-    "--scale",
-    Math.min(menucontainer.scrollTop / backgroundMapImage.clientHeight, 1)
-  );
+  appTitle.style.setProperty("--scale", Math.min(menucontainer.scrollTop / backgroundMapImage.clientHeight, 1));
 };
 menucontainer.onscroll();
 
@@ -315,8 +299,7 @@ function loadLocked() {
 }
 {
   u(window.location.hash);
-  if (currentPlace)
-    map.setView(new L.LatLng(currentPlaceDat.lat, currentPlaceDat.lon), 19);
+  if (currentPlace) map.setView(new L.LatLng(currentPlaceDat.lat, currentPlaceDat.lon), 19);
 }
 const unlockAll = function () {
   let unlocked = Object.keys(places);
@@ -344,9 +327,7 @@ dev.onclick = (e) => {
 const share = async () => {
   const shareData = {
     title: currentPlaceDat.name,
-    text: `Odwiedź ${
-      currentPlaceDat?.name2 || currentPlaceDat.name
-    } i inne ciekawe miejsca w katowicach!`,
+    text: `Odwiedź ${currentPlaceDat?.name2 || currentPlaceDat.name} i inne ciekawe miejsca w katowicach!`,
     url: window.location.href.replace(/[\?#].*$/, "") + "#map:" + currentPlace,
   };
   try {
@@ -371,21 +352,16 @@ const shareApp = async () => {
 window.share = share;
 window.shareApp = shareApp;
 
-new ResizeObserver((entries) =>
-  entries.forEach((entry) => map.invalidateSize())
-).observe(document.getElementById("map"));
+new ResizeObserver((entries) => entries.forEach((entry) => map.invalidateSize())).observe(
+  document.getElementById("map")
+);
 
-navigator.permissions
-  .query({ name: "geolocation" })
-  .then((permissionStatus) => {
-    permissionStatus.onchange = () => {
-      navigator.geolocation.clearWatch(localisationUpdateInterval);
-      localisationUpdateInterval = navigator.geolocation.watchPosition(
-        updateUserPos,
-        localisationError
-      );
-    };
-  });
+navigator.permissions.query({ name: "geolocation" }).then((permissionStatus) => {
+  permissionStatus.onchange = () => {
+    navigator.geolocation.clearWatch(localisationUpdateInterval);
+    localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError);
+  };
+});
 
 if (new URLSearchParams(window.location.search).get("unlockAll") == "true") {
   unlockAll();
