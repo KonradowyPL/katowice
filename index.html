@@ -22,19 +22,55 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap"
     />
-    <link rel="preload" as="font" href="https://unpkg.com/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2">
 
     <!-- JS -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" defer></script>
     <script src="./src/script.js" defer type="module"></script>
 
-    <link rel="preload" as="script" href="./src/script.js" />
-    <link rel="preload" as="script" href="./src/markers.js" />
-    <link rel="preload" as="script" href="./src/routes.js" />
-    <link rel="preload" as="script" href="./src/marker.js" />
-    <link rel="preload" as="script" href="./src/urlMenager.js" />
+    <link rel="preload" as="script" href="./src/script.js" crossorigin="anonymous" />
+    <link rel="preload" as="script" href="./src/markers.js" crossorigin="anonymous" />
+    <link rel="preload" as="script" href="./src/routes.js" crossorigin="anonymous" />
+    <link rel="preload" as="script" href="./src/marker.js" crossorigin="anonymous" />
+    <link rel="preload" as="script" href="./src/urlMenager.js" crossorigin="anonymous" />
+
+    <!-- Fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/inter/v18/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L5UUM.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/inter/v18/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L3UUMJng.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <!-- Images -->
+    <link rel="preload" as="image" href="./assets/mapBg.png" />
+
+    <!-- Fetch -->
+    <link rel="preload" as="fetch" fetchPriority="low" href="./PLACES/routes.json" />
+    <link rel="preload" as="fetch" fetchPriority="low" href="./PLACES/data.json" />
+    <link rel="preconnect" href="https://tile.openstreetmap.com" />
   </head>
 
   <body>
@@ -123,11 +159,13 @@
             <section class="qr-code-section">
               <a class="share" href="javascript:shareApp()">
                 <div>Udostępnij!</div>
-                <img src="./assets/share.svg" width="20px" height="20px" />
-                <img src="./assets/copy.svg" width="20px" height="20px" />
+                <img src="./assets/share.svg" width="20px" height="20px" loading="lazy" />
+                <img src="./assets/copy.svg" width="20px" height="20px" loading="lazy" />
               </a>
               <img
                 class="qr-code"
+                loading="lazy"
+                fetchPriority="low"
                 src="./assets/qr-code.png"
                 alt="Tu powinienen być kod QR. Spróbuj odświerzyć stronę."
               />

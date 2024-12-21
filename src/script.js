@@ -17,7 +17,7 @@ var UserPosition;
 
 try {
   const mappos = JSON.parse(localStorage.getItem("map"));
-  console.log("Loaded mappos:",mappos);
+  console.log("Loaded mappos:", mappos);
   map.setView([mappos.lat, mappos.lng], 14, { animate: false });
 } catch (e) {
   console.error(e);
@@ -29,7 +29,7 @@ const markerCircle = L.circleMarker([0, 0], {
   fillOpacity: 0.5,
   radius: 17,
 }).addTo(map);
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 21,
   maxNativeZoom: 19,
   minZoom: 11,
@@ -387,10 +387,10 @@ map.on("moveend", function (e) {
 });
 
 if (document.readyState !== "complete") {
-window.addEventListener('load', function() {
-  console.info("Loading completed!")
-  document.getElementById("loading").classList.add("fadeout")
-})
+  window.addEventListener("load", function () {
+    console.info("Loading completed!");
+    document.getElementById("loading").classList.add("fadeout");
+  });
 } else {
-  document.getElementById("loading").classList.add("fadeout")
+  document.getElementById("loading").classList.add("fadeout");
 }
