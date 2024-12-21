@@ -68,9 +68,9 @@
     <link rel="preload" as="image" href="./assets/mapBg.png" />
 
     <!-- Fetch -->
-    <link rel="preload" as="fetch" fetchPriority="low" href="./PLACES/routes.json" />
-    <link rel="preload" as="fetch" fetchPriority="low" href="./PLACES/data.json" />
-    <link rel="preconnect" href="https://tile.openstreetmap.com" />
+    <link rel="preload" as="fetch" fetchPriority="low" href="./PLACES/routes.json" crossorigin />
+    <link rel="preload" as="fetch" fetchPriority="low" href="./PLACES/data.json" crossorigin />
+    <link rel="preconnect" href="https://tile.openstreetmap.org" />
   </head>
 
   <body>
@@ -122,8 +122,8 @@
     <div class="mainContainer">
       <div id="mainmenu" class="hidden">
         <div class="menucontainer" id="menucontainer">
-          <a href="#map" class="backgroundMapImage" id="backgroundMapImage"></a>
-          <a href="#map" class="appTitle" id="appTitle" style="--scale: 0">
+          <a href="#map" class="backgroundMapImage" id="backgroundMapImage" aria-label="Przejdź do mapy"></a>
+          <a href="#map" class="appTitle" id="appTitle" style="--scale: 0" aria-label="Przejdź do mapy">
             <span><span>Ciekawe Katowice</span> <span>- zanurz się w historii</span></span>
             <svg><use href="#logo"></use></svg>
           </a>
@@ -183,7 +183,7 @@
         </div>
       </div>
       <div id="map"></div>
-      <a id="backButton" href="#mainmenu">
+      <a id="backButton" href="#mainmenu" aria-label="Przejdź do menu głównego">
         <svg
           width="100%"
           height="100%"
