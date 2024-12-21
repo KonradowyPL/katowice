@@ -131,12 +131,7 @@ a {
   width: 100%;
   height: 120px;
   filter: grayscale(100%) blur(1px);
-  background-image: linear-gradient(
-      to top,
-      rgb(var(--bgcolor1)) 10%,
-      transparent 55%
-    ),
-    url("./assets/mapBg.png");
+  background-image: linear-gradient(to top, rgb(var(--bgcolor1)) 10%, transparent 55%), url("./assets/mapBg.png");
 }
 
 .appTitle {
@@ -172,8 +167,7 @@ a {
   background-color: rgba(var(--bgcolor1), calc(var(--scale)));
   font-size: calc(var(--scale) * -1em + 2em);
   padding: calc(var(--scale) * -15px + 20px);
-  border-bottom: rgba(var(--bgcolor2), calc(var(--scale))) solid
-    calc(var(--scale) * 2px);
+  border-bottom: rgba(var(--bgcolor2), calc(var(--scale))) solid calc(var(--scale) * 2px);
 }
 
 .appTitle > svg {
@@ -721,4 +715,14 @@ section,
   .leaflet-marker-icon {
     transition: 300ms opacity !important;
   }
+}
+
+#loading {
+  transition: opacity 300ms, visibility 0ms 300ms;
+}
+
+#loading.fadeout {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }

@@ -17,7 +17,7 @@ var UserPosition;
 
 try {
   const mappos = JSON.parse(localStorage.getItem("map"));
-  console.log(mappos);
+  console.log("Loaded mappos:",mappos);
   map.setView([mappos.lat, mappos.lng], 14, { animate: false });
 } catch (e) {
   console.error(e);
@@ -384,5 +384,13 @@ collapse(places, map, currentPlace);
 
 map.on("moveend", function (e) {
   localStorage.setItem("map", JSON.stringify(map.getCenter()));
-  console.log(localStorage.getItem("map"));
 });
+
+if (document.readyState !== "complete") {
+window.addEventListener('load', function() {
+  console.info("Loading completed!")
+  document.getElementById("loading").classList.add("fadeout")
+})
+} else {
+  document.getElementById("loading").classList.add("fadeout")
+}

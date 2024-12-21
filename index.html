@@ -2,75 +2,87 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-    />
-    <title>Ciekawe Katowice - zanurz się w historii</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-    />
-    <meta content="Ciekawe Katowice - zanurz się w historii" name="title" />
-    <meta name="keywords" content="Katowice, Ciekawostki, Zabytki" />
-    <meta name="twitter:card" content="summary" />
-    <meta
-      property="og:image"
-      content="https://konradowypl.github.io/katowice/assets/logo.png"
-    />
-    <meta
-      content="Katowice w jednym miejscu: mapa turystyczna, historia, kulturę, zabytki i wiele innych. Znajdź ciekawostki, planuj trasy i odkrywaj nieznane zakątki miasta. Idealne dla miłośników historii i turystów poszukujących nowych wrażeń."
-      name="description"
-    />
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <title>Ciekawe Katowice - zanurz się w historii</title>
+
+    <meta name="title" content="Ciekawe Katowice - zanurz się w historii" />
+    <meta
+      name="description"
+      content="Katowice w jednym miejscu: mapa turystyczna, historia, kulturę, zabytki i wiele innych. Znajdź ciekawostki, planuj trasy i odkrywaj nieznane zakątki miasta. Idealne dla miłośników historii i turystów poszukujących nowych wrażeń."
     />
-    <script
-      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-      defer
-    ></script>
+    <meta name="keywords" content="Katowice, Ciekawostki, Zabytki" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="https://konradowypl.github.io/katowice/assets/logo.png" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <link rel="shortcut icon" href="./assets/logo.png">
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" defer></script>
     <script src="./src/script.js" defer type="module"></script>
   </head>
-
   <body>
+    <!-- logo -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="logo" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M9 20L3 17V4L5 5M9 20L15 17M9 20V14M15 17L21 20V7L19 6M15 17V14M15 6.2C15 7.96731 13.5 9.4 12 11C10.5 9.4 9 7.96731 9 6.2C9 4.43269 10.3431 3 12 3C13.6569 3 15 4.43269 15 6.2Z"
+          stroke="currentcolor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M12 6H12.01M15 6.2C15 7.96731 13.5 9.4 12 11C10.5 9.4 9 7.96731 9 6.2C9 4.43269 10.3431 3 12 3C13.6569 3 15 4.43269 15 6.2Z"
+          stroke="#bc2727"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+    </svg>
+
+    <div
+      id="loading"
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #105203;
+        z-index: 99999999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff;
+        font-family:Verdana, 'Trebuchet MS', Arial, monospace;
+        gap:50px
+      "
+    >
+      <svg viewBox="0 0 24 24" width="150px" style="overflow: visible;">
+        <circle cx="12" cy="12" r="15" fill="#13740050"></circle>
+        <use href="#logo" style="color:#137400;"></use>
+      </svg>
+      Ładowanie...
+    </div>
     <div class="mainContainer">
       <div id="mainmenu" class="hidden">
         <div class="menucontainer" id="menucontainer">
           <a href="#map" class="backgroundMapImage" id="backgroundMapImage"></a>
           <a href="#map" class="appTitle" id="appTitle" style="--scale: 0">
-            <span
-              ><span>Ciekawe Katowice</span>
-              <span>- zanurz się w historii</span></span
-            >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9 20L3 17V4L5 5M9 20L15 17M9 20V14M15 17L21 20V7L19 6M15 17V14M15 6.2C15 7.96731 13.5 9.4 12 11C10.5 9.4 9 7.96731 9 6.2C9 4.43269 10.3431 3 12 3C13.6569 3 15 4.43269 15 6.2Z"
-                stroke="currentcolor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M12 6H12.01M15 6.2C15 7.96731 13.5 9.4 12 11C10.5 9.4 9 7.96731 9 6.2C9 4.43269 10.3431 3 12 3C13.6569 3 15 4.43269 15 6.2Z"
-                stroke="#bc2727"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+            <span><span>Ciekawe Katowice</span> <span>- zanurz się w historii</span></span>
+            <svg><use href="#logo"></use></svg>
           </a>
           <div class="userinfo">
             <section id="locationBox">
-              <b><i>Uwaga: Aplikacja wymaga posiadania włączonej lokalizacji, aby
-              działać poprawnie!</b></i>
+              <b><i>Uwaga: Aplikacja wymaga posiadania włączonej lokalizacji, aby działać poprawnie!</i></b>
             </section>
             <section class="badges">
               <div id="badges"></div>
@@ -81,9 +93,7 @@
               <ul id="visited"></ul>
             </section>
             <section class="nonVisited visited">
-              <div class="sectionTitle">
-                Miejsca, o których możesz nie wiedzieć:
-              </div>
+              <div class="sectionTitle">Miejsca, o których możesz nie wiedzieć:</div>
               <ul id="nonVisited"></ul>
             </section>
             <section class="routes">
@@ -91,9 +101,7 @@
               <div id="routesObj"></div>
             </section>
             <section class="discreption">
-              <div class="sectionTitle">
-                Oznaczenia kolorów pinezek na mapie:
-              </div>
+              <div class="sectionTitle">Oznaczenia kolorów pinezek na mapie:</div>
               <ul>
                 <li color="gray">Pomniki</li>
                 <li color="violet">Kościoły i Katedry</li>
@@ -112,23 +120,15 @@
                 src="./assets/qr-code.png"
                 alt="Tu powinienen być kod QR. Spróbuj odświerzyć stronę."
               />
-              <div class="qr-code-link">
-                https://konradowypl.github.io/katowice
-              </div>
+              <div class="qr-code-link">https://konradowypl.github.io/katowice</div>
             </section>
             <section class="info">
               <div>
                 Ta strona używa map
-                <a href="https://www.openstreetmap.org" target="_blank"
-                  >openstreetmap.org</a
-                >
-                <a href="https://www.openstreetmap.org/about"
-                  >Dowiedz się więcej</a
-                >
+                <a href="https://www.openstreetmap.org" target="_blank">openstreetmap.org</a>
+                <a href="https://www.openstreetmap.org/about">Dowiedz się więcej</a>
               </div>
-              <div id="dev">
-                Zrobione na projekt na BIZ kompletnie za darmo.
-              </div>
+              <div id="dev">Zrobione na projekt na BIZ kompletnie za darmo.</div>
             </section>
           </div>
         </div>
