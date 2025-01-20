@@ -1,55 +1,36 @@
-export { geolocation_init };
+import { map, userPosMarker } from "./map.js";
+import { updateUserPos as _updateUserPos } from "./mainmenu.js";
 
-const geolocation_init = (map, _updateUserPos) => {
+userPosMarker.setOpacity(0);
+userPosMarker.options.interactive = false;
 
-    const updateUserPos = (position) => {
-        locationBox.style.display = "none";
-        UserPosition = position;
-        var newLatLng = new L.LatLng(UserPosition?.coords?.latitude, UserPosition?.coords?.longitude);
-        userPosMarker.setLatLng(newLatLng);
-        userPosMarker.setOpacity(1);
-        userPosMarker.options.interactive = true;
+const updateUserPos = (position) => {
+  locationBox.style.display = "none";
+  const UserPosition = position;
+  var newLatLng = new L.LatLng(UserPosition?.coords?.latitude, UserPosition?.coords?.longitude);
+  userPosMarker.setLatLng(newLatLng);
+  userPosMarker.setOpacity(1);
+  userPosMarker.options.interactive = true;
 
-        _updateUserPos()
-    }
+  _updateUserPos();
+};
 
-  var userPosIcon = new L.Icon({
-    iconUrl: "./assets/userPos.svg",
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41],
-  });
-
-  const userPosMarker = L.marker([50.2661678296663, 19.02556763415931], {
-    icon: userPosIcon,
-  })
-    .setZIndexOffset(9999999)
-    .addTo(map);
+const localisationError = () => {
+  locationBox.style.display = "flex";
   userPosMarker.setOpacity(0);
   userPosMarker.options.interactive = false;
-
-  const localisationError = () => {
-    locationBox.style.display = "flex";
-    userPosMarker.setOpacity(0);
-    userPosMarker.options.interactive = false;
-  };
-
-  navigator.permissions.query({ name: "geolocation" }).then((permissionStatus) => {
-    permissionStatus.onchange = () => {
-      navigator.geolocation.clearWatch(localisationUpdateInterval);
-      localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError);
-    };
-  });
-
-  var localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError);
-
-  navigator.geolocation.getCurrentPosition((position) => {
-    map.setView([position.coords.latitude, position.coords.longitude]);
-    updateUserPos(position);
-  }, localisationError);
-
-
-
-  return userPosMarker
 };
+
+navigator.permissions.query({ name: "geolocation" }).then((permissionStatus) => {
+  permissionStatus.onchange = () => {
+    navigator.geolocation.clearWatch(localisationUpdateInterval);
+    localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError);
+  };
+});
+
+var localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError);
+
+navigator.geolocation.getCurrentPosition((position) => {
+  map.setView([position.coords.latitude, position.coords.longitude]);
+  updateUserPos(position);
+}, localisationError);

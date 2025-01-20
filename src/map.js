@@ -1,4 +1,7 @@
-export { map, markerCircle, map_init };
+export { map, markerCircle, userPosMarker };
+import { places } from "./loader.js";
+import { collapse } from "./marker.js";
+import { currentPlace } from "./placeinfo.js";
 
 const map = L.map("map", {
   tap: false,
@@ -30,29 +33,41 @@ try {
 
 // add place icons to the map
 
-const map_init = (places, collapse, currentPlace) => {
-  places.forEach((place) => {
-    const marker = L.marker([place.lat, place.lon], {
-      icon: new L.divIcon({
-        className: "place-marker",
-        html: `<img src="./assets/${place.icon}.svg"><span>${place.name}</span>`,
-        iconSize: [24, 24],
-        iconAnchor: [12, 12],
-        popupAnchor: [0, 0],
-      }),
-    }).addTo(map);
-    place.marker = marker;
-    marker.on("click", function () {
-      window.location.hash = `#map:${place.id}`;
-    });
+places.forEach((place) => {
+  const marker = L.marker([place.lat, place.lon], {
+    icon: new L.divIcon({
+      className: "place-marker",
+      html: `<img src="./assets/${place.icon}.svg"><span>${place.name}</span>`,
+      iconSize: [24, 24],
+      iconAnchor: [12, 12],
+      popupAnchor: [0, 0],
+    }),
+  }).addTo(map);
+  place.marker = marker;
+  marker.on("click", function () {
+    window.location.hash = `#map:${place.id}`;
   });
+});
 
-  map.on("zoomend", function (e) {
-    collapse(places, map, currentPlace);
-  });
+map.on("zoomend", function (e) {
   collapse(places, map, currentPlace);
+});
+collapse(places, map, currentPlace);
 
-  map.on("moveend", function (e) {
-    localStorage.setItem("map", JSON.stringify(map.getCenter()));
-  });
-};
+map.on("moveend", function (e) {
+  localStorage.setItem("map", JSON.stringify(map.getCenter()));
+});
+
+const userPosIcon = new L.Icon({
+  iconUrl: "./assets/userPos.svg",
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+});
+
+const userPosMarker = L.marker([50.2661678296663, 19.02556763415931], {
+  icon: userPosIcon,
+})
+  .setZIndexOffset(9999999)
+  .addTo(map);

@@ -1,7 +1,7 @@
-export { u, urlMenager_get };
+export { u };
+import { places } from "./loader.js";
+import { displayPlace } from "./placeinfo.js";
 
-var places = [];
-var displayPlace = undefined;
 
 const u = (url) => {
   const map = new Map([
@@ -54,8 +54,3 @@ const u = (url) => {
 window.addEventListener("popstate", function () {
   u(window.location.hash);
 });
-
-const urlMenager_get = (_places, _displayPlace) => {
-  places = _places;
-  displayPlace = _displayPlace;
-};

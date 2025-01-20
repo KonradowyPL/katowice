@@ -1,20 +1,11 @@
-import { u, urlMenager_get } from "./urlMenager.js";
-import { collapse } from "./marker.js";
-import { swiping } from "./swipe.js";
-import { geolocation_init } from "./geolocation.js";
-import { map, markerCircle, map_init } from "./map.js";
-import { displayPlace, init_placeinfo, currentPlace, currentPlaceDat } from "./placeinfo.js";
-import { updateUserPos, init_mainmenu } from "./mainmenu.js";
-
-const places = await fetch("./PLACES/data.json").then((res) => res.json());
-
-// init all submodules
-// TODO: remove this lol
-init_placeinfo(places, markerCircle);
-urlMenager_get(places, displayPlace);
-const userPosMarker = geolocation_init(map, updateUserPos);
-map_init(places, collapse, currentPlace);
-init_mainmenu(places, userPosMarker);
+import { currentPlace, currentPlaceDat } from "./placeinfo.js";
+import { userPosMarker } from "./map.js";
+import { places } from "./loader.js";
+import { u } from "./urlMenager.js";
+import { map } from "./map.js";
+import "./mainmenu.js";
+import "./marker.js";
+import "./swipe.js";
 
 // load current place
 u(window.location.hash);

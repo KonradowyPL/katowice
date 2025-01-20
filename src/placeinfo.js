@@ -1,14 +1,12 @@
-export { displayPlace, init_placeinfo, currentPlace, currentPlaceDat };
+export { displayPlace, currentPlace, currentPlaceDat };
+import { places } from "./loader.js";
+import { markerCircle } from "./map.js";
 
-var places = null;
+
 var currentPlace = "";
 var currentPlaceDat = "";
-var markerCircle = null;
 
-const init_placeinfo = (_places, _markerCircle) => {
-  places = _places;
-  markerCircle = _markerCircle;
-};
+
 
 const placeData = document.getElementById("placeData");
 

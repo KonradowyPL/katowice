@@ -1,18 +1,9 @@
-export { updateUserPos, init_mainmenu };
+export { updateUserPos };
+
 import { loadRoutes } from "./routes.js";
+import { places } from "./loader.js";
+import { userPosMarker } from "./map.js";
 
-
-var places = null;
-var userPosMarker = null
-
-const init_mainmenu = (_places, _userPosMarker) => {
-  places = _places;
-  userPosMarker = _userPosMarker
-  loadLocked();
-  loadRoutes(places, userPosMarker.getLatLng());
-  updateVisited();
-  updateNonVisited();
-};
 
 const updateUserPos = () => {
   checkLocked();
@@ -91,16 +82,22 @@ function loadLocked() {
   });
 }
 
-
 window.shareApp = async () => {
-    const shareData = {
-      title: "Ciekawe Katowice - Zanurz się w historii",
-      text: `Odwiedź ciekawe miejsca w katowicach!`,
-      url: window.location.href.replace(/[\?#].*$/, ""),
-    };
-    try {
-      await navigator.share(shareData);
-    } catch (err) {
-      console.error(`Error: ${err}`);
-    }
+  const shareData = {
+    title: "Ciekawe Katowice - Zanurz się w historii",
+    text: `Odwiedź ciekawe miejsca w katowicach!`,
+    url: window.location.href.replace(/[\?#].*$/, ""),
   };
+  try {
+    await navigator.share(shareData);
+  } catch (err) {
+    console.error(`Error: ${err}`);
+  }
+};
+
+{
+  loadLocked();
+  updateVisited();
+  updateNonVisited();
+  loadRoutes(places, userPosMarker.getLatLng());
+}
