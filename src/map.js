@@ -30,7 +30,7 @@ try {
 
 // add place icons to the map
 
-const map_init = (places) => {
+const map_init = (places, collapse, currentPlace) => {
   places.forEach((place) => {
     const marker = L.marker([place.lat, place.lon], {
       icon: new L.divIcon({
@@ -45,5 +45,14 @@ const map_init = (places) => {
     marker.on("click", function () {
       window.location.hash = `#map:${place.id}`;
     });
+  });
+
+  map.on("zoomend", function (e) {
+    collapse(places, map, currentPlace);
+  });
+  collapse(places, map, currentPlace);
+
+  map.on("moveend", function (e) {
+    localStorage.setItem("map", JSON.stringify(map.getCenter()));
   });
 };
