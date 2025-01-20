@@ -27,12 +27,24 @@
 
     <!-- JS -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" defer></script>
-    <script src="./src/script.js" defer type="module" onerror="alert(1)"></script>
+    <script
+      src="./src/script.js"
+      defer
+      type="module"
+      onerror="(document.getElementById('loadingStatus').innerText = 'Nie udało się załadować aplikacji. Sprawdź swoje połączenie z internetem.')"
+    ></script>
 
+    <link rel="preload" as="script" href="./src/main.js" crossorigin="anonymous" />
+    <link rel="preload" as="script" href="./src/placeinfo.js" crossorigin="anonymous" />
+    <link rel="preload" as="script" href="./src/swipe.js" crossorigin="anonymous" />
+    <link rel="preload" as="script" href="./src/mainmenu.js" crossorigin="anonymous" />
     <link rel="preload" as="script" href="./src/script.js" crossorigin="anonymous" />
-      <link rel="preload" as="script" href="./src/routes.js" crossorigin="anonymous" />
+    <link rel="preload" as="script" href="./src/map.js" crossorigin="anonymous" />
+    <link rel="preload" as="script" href="./src/routes.js" crossorigin="anonymous" />
     <link rel="preload" as="script" href="./src/marker.js" crossorigin="anonymous" />
+    <link rel="preload" as="script" href="./src/geolocation.js" crossorigin="anonymous" />
     <link rel="preload" as="script" href="./src/urlMenager.js" crossorigin="anonymous" />
+    <link rel="preload" as="script" href="./src/loader.js" crossorigin="anonymous" />
 
     <!-- Fonts -->
     <link
@@ -116,7 +128,7 @@
         <circle cx="12" cy="12" r="15" fill="#13740050"></circle>
         <use href="#logo" style="color: #137400"></use>
       </svg>
-      Ładowanie...
+      <div id="loadingStatus">Ładowanie...</div>
     </div>
     <div class="mainContainer">
       <div id="mainmenu" class="hidden">
