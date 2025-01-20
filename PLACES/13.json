@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Pomnik_Studenta_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Katowice_-_Pomnik_studenta_01.JPG/320px-Katowice_-_Pomnik_studenta_01.JPG"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Katowice_-_Pomnik_studenta_01.JPG/320px-Katowice_-_Pomnik_studenta_01.JPG",
+      "width": 320,
+      "height": 480
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Pomnik Studenta w Katowicach</b></i> − pomnik zlokalizowany przed rektoratem Uniwersytetu Śląskiego w Katowicach, przy ul. Bankowej 12.<br> Z inicjatywą budowy pomnika wystąpiły władze Uniwersytetu Śląskiego i władze miasta Katowice. Projektantami monumentu są pracownicy Katedry Rzeźby Instytutu Sztuki Uniwersytetu Śląskiego w Cieszynie − prof. Jerzy Fober oraz prof. Andrzej Szarek. Pomnik odsłonięto 24 czerwca 2008[2]. Docelowym usytuowaniem pomnika będzie fronton budowanej Biblioteki Akademickiej.<br> Rzeźba przedstawia uśmiechniętego młodzieńca z czworokątną czapką i nagim torsem, nawiązującego to starożytnego greckiego motywu kurosa. Pomnik ma wysokość około dwóch metrów. Wykonano go z brązu."

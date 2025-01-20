@@ -193,10 +193,12 @@ async function displayPlace(key, move) {
 
   placeImages.innerHTML = "";
   placeImages.append(
-    ...place.img.map((src) => {
+    ...place.img.map((image) => {
       const img = document.createElement("img");
-      img.setAttribute("src", src);
-      img.onclick = () => displayImage(src);
+      img.setAttribute("src", image.src);
+      img.setAttribute("width", image.width);
+      img.setAttribute("height", image.height);
+      img.onclick = () => displayImage(image.src);
       return img;
     })
   );

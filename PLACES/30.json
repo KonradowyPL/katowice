@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Plac_Wolności_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/2022-08_Katowice_-_%C5%9Ar%C3%B3dmie%C5%9Bcie_II_006.jpg/480px-2022-08_Katowice_-_%C5%9Ar%C3%B3dmie%C5%9Bcie_II_006.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/2022-08_Katowice_-_%C5%9Ar%C3%B3dmie%C5%9Bcie_II_006.jpg/480px-2022-08_Katowice_-_%C5%9Ar%C3%B3dmie%C5%9Bcie_II_006.jpg",
+      "width": 480,
+      "height": 321
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Plac Wolności w Katowicach</b></i> (do 1922 i w latach 1939–1945) – plac miejski usytuowany w katowickiej dzielnicy Śródmieście[6]. Rozchodzą się z niego promieniście ulice: 3 Maja biegnąca w kierunku Rynku, Sokolska prowadząca w stronę Koszutki i Bogucic, Gliwicka biegnąca w stronę Załęża i dalej – Chorzowa, oraz krótkie ulice Jana Matejki i Sądowa. Plac pełni funkcje rekreacyjne (zieleń miejska, ławki, alejki spacerowe), stanowi punkt wyjściowy manifestacji, jest także ważnym węzłem komunikacyjnym, zarówno dla autobusów, jak i tramwajów."

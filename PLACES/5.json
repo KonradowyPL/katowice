@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Wieża_spadochronowa_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Katowice_-_Wie%C5%BCa_Spadochronowa_02.JPG/1200px-Katowice_-_Wie%C5%BCa_Spadochronowa_02.JPG"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Katowice_-_Wie%C5%BCa_Spadochronowa_02.JPG/1200px-Katowice_-_Wie%C5%BCa_Spadochronowa_02.JPG",
+      "width": 1200,
+      "height": 1600
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Wieża spadochronowa w Katowicach</b></i> – 35-metrowa stalowa wieża spadochronowa w Katowicach w parku im. Tadeusza Kościuszki. Do lat 50. XX wieku była wykorzystywana do początkowego szkolenia lotniczego i szkolenia skoczków spadochronowych. Jest to również owiany legendą punkt obrony Katowic, skąd – według rozpowszechnionego przekazu – w pierwszych dniach II wojny światowej harcerze Związku Harcerstwa Polskiego mieli stawić opór wkraczającym do miasta oddziałom Wehrmachtu. Skala oporu i przebieg wydarzeń budzi kontrowersje, a tożsamość obrońców wieży spadochronowej nie została ustalona. Obecnie obiekt jest pomnikiem poświęconym wszystkim obrońcom Katowic, poległym i zamordowanym przez Niemców w 1939. Jest to także jedyna zachowana wieża spadochronowa w Polsce. Obiekt ten stał się pomnikiem śmierci śląskich harcerzy."

@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Pomnik_Harcerzy_Września_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Katowice_Pomnik_Harcerzy_Wrzesnia_2023.jpg/1920px-Katowice_Pomnik_Harcerzy_Wrzesnia_2023.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Katowice_Pomnik_Harcerzy_Wrzesnia_2023.jpg/1920px-Katowice_Pomnik_Harcerzy_Wrzesnia_2023.jpg",
+      "width": 1920,
+      "height": 1280
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Pomnik Harcerzy Września</b></i> − odsłonięty 4 września 1983 pomnik upamiętniający męczeńską śmierć śląskich harcerzy, którzy we wrześniu 1939 stawili opór wkraczającym do Katowic niemieckim żołnierzom i bojówkarzom. Pomnik upamiętnia także harcerzy, którzy polegli lub zostali zamordowani w późniejszym okresie okupacji niemieckiej."

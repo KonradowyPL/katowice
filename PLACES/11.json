@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Obelisk_Orłów_Śląskich_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Katowice_Obelisk_Orlow_Slaskich_2023.jpg/480px-Katowice_Obelisk_Orlow_Slaskich_2023.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Katowice_Obelisk_Orlow_Slaskich_2023.jpg/480px-Katowice_Obelisk_Orlow_Slaskich_2023.jpg",
+      "width": 480,
+      "height": 320
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Obelisk Orłów Śląskich</b></i> – znajdujący się w śródmieściu Katowic pomnik upamiętniający miejsce, w którym wzniesiono przed II wojną światową gmach Muzeum Śląskiego. <br> Obelisk z rzeźbą przedstawiającą dwa zrywające się do lotu orły stoi w narożniku katowickiego placu Bolesława Chrobrego (róg ulic Jagiellońskiej i ul. Józefa Lompy). Jest symbolem powrotu Śląska do Macierzy. Przed II wojną światową w miejscu tym wzniesiono nowoczesny gmach Muzeum Śląskiego. Przygotowania do otwarcia muzeum przerwało nadejście okupacji niemieckiej. Budynek został wówczas rozebrany przez niemieckie władze okupacyjne. O dawnym gmachu muzeum informuje tablica pamiątkowa przy obelisku."

@@ -1,7 +1,13 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Ratusz_gminy_Dąbrówka_Mała",
   "address": "Katowice, Generała Henryka le Ronda 16",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Katowice%2C_ratusz_gminy_D%C4%85br%C3%B3wka_Ma%C5%82a%2C_ob._przychodnia%2C_01.JPG/1024px-Katowice%2C_ratusz_gminy_D%C4%85br%C3%B3wka_Ma%C5%82a%2C_ob._przychodnia%2C_01.JPG"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Katowice%2C_ratusz_gminy_D%C4%85br%C3%B3wka_Ma%C5%82a%2C_ob._przychodnia%2C_01.JPG/1024px-Katowice%2C_ratusz_gminy_D%C4%85br%C3%B3wka_Ma%C5%82a%2C_ob._przychodnia%2C_01.JPG",
+      "width": 1024,
+      "height": 768
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Budynek dawnego Urzędu Gminy Dąbrówka Mała (popularnie nazywany ratuszem)</b></i> − budynek zlokalizowany przy ul. gen. Henryka Le Ronda 16 w dzielnicy Katowic − Dąbrówce Małej."

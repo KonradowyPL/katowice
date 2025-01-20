@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Pałacyk_Prittwitz",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Katowice_-_Szopienice-Burowiec_025.jpg/1024px-Katowice_-_Szopienice-Burowiec_025.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Katowice_-_Szopienice-Burowiec_025.jpg/1024px-Katowice_-_Szopienice-Burowiec_025.jpg",
+      "width": 1024,
+      "height": 685
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Pałacyk „Prittwitz”</b></i> – budynek znajdujący się przy ulicy Krakowskiej 81-83 w Katowicach, na terenie dzielnicy Szopienice-Burowiec."

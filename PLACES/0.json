@@ -1,7 +1,13 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Giszowiec",
   "website": "https://www.giszowiec.info/",
-  "img": ["https://www.giszowiec.info/grafa/nowe/wiosna/d/IMG_4193.jpg"],
+  "img": [
+    {
+      "src": "https://www.giszowiec.info/grafa/nowe/wiosna/d/IMG_4193.jpg",
+      "width": 1920,
+      "height": 1280
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Giszowiec</i></b> (1979–1990 Osiedle im. Stanisława Staszica; niem. Gieschewald) – zabytkowe osiedle patronackie, część oraz dzielnica Katowic, położona we wschodniej części miasta, nad Boliną.<br> Giszowiec składa się z budynków wielorodzinnych z wielkiej płyty oraz zabytkowych domów, przeważnie jedno- i dwurodzinnych, stanowiących niegdyś zwarte osiedle górnicze, które do dziś jest unikatowe w skali europejskiej i znajduje się na Szlaku Zabytków Techniki Województwa Śląskiego. Zostało ono wybudowane dla górników pracujących w kopalni „Giesche” (późniejszej kopalni „Wieczorek”) przez koncern Georg von Giesches Erben na zlecenie dyrektora spółki Antona Uthemanna w latach 1907–1910. Projektantami osiedla byli Georg i Emil Zillmannowie. Osiedle górnicze w dwóch trzecich uległo wyburzeniu w latach 70. XX wieku na skutek rozwoju budownictwa mieszkaniowego wielokondygnacyjnego z wielkiej płyty dla pracowników powstałej w 1964 roku kopalni „Staszic”.<br> Giszowiec ma charakter głównie mieszkaniowy i przemysłowy. Otaczają go dwa szlaki komunikacyjne: droga krajowa nr 86 oraz autostrada A4, a także rozpoczyna tu swój bieg droga krajowa nr 81. Dzielnica ma powierzchnię 12,03 km² (7,30% powierzchni miasta) i liczyła w 2007 roku 18 475 mieszkańców (5,9% ludności Katowic)."

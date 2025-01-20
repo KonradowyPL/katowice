@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Pomnik_Wojciecha_Korfantego_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Katowice-%C5%9Ar%C3%B3dmie%C5%9Bcie_S_-_pl._Sejmu_%C5%9Al%C4%85skiego_%288%29.jpg/1920px-Katowice-%C5%9Ar%C3%B3dmie%C5%9Bcie_S_-_pl._Sejmu_%C5%9Al%C4%85skiego_%288%29.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Katowice-%C5%9Ar%C3%B3dmie%C5%9Bcie_S_-_pl._Sejmu_%C5%9Al%C4%85skiego_%288%29.jpg/1920px-Katowice-%C5%9Ar%C3%B3dmie%C5%9Bcie_S_-_pl._Sejmu_%C5%9Al%C4%85skiego_%288%29.jpg",
+      "width": 1920,
+      "height": 1285
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Pomnik Wojciecha Korfantego w Katowicach</b></i> – pomnik upamiętniający Wojciecha Korfantego znajdujący się na placu Sejmu Śląskiego, pomiędzy Śląskim Urzędem Wojewódzkim i Wydziałem Filologicznym Uniwersytetu Śląskiego w Katowicach, odsłonięty 19 czerwca 1999 roku."

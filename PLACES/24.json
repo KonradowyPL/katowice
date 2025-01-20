@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Muzeum_Najmniejszych_Książek_Świata_Zygmunta_Szkocnego",
-  "img": ["https://www.waszaturystyka.pl/wp-content/uploads/2022/06/kniga1.jpeg"],
+  "img": [
+    {
+      "src": "https://www.waszaturystyka.pl/wp-content/uploads/2022/06/kniga1.jpeg",
+      "width": 1200,
+      "height": 791
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Muzeum Najmniejszych Książek Świata Zygmunta Szkocnego</b></i> przy ul. Traktorzystów 5 w katowickiej dzielnicy Piotrowice to wystawa stała poświęcona twórczości Zygmunta Szkocnego. Zgromadzone tam zbiory przedstawiają miniaturowe wersje wybitnych dzieł Literatury Polskiej. Wystawa funkcjonuje od 1970 roku w prywatnym domu, w którym żył i tworzył autor."

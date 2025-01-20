@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Plac_Augusta_Hlonda_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Katowice_plac_Hlonda_2024.jpg/1024px-Katowice_plac_Hlonda_2024.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Katowice_plac_Hlonda_2024.jpg/1024px-Katowice_plac_Hlonda_2024.jpg",
+      "width": 1024,
+      "height": 683
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Plac kardynała Augusta Hlonda w Katowicach</b></i> – plac znajdujący się w katowickiej dzielnicy Śródmieście, w centrum miasta. Usytuowany jest pomiędzy ulicami: Mikołowską, Henryka Jordana, Głowackiego i J. Poniatowskiego."

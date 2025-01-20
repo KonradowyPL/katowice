@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Pomnik_„Rodzina”_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Monument_of_Family_in_Katowice.jpg/360px-Monument_of_Family_in_Katowice.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Monument_of_Family_in_Katowice.jpg/360px-Monument_of_Family_in_Katowice.jpg",
+      "width": 360,
+      "height": 480
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Rzeźba Rodzina, Pomnik Rodzina w Katowicach (także jako Pomnik Rodziny)</b></i> – pomnik, właściwie rzeźba w katowickiej dzielnicy Koszutka, zlokalizowany w zachodniej części placu Grunwaldzkiego, przy skrzyżowaniu ulicy Sokolskiej i ulicy Gustawa Morcinka."

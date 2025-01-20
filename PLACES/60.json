@@ -2,7 +2,13 @@
   "wikipedia": "https://pl.wikipedia.org/wiki/Oblaci",
   "website": "https://oblaci.pl/",
   "address": "Katowice, Misjonarzy Oblatów MN 12",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/9/9a/Katowice_Koszutka_church_%26_monastery_2022.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Katowice_Koszutka_church_%26_monastery_2022.jpg",
+      "width": 1930,
+      "height": 1930
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Misjonarze oblaci MN, Zgromadzenie Misjonarzy Oblatów Maryi Niepokalanej (OMI)</b></i> – zgromadzenie zakonne założone 25 stycznia 1816 roku przez późniejszego biskupa Marsylii św. Eugeniusza de Mazenoda, a zatwierdzone w 17 lutego 1826 roku przez papieża Leona XII. Od 2022 superiorem generalnym zgromadzenia jest o. Luis Ignacio Rois Alonso OMI, a wikariuszem generalnym o. Antoni Bochm OMI."

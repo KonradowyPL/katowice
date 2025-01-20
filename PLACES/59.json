@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Kaplica_Najświętszego_Serca_Pana_Jezusa_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/9/97/Katowice_-_Bogucice_034.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/9/97/Katowice_-_Bogucice_034.jpg",
+      "width": 3840,
+      "height": 2570
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Kaplica Najświętszego Serca Pana Jezusa w Katowicach</b></i> – zabytkowa, rzymskokatolicka kaplica cmentarna, znajdująca się na cmentarzu parafialnym parafii św. Szczepana w Katowicach, na terenie dzielnicy Bogucice. Powstała w 1910 roku, a zaprojektował ją Mansuetus Fromm OFM w stylu neoromańskim."

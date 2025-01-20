@@ -1,7 +1,13 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Walcownia_–_Muzeum_Hutnictwa_Cynku",
   "website": "http://www.walcownia.org/",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Katowice_-_Szopienice%2C_walcownia.jpg/1024px-Katowice_-_Szopienice%2C_walcownia.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Katowice_-_Szopienice%2C_walcownia.jpg/1024px-Katowice_-_Szopienice%2C_walcownia.jpg",
+      "width": 1024,
+      "height": 768
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Walcownia – Muzeum Hutnictwa Cynku</b></i> – zabytkowa  walcownia cynku z lat 1903–1904, 1916–1917 w Katowicach-Szopienicach, przy ul. 11 Listopada[1]. od 1 stycznia 2017 roku znajduje się na Szlaku Zabytków Techniki Województwa Śląskiego[2]."

@@ -2,7 +2,13 @@
   "wikipedia": "https://pl.wikipedia.org/wiki/Teatr_Gry_i_Ludzie",
   "website": "teatr@gryiludzie.pl",
   "address": "Katowice, Aleja Niepodległości 2",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/2024-09_Katowice-Za%C5%82%C4%99%C5%BCe_Scena_Gliwicka_120_%281%29.jpg/1024px-2024-09_Katowice-Za%C5%82%C4%99%C5%BCe_Scena_Gliwicka_120_%281%29.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/2024-09_Katowice-Za%C5%82%C4%99%C5%BCe_Scena_Gliwicka_120_%281%29.jpg/1024px-2024-09_Katowice-Za%C5%82%C4%99%C5%BCe_Scena_Gliwicka_120_%281%29.jpg",
+      "width": 1024,
+      "height": 683
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Teatr Gry i Ludzie</b></i> – teatr w Katowicach, z siedzibą przy ulicy Gliwickiej 120 na terenie dzielnicy Załęże.<br> Założony został w 1997 roku i ma charakter podróżujący, występując na scenach krajowych i zagranicznych. Zespół tworzą ludzie o różnych korzeniach i doświadczeniach artystycznych. Teatr podejmuje współpracę ze środowiskami związanymi z teatrami instytucjonalnymi oraz innymi teatrami niezależnymi. Prowadzony jest przez Stowarzyszenie Ogrody Teatru."

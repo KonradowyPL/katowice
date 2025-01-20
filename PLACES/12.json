@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Pomnik_Papieża_Jana_Pawła_II_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/At_Katowice_2024_148.jpg/320px-At_Katowice_2024_148.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/At_Katowice_2024_148.jpg/320px-At_Katowice_2024_148.jpg",
+      "width": 320,
+      "height": 480
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Pomnik Papieża Jana Pawła II</b></i> – pomnik w Katowicach znajdujący się w północno-zachodnim narożniku placu katedralnego w Katowicach. Po przeciwnej stronie ulicy Powstańców znajduje się plac Jana Pawła II."

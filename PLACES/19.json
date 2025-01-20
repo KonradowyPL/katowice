@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Izba_Śląska",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Katowice-Giszowiec_088.jpg/480px-Katowice-Giszowiec_088.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Katowice-Giszowiec_088.jpg/480px-Katowice-Giszowiec_088.jpg",
+      "width": 480,
+      "height": 322
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Izba Śląska (zwana również Gawlikówką)</b></i> − muzeum w Katowicach w dzielnicy Giszowiec na placu Pod Lipami 3-3a, prezentujące eksponaty związane z kulturą i sztuką Górnego Śląska oraz obrazy i pamiątki po malarzu Ewaldzie Gawliku. Siedziba ta jest filią Miejskiego Dom Kultury „Szopienice-Giszowiec” w Katowicach.<br> Budynek został zaprojektowany przez Jerzego i Emila Zillmannów i wybudowany na początku XX wieku. Składa się z dwóch obiektów połączonych razem ze sobą. Początkowo mieściła się w nim stajnia, pomieszczenia dla woźniców i wozownia. W 1986 roku kopalnia Staszic przekazała budynek emerytowanym pracownikom, którzy urządzili w nim klub. Został on wyremontowany i odnowiony. W trakcie remontu starano się nadać wnętrzom tradycyjny śląski charakter."

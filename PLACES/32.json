@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Plac_Grunwaldzki_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Katowice_-_Koszutka_-_Fontanna.JPG/1024px-Katowice_-_Koszutka_-_Fontanna.JPG"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Katowice_-_Koszutka_-_Fontanna.JPG/1024px-Katowice_-_Koszutka_-_Fontanna.JPG",
+      "width": 1024,
+      "height": 715
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Plac Grunwaldzki w Katowicach</b></i> – plac znajdujący się w katowickiej dzielnicy Koszutka, w północnej części miasta. Usytuowany pomiędzy ulicą Sokolską, ulicą Gustawa Morcinka i ulicą Władysława Broniewskiego.<br> Na placu znajdują się zieleńce, alejki spacerowe z ławkami, rzeźba Jerzego Kwiatkowskiego „Rodzina” oraz fontanna Olimpijska, wykonana w kształcie koła o średnicy 5,5 m. Strumień wody dochodzi do wysokości 1,5 m; obiekt ma pięć dysz."

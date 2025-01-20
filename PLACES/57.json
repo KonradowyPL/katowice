@@ -2,7 +2,13 @@
   "wikipedia": "https://pl.wikipedia.org/wiki/Spodek_(hala_widowiskowa)",
   "website": "+48 32 253 87 33",
   "address": "Katowice, Aleja Wojciecha Korfantego 35",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Katowice_Spodek-_Nowa_elewacja.jpg/240px-Katowice_Spodek-_Nowa_elewacja.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Katowice_Spodek-_Nowa_elewacja.jpg/240px-Katowice_Spodek-_Nowa_elewacja.jpg",
+      "width": 240,
+      "height": 147
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Spodek</b></i> – hala widowiskowo-sportowa, zlokalizowana w Katowicach przy Alei Wojciecha Korfantego 35, stanowiąca własność miasta Katowic, a zarządzana przez PTWP Event Center sp. z o.o. Została wybudowana pod nazwą Wojewódzka Hala Widowiskowo-Sportowa w Katowicach, pod którą jest znana w literaturze architektonicznej i pod którą funkcjonowała do 1997."

@@ -1,7 +1,13 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Muzeum_Historii_Komputerów_i_Informatyki",
   "website": "https://www.muzeumkomputerow.edu.pl/",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/KomputeryPRS3v2.jpg/480px-KomputeryPRS3v2.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/KomputeryPRS3v2.jpg/480px-KomputeryPRS3v2.jpg",
+      "width": 480,
+      "height": 360
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Muzeum Historii Komputerów i Informatyki</b></i> – muzeum prywatne poświęcone historii komputerów i informatyki utworzone w Katowicach 12 grudnia 2012 roku[3].Muzeum na początku prezentowało swoje zbiory w budynku Wyższej Szkoły Mechatroniki. W 2014 przeniosło się do siedziby na pl. Oddziałów Młodzieży Powstańczej (biuro muzeum). W 2016 otwarto ekspozycję w budynku instytucji kultury „Katowice – Miasto Ogrodów”.<br> 25 października 2016 roku otwarto stałą ekspozycję w budynku Katowice Miasto Ogrodów Instytucja Kultury im. Krystyny Bochenek. Ekspozycja przedstawia przekrojowy rys historyczny rozwoju dziedziny IT, prezentując także dorobek rodzimych firm produkujących sprzęt IT."

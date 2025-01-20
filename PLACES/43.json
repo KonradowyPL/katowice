@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Kościół_św._Kazimierza_Królewicza_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Katowice_-_Ko%C5%9Bci%C3%B3%C5%82_garnizonowy.JPG/800px-Katowice_-_Ko%C5%9Bci%C3%B3%C5%82_garnizonowy.JPG"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Katowice_-_Ko%C5%9Bci%C3%B3%C5%82_garnizonowy.JPG/800px-Katowice_-_Ko%C5%9Bci%C3%B3%C5%82_garnizonowy.JPG",
+      "width": 800,
+      "height": 1301
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Kościół garnizonowy św. Kazimierza Królewicza w Katowicach</b></i> – zabytkowy kościół garnizonowy Wojska Polskiego w Katowicach, położony w narożniku ulic M. Kopernika i M. Skłodowskiej-Curie, na terenie dzielnicy Śródmieście.<br> Powstał on w stylu funkcjonalizmu według projektu Leona Dietza d’Army we współpracy z Janem Zarzyckim. Został on konsekrowany w 1933 roku. Kościół stanowi świątynię parafii wojskowej św. Kazimierza Królewicza."

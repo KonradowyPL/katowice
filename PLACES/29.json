@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Lotnisko_Katowice-Muchowiec",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Baza_HEMS_Katowice_-_sierpie%C5%84_2022.jpg/486px-Baza_HEMS_Katowice_-_sierpie%C5%84_2022.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Baza_HEMS_Katowice_-_sierpie%C5%84_2022.jpg/486px-Baza_HEMS_Katowice_-_sierpie%C5%84_2022.jpg",
+      "width": 486,
+      "height": 273
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Lotnisko Katowice-Muchowiec </b></i> – cywilne lotnisko sportowe w Katowicach z betonową drogą startową, częściowo zniszczoną przez szkody górnicze i dwiema drogami trawiastymi. Ponieważ port lotniczy Katowice-Pyrzowice jest położony w dużym oddaleniu od centrum miasta, w 2005 władzom Katowic zaproponowano przystosowanie lotniska na Muchowcu do przejęcia od portu w Pyrzowicach mniejszych lotów rejsowych i części intensywnego ruchu małych samolotów lotnictwa ogólnego"

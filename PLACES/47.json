@@ -1,7 +1,13 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Willa_dyrektora_kopalni_„Giesche”",
   "address": "Katowice, Pszczyńska 10",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Katowice-Giszowiec_037.jpg/1024px-Katowice-Giszowiec_037.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Katowice-Giszowiec_037.jpg/1024px-Katowice-Giszowiec_037.jpg",
+      "width": 1024,
+      "height": 687
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Willa dyrektora kopalni „Giesche” (nazywana willą Brachta lub błędnie willą Uthemanna)</b></i> – willa znajdująca się w katowickiej dzielnicy Giszowiec, przy ulicy Pszczyńskiej 10.<br> Budynek powstał w 1910 roku w stylu łączącym neobarok, klasycyzm i secesję, a przeznaczony był dla dyrektora kopalni „Giesche” (późniejszy „Wieczorek”). W czasie II wojny światowej zamieszkał w willi Fritz Bracht – gauleiter i nadprezydent prowincji Górny Śląsk, natomiast po wojnie pełnił funkcję przedszkola, domu kultury, harcówki i banku."

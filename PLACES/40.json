@@ -1,7 +1,13 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Pałac_Młodzieży_w_Katowicach",
   "address": "Katowice, Mikołowska 26",
-  "img": ["https://www.eventim.pl/obj/media/PL-eventim/teaser/venue/ticketbanner/2023/palac-mlodziezy-w-katowicach-tb.png"],
+  "img": [
+    {
+      "src": "https://www.eventim.pl/obj/media/PL-eventim/teaser/venue/ticketbanner/2023/palac-mlodziezy-w-katowicach-tb.png",
+      "width": 1125,
+      "height": 450
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Pałac Młodzieży im. prof. Aleksandra Kamińskiego w Katowicach</b></i> – placówka wychowania pozaszkolnego miasta Katowice. Nadzór pedagogiczny nad Pałacem Młodzieży sprawuje Śląski Kurator Oświaty w Katowicach."

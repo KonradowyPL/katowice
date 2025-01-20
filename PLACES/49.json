@@ -3,7 +3,13 @@
   "website": "http://www.swjadwiga.wiara.org.pl",
   "phone": "szopienice@katowice.opoka.org.pl",
   "address": "Katowice, Plac Powstańców Śląskich 3",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Kosciol_Sw_Jadwigi-Szopienice_2.jpg/800px-Kosciol_Sw_Jadwigi-Szopienice_2.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Kosciol_Sw_Jadwigi-Szopienice_2.jpg/800px-Kosciol_Sw_Jadwigi-Szopienice_2.jpg",
+      "width": 800,
+      "height": 1343
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Kościół Świętej Jadwigi Śląskiej w Katowicach-Szopienicach</b></i> – zabytkowy kościół w Katowicach, mieszczący się w dzielnicy Szopienice-Burowiec, przy placu Powstańców Śląskich 3. Budynek świątyni powstał w latach 1885–1887 w stylu neogotyckim, natomiast jego projektantem był Carl Gustav Grundmann (projekt przypisywany jest też Paulowi Jackischowi[3]), a sąsiednią kaplicę Ogrójca, powstałą w 1903 roku, zaprojektował Ludwik Schneider."

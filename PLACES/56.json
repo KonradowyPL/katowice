@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Wieża_wodna_przy_ul._Korczaka_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Katowice_Korczaka_wie%C5%BCa_wodna_DSC_6366.jpg/800px-Katowice_Korczaka_wie%C5%BCa_wodna_DSC_6366.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Katowice_Korczaka_wie%C5%BCa_wodna_DSC_6366.jpg/800px-Katowice_Korczaka_wie%C5%BCa_wodna_DSC_6366.jpg",
+      "width": 800,
+      "height": 965
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Wieża wodna przy ul. Janusza Korczaka w Katowicach</b></i> – wieża ciśnień, zlokalizowana przy ul. Janusza Korczaka, pomiędzy Burowcem a Borkami w Katowicach.<br> Wieża wodna została wzniesiona w stylu secesji i modernizmu w latach 1911–1912 według projektu Jerzego i Emila Zillmannów z 1907 roku, na terenie ówczesnej gminy Roździeń, przy drodze do Borek. Wieżę wzniesiono dla rozbudowujących się zakładów cynkowych Georg von Giesches Erben[9]. Budowla ma 68 metrów wysokości. W 1919 roku wieża posiadała dwa teleskopy, obejmujące widnokrąg o średnicy 40 km. W latach międzywojennych obok wieży istniała kopalnia „Polska” (od 1937 pod nazwą „Dąbrówka Śląska”). W latach 60. XX wieku w obiekcie, należącym wtedy do Zakładu Metali Kolorowych Szopienice, zaczęto produkować śrut strzelniczy z ołowiu."

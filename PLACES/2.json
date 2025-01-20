@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Pomnik_Powstańców_Śląskich",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/2024-04_Katowice_pomnik_Powsta%C5%84c%C3%B3w_%C5%9Al%C4%85skich_%284%29.jpg/1920px-2024-04_Katowice_pomnik_Powsta%C5%84c%C3%B3w_%C5%9Al%C4%85skich_%284%29.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/2024-04_Katowice_pomnik_Powsta%C5%84c%C3%B3w_%C5%9Al%C4%85skich_%284%29.jpg/1920px-2024-04_Katowice_pomnik_Powsta%C5%84c%C3%B3w_%C5%9Al%C4%85skich_%284%29.jpg",
+      "width": 1920,
+      "height": 1280
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Pomnik Powstańców Śląskich w Katowicach</b></i> – pomnik w Katowicach upamiętniający trzy wystąpienia zbrojne ludności śląskiej przeciwko władzom niemieckim, mające na celu wywalczenie przyłączenia Górnego Śląska do Polski."

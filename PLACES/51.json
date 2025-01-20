@@ -2,7 +2,13 @@
   "wikipedia": "https://pl.wikipedia.org/wiki/Kościół_św._Michała_Archanioła_w_Katowicach",
   "website": "parafia@michal.wiara.org.pl",
   "address": "Katowice, Tadeusza Kościuszki 103",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/2021-07_Katowice-Bryn%C3%B3w_ko%C5%9Bci%C3%B3%C5%82_%C5%9Bw._Micha%C5%82a_Archanio%C5%82a_%2831%29.jpg/1024px-2021-07_Katowice-Bryn%C3%B3w_ko%C5%9Bci%C3%B3%C5%82_%C5%9Bw._Micha%C5%82a_Archanio%C5%82a_%2831%29.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/2021-07_Katowice-Bryn%C3%B3w_ko%C5%9Bci%C3%B3%C5%82_%C5%9Bw._Micha%C5%82a_Archanio%C5%82a_%2831%29.jpg/1024px-2021-07_Katowice-Bryn%C3%B3w_ko%C5%9Bci%C3%B3%C5%82_%C5%9Bw._Micha%C5%82a_Archanio%C5%82a_%2831%29.jpg",
+      "width": 1024,
+      "height": 685
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Kościół św. Michała Archanioła w Katowicach</b></i> – rzymskokatolicki kościół w Katowicach, położony na Wzgórzu Beaty w parku T. Kościuszki, na terenie dzielnicy Brynów część wschodnia-Osiedle Zgrzebnioka.<br> Wzniesiony został prawdopodobnie w 1510 roku w Syryni w powiecie wodzisławskim, lecz pierwsze poświadczenia o tamtejszym kościele pochodzą z XIV wieku. W 1938 roku kościół został przeniesiony do Katowic, a od 1997 roku jest jednym z oddziałów Muzeum Historii Katowic."

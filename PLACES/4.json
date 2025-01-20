@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Pomnik_Józefa_Piłsudskiego_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/d/dc/Katowice_-_Pi%C5%82sudski.JPG"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Katowice_-_Pi%C5%82sudski.JPG",
+      "width": 2576,
+      "height": 1932
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Pomnik Marszałka Józefa Piłsudskiego</b></i> – odsłonięty w 1993 r. pomnik Józefa Piłsudskiego znajdujący się na placu Bolesława Chrobrego, przed frontonem gmachu Śląskiego Urzędu Wojewódzkiego w Katowicach. Pomnik ustawiono tyłem do gmachu dawnej Wojewódzkiej Rady Związków Zawodowych (obecnie Urząd Marszałkowski Województwa Śląskiego)."

@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Huta_Metali_Nieżelaznych_Szopienice",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Szopienice_wie%C5%BCa_ci%C5%9Bnie%C5%84_huty_cynku.jpg/1024px-Szopienice_wie%C5%BCa_ci%C5%9Bnie%C5%84_huty_cynku.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Szopienice_wie%C5%BCa_ci%C5%9Bnie%C5%84_huty_cynku.jpg/1024px-Szopienice_wie%C5%BCa_ci%C5%9Bnie%C5%84_huty_cynku.jpg",
+      "width": 1024,
+      "height": 512
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Huta Metali Nieżelaznych Szopienice Spółka Akcyjna</b></i> – huta istniejąca od 1834 w katowickiej dzielnicy Szopienice. Była jednym z największych w Polsce producentów wyrobów walcowanych z miedzi i mosiądzu – taśm, blach, krążków oraz rurek cienkościennych. W 2008 została postawiona w stan likwidacji[2]."

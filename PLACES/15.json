@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Pomnik_Józefa_Wieczorka_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Jan%C3%B3w-Nikiszowiec_II_037.jpg/480px-Jan%C3%B3w-Nikiszowiec_II_037.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Jan%C3%B3w-Nikiszowiec_II_037.jpg/480px-Jan%C3%B3w-Nikiszowiec_II_037.jpg",
+      "width": 480,
+      "height": 321
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Pomnik Józefa Wieczorka w Katowicach</b></i> – pomnik upamiętniający górnika kopalni „Giesche” – Józefa Wieczorka, zlokalizowany przy ul. Zofii Nałkowskiej na terenie dzielnicy Janów-Nikiszowiec, naprzeciw skweru Emila i Georga Zillmannów.Pomnik powstał w 1947 roku."

@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Pomnik_Stanisława_Moniuszki_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Katowice_-_Moniuszko.JPG/360px-Katowice_-_Moniuszko.JPG"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Katowice_-_Moniuszko.JPG/360px-Katowice_-_Moniuszko.JPG",
+      "width": 360,
+      "height": 480
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Pomnik Stanisława Moniuszki w Katowicach</b></i> – pomnik w katowickiej dzielnicy Śródmieście, znajdujący się na placu Karola Miarki.<br>Pomnik Stanisława Moniuszki na pl. Karola Miarki odsłonięto 8 czerwca 1930. Autorami projektu byli Wincenty i Stefan Chorembalscy; pomnik wykonał Wincenty Chorembalski. Monument powstał z inicjatywy kompozytora i dyrygenta Stefana Mariana Stoińskiego – prezesa Związku Śląskich Kół Śpiewaczych. Ufundowali go członkowie śląskich kół śpiewaczych. Planowano różne lokalizacje monumentu, m.in. pl. Andrzeja lub okolice Akademii Muzycznej."

@@ -1,7 +1,13 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Galeria_Sztuki_Współczesnej_BWA_w_Katowicach",
   "website": "+48 32 259 90 40;+48 32 259 93 24",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/2024-08_Katowice_BWA_%283%29.jpg/480px-2024-08_Katowice_BWA_%283%29.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/2024-08_Katowice_BWA_%283%29.jpg/480px-2024-08_Katowice_BWA_%283%29.jpg",
+      "width": 480,
+      "height": 320
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Galeria Sztuki Współczesnej BWA w Katowicach (właściwie Galeria Sztuki Współczesnej BWA)</b></i> – galeria sztuki współczesnej powstała w Katowicach w sierpniu 1949, wówczas jako filia Centralnego Biura Wystaw Artystycznych. Mieści się przy al. Wojciecha Korfantego 6. Godziny otwarcia wystaw: z wyjątkiem poniedziałków; codziennie 10.00 - 18.00.<br> Galeria posiada jedną z największych w Polsce przestrzeni wystawienniczych – 800 m². Prezentuje sztukę współczesną, prowadzi działalność edukacyjną i wydawniczą. Zajmuje się promocją i prezentacją sztuki współczesnej, organizacją wystaw indywidualnych i zbiorowych artystów polskich i zagranicznych."

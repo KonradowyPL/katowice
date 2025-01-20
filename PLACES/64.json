@@ -1,7 +1,13 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Dom_pracowniczy_kopalni_„Kleofas”_w_Katowicach",
   "address": "Katowice, Gliwicka 204",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Katowice_budynek_Gliwicka_204.jpg/1024px-Katowice_budynek_Gliwicka_204.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Katowice_budynek_Gliwicka_204.jpg/1024px-Katowice_budynek_Gliwicka_204.jpg",
+      "width": 1024,
+      "height": 683
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "Dom pracowniczy kopalni „Kleofas” w Katowicach – budynek dawnego domu pracowniczego dla górników kopalni „Kleofas”, obecnie budynek handlowo-usługowy, położony w Katowicach przy ulicy Gliwickiej 204, na terenie dzielnicy Załęże. Powstał około 1907 roku i ma w sobie cechy historyzujące bądź secesji. Inwestorem gmachu była spółka Georg von Giesches Erben."

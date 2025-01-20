@@ -3,7 +3,13 @@
   "website": "http://www.kostka-katowice.pl",
   "phone": "+48 32 256-07-90",
   "address": "Katowice, Górniczego Stanu 22",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Katowice-Giszowiec_023.jpg/1024px-Katowice-Giszowiec_023.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Katowice-Giszowiec_023.jpg/1024px-Katowice-Giszowiec_023.jpg",
+      "width": 1024,
+      "height": 687
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Parafia św. Stanisława Kostki w Katowicach-Giszowcu</b></i> – rzymskokatolicka parafia w Katowicach, położona na obszarze dzielnicy Giszowiec, należąca do dekanatu Katowice-Bogucice w archidiecezji katowickiej. Obejmuje ona swoim zasięgiem wiernych z południowej części dzielnicy (pozostali wierni z Giszowca przynależą parafii św. Barbary).<br>Kościół parafialny, konsekrowany 17 maja 1948 roku, znajduje się przy ulicy Górniczego Stanu, natomiast probostwo położone jest po drugiej stronie ulicy, przy ulicy Górniczego Stanu 22. 1 stycznia 1949 roku powołano kurację, natomiast parafia została erygowana 28 maja 1957 roku. Liczyła ona w 2015 roku około 6,0 tys. wiernych."

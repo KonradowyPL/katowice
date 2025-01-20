@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Park_Załęski_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/2024-10_Katowice_park_Za%C5%82%C4%99ski_%282%29.jpg/1024px-2024-10_Katowice_park_Za%C5%82%C4%99ski_%282%29.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/2024-10_Katowice_park_Za%C5%82%C4%99ski_%282%29.jpg/1024px-2024-10_Katowice_park_Za%C5%82%C4%99ski_%282%29.jpg",
+      "width": 1024,
+      "height": 683
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Park Załęski w Katowicach</b></i> – park miejski w Katowicach, położony przy ulicy Gliwickiej 212, na terenie dzielnicy Załęże. Został ustanowiony w 2010 roku w miejscu ogrodu jordanowskiego powstałego pod koniec lat 30. XX wieku."

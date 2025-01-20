@@ -3,7 +3,13 @@
   "website": "+48 32 258-47-92",
   "phone": "bogucice@archidiecezjakatowicka.pl",
   "address": "Katowice, Leopolda Markiefki 89",
-  "img": ["https://mszeswiete.pl/files/obrazy/bogucice.jpg"],
+  "img": [
+    {
+      "src": "https://mszeswiete.pl/files/obrazy/bogucice.jpg",
+      "width": 320,
+      "height": 243
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Bazylika św. Szczepana i Matki Bożej Boguckiej w Katowicach</b></i> – rzymskokatolicki kościół parafialny w Katowicach, należący do parafii św. Szczepana, wpisany do rejestru zabytków nieruchomych województwa śląskiego. Położony jest przy skrzyżowaniu ulic ks. L. Markiefki i Leopolda, na terenie dzielnicy Bogucice."

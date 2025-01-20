@@ -1,7 +1,13 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Gmach_Urzędu_Skarbowego_w_Katowicach",
   "address": "Katowice, Franciszka Żwirki i Stanisława Wigury 15",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Katowice_-_Drapacz_Chmur_01.jpg/800px-Katowice_-_Drapacz_Chmur_01.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Katowice_-_Drapacz_Chmur_01.jpg/800px-Katowice_-_Drapacz_Chmur_01.jpg",
+      "width": 800,
+      "height": 1200
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Gmach Urzędu Skarbowego w Katowicach (zwany także Drapaczem Chmur)</b></i> – siedemnastokondygnacyjny wysokościowiec w Katowicach, położony przy ulicy Żwirki i Wigury 15, w dzielnicy Śródmieście. Budynek jest zbudowany na bazie nowatorskiej (na owe czasy) stalowej konstrukcji szkieletowej i uważa się go za najciekawszy i najbardziej spektakularny przykład funkcjonalizmu w Polsce."

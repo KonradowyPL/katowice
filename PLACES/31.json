@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Park_Giszowiecki_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/c/ca/Katowice-Giszowiec_095.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Katowice-Giszowiec_095.jpg",
+      "width": 2634,
+      "height": 1770
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Park Giszowiecki w Katowicach</b></i> – park miejski położony w Katowicach, w środkowej części dzielnicy Giszowiec, usytuowany w rejonie placu Pod Lipami oraz ulic: Gościnnej, Wesołowskiej i Działkowej, o powierzchni 3,378 ha. Powstał on wraz z budową osiedla patronackiego Giszowiec w latach 1907–1910 według projektu Emila i Georga Zillmannów, a obecna nazwa została ustanowiona 25 października 2010 roku."

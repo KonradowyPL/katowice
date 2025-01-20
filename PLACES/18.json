@@ -3,7 +3,13 @@
   "website": "http://www.muzeum.archidiecezja.katowice.pl",
   "phone": "muzeum@archidiecezja.katowice.pl",
   "address": "Katowice, Henryka Jordana 39",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Katowice_Muzeum_Archidiecezjalne_2019.jpg/440px-Katowice_Muzeum_Archidiecezjalne_2019.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Katowice_Muzeum_Archidiecezjalne_2019.jpg/440px-Katowice_Muzeum_Archidiecezjalne_2019.jpg",
+      "width": 440,
+      "height": 287
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Muzeum Archidiecezjalne w Katowicach</b></i> – muzeum sztuki religijnej istniejące w Katowicach, gromadzi artefakty związane z historią kościoła katolickiego i mieszkańców Górnego Śląska.<br> Placówka została powołana do istnienia w 1975 decyzją ówczesnego biskupa katowickiego Herberta Bednorza, chociaż starania o zgromadzenie i prezentację kolekcji sztuki religijnej podejmowano już w dwudziestoleciu międzywojennym."

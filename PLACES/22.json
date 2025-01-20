@@ -1,6 +1,12 @@
 {
   "wikipedia": "https://pl.wikipedia.org/wiki/Ławeczka_Stanisława_Ligonia_w_Katowicach",
-  "img": ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/At_Katowice_2024_634.jpg/480px-At_Katowice_2024_634.jpg"],
+  "img": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/At_Katowice_2024_634.jpg/480px-At_Katowice_2024_634.jpg",
+      "width": 480,
+      "height": 320
+    }
+  ],
   "summary": "",
   "short": "",
   "discreption": "<b><i>Pomnik Henryka Sławika i Józsefa Antalla seniora w Katowicach</b></i> – pomnik, znajdujący się w Katowicach, umiejscowiony na placu przed Międzynarodowym Centrum Kongresowym. Poświęcony jest Henrykowi Sławikowi oraz Józsefowi Antallowi seniorowi – bohaterom lat II wojny światowej, dzięki którym uratowano co najmniej 5 tys. polskich Żydów."
