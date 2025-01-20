@@ -1,6 +1,18 @@
 export { geolocation_init };
 
-const geolocation_init = (map, updateUserPos) => {
+const geolocation_init = (map, _updateUserPos) => {
+
+    const updateUserPos = (position) => {
+        locationBox.style.display = "none";
+        UserPosition = position;
+        var newLatLng = new L.LatLng(UserPosition?.coords?.latitude, UserPosition?.coords?.longitude);
+        userPosMarker.setLatLng(newLatLng);
+        userPosMarker.setOpacity(1);
+        userPosMarker.options.interactive = true;
+
+        _updateUserPos()
+    }
+
   var userPosIcon = new L.Icon({
     iconUrl: "./assets/userPos.svg",
     iconSize: [25, 41],

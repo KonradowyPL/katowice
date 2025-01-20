@@ -2,48 +2,12 @@ import { u, urlMenager_get } from "./urlMenager.js";
 import { loadRoutes } from "./routes.js";
 import { collapse } from "./marker.js";
 import { swiping } from "./swipe.js";
-import {geolocation_init } from "./geolocation.js"
+import { geolocation_init } from "./geolocation.js";
+import { map, markerCircle, map_init } from "./map.js";
 
 const places = await fetch("./PLACES/data.json").then((res) => res.json());
 
-
-const map = L.map("map", {
-  tap: false,
-  zoomDelta: 1,
-  zoomSnap: 0,
-}).setView([50.2661678296663, 19.02556763415931], 14);
-
-const markerCircle = L.circleMarker([0, 0], {
-  color: "#1d740b",
-  fillColor: "#1d740b",
-  fillOpacity: 0.5,
-  radius: 17,
-}).addTo(map);
-
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 21,
-  maxNativeZoom: 19,
-  minZoom: 11,
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-}).addTo(map);
-
-try {
-  const mappos = JSON.parse(localStorage.getItem("map"));
-  console.log("Loaded mappos:", mappos);
-  map.setView([mappos.lat, mappos.lng], 14, { animate: false });
-} catch (e) {
-  console.error(e);
-}
-
-
-
-const updateUserPos = (position) => {
-  locationBox.style.display = "none";
-  UserPosition = position;
-  var newLatLng = new L.LatLng(UserPosition?.coords?.latitude, UserPosition?.coords?.longitude);
-  userPosMarker.setLatLng(newLatLng);
-  userPosMarker.setOpacity(1);
-  userPosMarker.options.interactive = true;
+const updateUserPos = () => {
   checkLocked();
   updateVisited();
   updateNonVisited();
@@ -51,23 +15,8 @@ const updateUserPos = (position) => {
 };
 
 urlMenager_get(places, displayPlace);
-const userPosMarker = geolocation_init(map, updateUserPos)
-
-places.forEach((place) => {
-  const marker = L.marker([place.lat, place.lon], {
-    icon: new L.divIcon({
-      className: "place-marker",
-      html: `<img src="./assets/${place.icon}.svg"><span>${place.name}</span>`,
-      iconSize: [24, 24],
-      iconAnchor: [12, 12],
-      popupAnchor: [0, 0],
-    }),
-  }).addTo(map);
-  place.marker = marker;
-  marker.on("click", function () {
-    window.location.hash = `#map:${place.id}`;
-  });
-});
+const userPosMarker = geolocation_init(map, updateUserPos);
+map_init(places);
 
 var currentPlace = "";
 var currentPlaceDat = "";
@@ -204,10 +153,12 @@ function loadLocked() {
     if (place) place.unlocked = true;
   });
 }
-{
-  u(window.location.hash);
-  if (currentPlace) map.setView(new L.LatLng(currentPlaceDat.lat, currentPlaceDat.lon), 19);
-}
+
+u(window.location.hash);
+if (currentPlace) map.setView(new L.LatLng(currentPlaceDat.lat, currentPlaceDat.lon), 19);
+
+
+// unlock all easter egg
 const unlockAll = function () {
   let unlocked = Object.keys(places);
   localStorage.setItem("unlocked", JSON.stringify(unlocked));
@@ -262,8 +213,6 @@ window.shareApp = shareApp;
 new ResizeObserver((entries) => entries.forEach((entry) => map.invalidateSize())).observe(
   document.getElementById("map")
 );
-
-
 
 if (new URLSearchParams(window.location.search).get("unlockAll") == "true") {
   unlockAll();
