@@ -4,33 +4,36 @@ var places = [];
 var displayPlace = undefined;
 
 const u = (url) => {
-  if (url.startsWith("http")) {
-    var win = window.open(url, "_blank");
-    win.focus();
-  }
-  if (url.startsWith("#")) {
-    if (url.startsWith("#mainmenu")) {
-      mainmenu.classList.remove("hidden");
-      backButton.href = "#map";
+  const map = new Map();
+  map.set(/^https:\/\/.+$/, () => {
+    window.open(url, "_blank").focus();
+  });
+  map.set(/^#mainmenu.*$/, () => {
+    mainmenu.classList.remove("hidden");
+    backButton.href = "#map";
+  });
+  map.set(/^#map$/, () => {
+    backButton.href = "#mainmenu";
+    mainmenu.classList.add("hidden");
+  });
+  map.set(/^#map:(\d+)(&?)$/, ()=> {
+    const match = url.match(/^#map:(\d+)(&?)$/)
+    console.log("called", match)
+    const id = match[1]|0;
+    const move = !!match[2] 
+    const place = places.find((place) => place.id == id);
+    console.log(id,move,place)
+    if (place) {
+      displayPlace(id, move);
+    } else {
+      tooltips.style.height = "0%";
     }
-    if (url.startsWith("#map")) {
-      backButton.href = "#mainmenu";
+  })
 
-      mainmenu.classList.add("hidden");
-      if (url.startsWith("#map:")) {
-        var move = false;
-        if (url.endsWith("&")) {
-          url = url.slice(0, -1);
-          move = true;
-        }
-        url = trimPrefix(url, "#map:");
-        const place = places.find((place) => place.id == url);
-        if (place) {
-          displayPlace(url, move);
-        } else {
-          tooltips.style.height = "0%";
-        }
-      }
+  for (const [regex, handler] of map) {
+    if (regex.test(url)) {
+      console.log(regex, handler, handler.toString())
+      return handler()
     }
   }
 };
@@ -38,14 +41,6 @@ const u = (url) => {
 window.addEventListener("popstate", function () {
   u(window.location.hash);
 });
-
-function trimPrefix(str, prefix) {
-  if (str.startsWith(prefix)) {
-    return str.slice(prefix.length);
-  } else {
-    return str;
-  }
-}
 
 const urlMenager_get = (_places, _displayPlace) => {
   places = _places;
