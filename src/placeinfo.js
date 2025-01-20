@@ -71,7 +71,7 @@ async function displayPlace(key, move) {
     : "<div class='locked'>Odwiedź to miejsce aby dowiedzieć się więcej!</div>";
 }
 
-window.share  = async () => {
+window.share = async () => {
   const shareData = {
     title: currentPlaceDat.name,
     text: `Odwiedź ${currentPlaceDat?.name2 || currentPlaceDat.name} i inne ciekawe miejsca w katowicach!`,
@@ -83,3 +83,15 @@ window.share  = async () => {
     console.error(`Error: ${err}`);
   }
 };
+
+const imagePreview = document.getElementById("imagePreview");
+imagePreview.onclick = (e) => {
+  if (e.target == imagePreview) imagePreview.innerHTML = "";
+};
+
+function displayImage(src) {
+  imagePreview.innerHTML = "";
+  const img = document.createElement("img");
+  img.src = src;
+  imagePreview.append(img);
+}
