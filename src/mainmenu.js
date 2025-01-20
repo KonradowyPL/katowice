@@ -4,18 +4,19 @@ import { loadRoutes } from "./routes.js";
 import { places } from "./loader.js";
 import { userPosMarker } from "./map.js";
 
+// update icon size by css
+menucontainer.onscroll = (e) => {
+  appTitle.style.setProperty("--scale", Math.min(menucontainer.scrollTop / backgroundMapImage.clientHeight, 1));
+};
+menucontainer.onscroll();
 
+// update whole menu
 const updateUserPos = () => {
   checkLocked();
   updateVisited();
   updateNonVisited();
   loadRoutes(places, userPosMarker.getLatLng());
 };
-
-menucontainer.onscroll = (e) => {
-  appTitle.style.setProperty("--scale", Math.min(menucontainer.scrollTop / backgroundMapImage.clientHeight, 1));
-};
-menucontainer.onscroll();
 
 function updateVisited() {
   var ele = "";
@@ -27,6 +28,7 @@ function updateVisited() {
   visited.innerHTML = ele;
 }
 
+// "Miejsca, o których możesz nie wiedzieć"
 function updateNonVisited() {
   var ele = "";
   const distances = [];
@@ -57,6 +59,14 @@ function updateNonVisited() {
   nonVisited.innerHTML = ele;
 }
 
+function loadLocked() {
+  var unlocked = JSON.parse(localStorage.getItem("unlocked")) || [];
+  unlocked.forEach((e) => {
+    var place = places.find((place) => place.id == e);
+    if (place) place.unlocked = true;
+  });
+}
+
 function checkLocked() {
   places.forEach((place) => {
     if (place?.locked) {
@@ -74,14 +84,6 @@ function checkLocked() {
   });
 }
 
-function loadLocked() {
-  var unlocked = JSON.parse(localStorage.getItem("unlocked")) || [];
-  unlocked.forEach((e) => {
-    var place = places.find((place) => place.id == e);
-    if (place) place.unlocked = true;
-  });
-}
-
 window.shareApp = async () => {
   const shareData = {
     title: "Ciekawe Katowice - Zanurz się w historii",
@@ -95,9 +97,5 @@ window.shareApp = async () => {
   }
 };
 
-{
-  loadLocked();
-  updateVisited();
-  updateNonVisited();
-  loadRoutes(places, userPosMarker.getLatLng());
-}
+loadLocked();
+updateUserPos();
