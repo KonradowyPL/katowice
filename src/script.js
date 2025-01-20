@@ -1,11 +1,11 @@
-import { userPosIcon } from "./markers.js";
 import { u, urlMenager_get } from "./urlMenager.js";
 import { loadRoutes } from "./routes.js";
 import { collapse } from "./marker.js";
+import { swiping } from "./swipe.js";
+import {geolocation_init } from "./geolocation.js"
 
 const places = await fetch("./PLACES/data.json").then((res) => res.json());
 
-urlMenager_get(places, displayPlace);
 
 const map = L.map("map", {
   tap: false,
@@ -13,7 +13,19 @@ const map = L.map("map", {
   zoomSnap: 0,
 }).setView([50.2661678296663, 19.02556763415931], 14);
 
-var UserPosition;
+const markerCircle = L.circleMarker([0, 0], {
+  color: "#1d740b",
+  fillColor: "#1d740b",
+  fillOpacity: 0.5,
+  radius: 17,
+}).addTo(map);
+
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  maxZoom: 21,
+  maxNativeZoom: 19,
+  minZoom: 11,
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+}).addTo(map);
 
 try {
   const mappos = JSON.parse(localStorage.getItem("map"));
@@ -23,32 +35,7 @@ try {
   console.error(e);
 }
 
-const markerCircle = L.circleMarker([0, 0], {
-  color: "#1d740b",
-  fillColor: "#1d740b",
-  fillOpacity: 0.5,
-  radius: 17,
-}).addTo(map);
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 21,
-  maxNativeZoom: 19,
-  minZoom: 11,
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-}).addTo(map);
 
-const userPosMarker = L.marker([50.2661678296663, 19.02556763415931], {
-  icon: userPosIcon,
-})
-  .setZIndexOffset(9999999)
-  .addTo(map);
-userPosMarker.setOpacity(0);
-userPosMarker.options.interactive = false;
-
-const localisationError = () => {
-  locationBox.style.display = "flex";
-  userPosMarker.setOpacity(0);
-  userPosMarker.options.interactive = false;
-};
 
 const updateUserPos = (position) => {
   locationBox.style.display = "none";
@@ -63,90 +50,8 @@ const updateUserPos = (position) => {
   loadRoutes(places, userPosMarker.getLatLng());
 };
 
-var localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError);
-
-navigator.geolocation.getCurrentPosition((position) => {
-  map.setView([position.coords.latitude, position.coords.longitude]);
-  updateUserPos(position);
-}, localisationError);
-
-var swiping = false;
-var swipingStart;
-var swipingFix;
-var tabswiping = false;
-
-tooltipsSwipeButton.onmousedown = (e) => {
-  swipingStart = 1 - e.clientY / document.documentElement.scrollHeight;
-  swipingFix = swipingStart - parseFloat(tooltips.style.height) * 0.01;
-  swiping = true;
-};
-
-tooltipsSwipeButton.ontouchstart = (e) => {
-  swipingStart = 1 - e.changedTouches[0].clientY / document.documentElement.scrollHeight;
-  swipingFix = swipingStart - parseFloat(tooltips.style.height) * 0.01;
-  swiping = true;
-};
-
-tooltips.ontouchmove = (e) => {
-  if (placeData.scrollTop == 0 && !swiping) {
-    swiping = true;
-    tabswiping = true;
-    swipingStart = e.changedTouches[0].clientY / document.documentElement.scrollHeight;
-    swipingFix = 1 - parseFloat(tooltips.style.height) * 0.01 - swipingStart;
-  }
-};
-
-document.onmouseup = (e) => f(e.clientY);
-document.ontouchend = (e) => f(e.changedTouches[0].clientY);
-
-const f = (h) => {
-  if (swiping) {
-    const height = 1 - h / document.documentElement.scrollHeight - swipingFix;
-    if (height > 0.1) {
-      tooltips.style.transition = "300ms";
-
-      if (height >= swipingStart) {
-        tooltips.style.height = "90%";
-      } else {
-        tooltips.style.height = "10%";
-        placeData.scrollTop = 0;
-
-        window.location.hash = "#map";
-      }
-    } else {
-      tooltips.style.height = "0%";
-      tooltips.style.transition = "100ms";
-      window.location.hash = "#map";
-    }
-  }
-
-  swiping = false;
-  tabswiping = false;
-};
-
-document.onmousemove = (e) => {
-  if (swiping) {
-    const height = 1 - e.clientY / document.documentElement.scrollHeight - swipingFix;
-    tooltips.style.transition = "0ms";
-    tooltips.style.height = height * 100 + "%";
-    placeData.scrollTop = 0;
-  }
-};
-
-document.ontouchmove = (e) => {
-  if (swiping) {
-    var height = 1 - e.changedTouches[0].clientY / document.documentElement.scrollHeight - swipingFix;
-    if (tabswiping) {
-      if (height > 0.9) {
-        height = 0.9;
-      } else {
-        placeData.scrollTop = 0;
-      }
-    }
-    tooltips.style.transition = "0ms";
-    tooltips.style.height = height * 100 + "%";
-  }
-};
+urlMenager_get(places, displayPlace);
+const userPosMarker = geolocation_init(map, updateUserPos)
 
 places.forEach((place) => {
   const marker = L.marker([place.lat, place.lon], {
@@ -358,12 +263,7 @@ new ResizeObserver((entries) => entries.forEach((entry) => map.invalidateSize())
   document.getElementById("map")
 );
 
-navigator.permissions.query({ name: "geolocation" }).then((permissionStatus) => {
-  permissionStatus.onchange = () => {
-    navigator.geolocation.clearWatch(localisationUpdateInterval);
-    localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError);
-  };
-});
+
 
 if (new URLSearchParams(window.location.search).get("unlockAll") == "true") {
   unlockAll();
