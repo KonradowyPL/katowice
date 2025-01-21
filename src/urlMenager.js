@@ -29,11 +29,9 @@ const u = (url) => {
       /^#map:(\d+)(&?)$/,
       () => {
         const match = url.match(/^#map:(\d+)(&?)$/);
-        console.log("called", match);
         const id = match[1] | 0;
         const move = !!match[2];
         const place = places.find((place) => place.id == id);
-        console.log(id, move, place);
         if (place) {
           displayPlace(id, move);
         } else {
@@ -45,7 +43,6 @@ const u = (url) => {
 
   for (const [regex, handler] of map) {
     if (regex.test(url)) {
-      console.log(regex, handler, handler.toString());
       return handler();
     }
   }

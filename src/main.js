@@ -2,6 +2,7 @@ import { currentPlace, currentPlaceDat } from "./placeinfo.js";
 import { places } from "./loader.js";
 import { u } from "./urlMenager.js";
 import { map } from "./map.js";
+import "./geolocation.js"
 import "./mainmenu.js";
 import "./marker.js";
 import "./swipe.js";

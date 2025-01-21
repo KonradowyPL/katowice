@@ -25,7 +25,7 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 try {
   const mappos = JSON.parse(localStorage.getItem("map"));
-  console.log("Loaded mappos:", mappos);
+  console.info("Loaded mappos:", mappos);
   map.setView([mappos.lat, mappos.lng], 14, { animate: false });
 } catch (e) {
   console.error(e);

@@ -1,8 +1,7 @@
-export {swiping}
+export { swiping };
 
-
-const tooltipsSwipeButton = document.getElementById("tooltipsSwipeButton")
-const tooltips = document.getElementById("tooltips")
+const tooltipsSwipeButton = document.getElementById("tooltipsSwipeButton");
+const tooltips = document.getElementById("tooltips");
 
 var swiping = false;
 var swipingStart;
@@ -39,7 +38,7 @@ const f = (h) => {
     if (height > 0.1) {
       tooltips.style.transition = "300ms";
 
-      if (height >= swipingStart) {
+      if (height >= (tabswiping ? 0.9 : swipingStart)) {
         tooltips.style.height = "90%";
       } else {
         tooltips.style.height = "10%";

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="referrer" content="strict-origin" />
 
     <title>Ciekawe Katowice - zanurz się w historii</title>
     <meta name="title" content="Ciekawe Katowice - zanurz się w historii" />
@@ -29,22 +30,22 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" defer></script>
     <script
       src="./src/script.js"
-      defer
       type="module"
-      onerror="(document.getElementById('loadingStatus').innerText = 'Nie udało się załadować aplikacji. Sprawdź swoje połączenie z internetem.')"
+      defer
+      crossorigin="anonymous"
+      onerror="document.getElementById('loadingStatus').innerText = 'Nie udało się załadować aplikacji. Sprawdź swoje połączenie z internetem.'"
     ></script>
 
-    <link rel="preload" as="script" href="./src/main.js" crossorigin="anonymous" />
-    <link rel="preload" as="script" href="./src/placeinfo.js" crossorigin="anonymous" />
-    <link rel="preload" as="script" href="./src/swipe.js" crossorigin="anonymous" />
-    <link rel="preload" as="script" href="./src/mainmenu.js" crossorigin="anonymous" />
-    <link rel="preload" as="script" href="./src/script.js" crossorigin="anonymous" />
-    <link rel="preload" as="script" href="./src/map.js" crossorigin="anonymous" />
-    <link rel="preload" as="script" href="./src/routes.js" crossorigin="anonymous" />
-    <link rel="preload" as="script" href="./src/marker.js" crossorigin="anonymous" />
-    <link rel="preload" as="script" href="./src/geolocation.js" crossorigin="anonymous" />
-    <link rel="preload" as="script" href="./src/urlMenager.js" crossorigin="anonymous" />
-    <link rel="preload" as="script" href="./src/loader.js" crossorigin="anonymous" />
+    <link rel="modulepreload" href="./src/main.js" crossorigin="anonymous" />
+    <link rel="modulepreload" href="./src/placeinfo.js" crossorigin="anonymous" />
+    <link rel="modulepreload" href="./src/swipe.js" crossorigin="anonymous" />
+    <link rel="modulepreload" href="./src/mainmenu.js" crossorigin="anonymous" />
+    <link rel="modulepreload" href="./src/map.js" crossorigin="anonymous" />
+    <link rel="modulepreload" href="./src/routes.js" crossorigin="anonymous" />
+    <link rel="modulepreload" href="./src/marker.js" crossorigin="anonymous" />
+    <link rel="modulepreload" href="./src/geolocation.js" crossorigin="anonymous" />
+    <link rel="modulepreload" href="./src/urlMenager.js" crossorigin="anonymous" />
+    <link rel="modulepreload" href="./src/loader.js" crossorigin="anonymous" />
 
     <!-- Fonts -->
     <link
