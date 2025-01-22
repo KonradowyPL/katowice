@@ -28,6 +28,9 @@ const u = (url) => {
     [
       /^#map:(\d+)(&?)$/,
       () => {
+        backButton.href = "#mainmenu";
+        mainmenu.classList.add("hidden");
+        
         const match = url.match(/^#map:(\d+)(&?)$/);
         const id = match[1] | 0;
         const move = !!match[2];

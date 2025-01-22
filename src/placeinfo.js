@@ -1,6 +1,6 @@
 export { displayPlace, currentPlace, currentPlaceDat };
 import { places } from "./loader.js";
-import { markerCircle } from "./map.js";
+import { markerCircle, map } from "./map.js";
 
 
 var currentPlace = "";

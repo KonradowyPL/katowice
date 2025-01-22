@@ -44,7 +44,7 @@ function loadRoutes(places, userPos) {
       }
 
       if (place.unlocked) {
-        thisele += `<li><a href="#map:${e.id}&"><span>${place.name}</span><span class="checkmark"></span></a></li>`;
+        thisele += `<li><a href="#map:${e.id}&"><span>${place.name}</span><i class="bi bi-check"></i></a></li>`;
         completed++;
       } else {
         thisele += `<li><a href="#map:${e.id}&"><span>${place.name}</span><span>${roundedDistance}</span></a></li>`;
