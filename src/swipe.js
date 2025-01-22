@@ -1,7 +1,10 @@
 export { swiping };
 
+import { map } from "./map.js";
+
 const tooltipsSwipeButton = document.getElementById("tooltipsSwipeButton");
 const tooltips = document.getElementById("tooltips");
+const menuDiv = document.getElementById("mainmenu");
 
 var swiping = false;
 var swipingStart;
@@ -29,10 +32,10 @@ tooltips.ontouchmove = (e) => {
   }
 };
 
-document.onmouseup = (e) => f(e.clientY);
-document.ontouchend = (e) => f(e.changedTouches[0].clientY);
+document.onmouseup = (e) => f(e.clientY, e.clientX);
+document.ontouchend = (e) => f(e.changedTouches[0].clientY, e.changedTouches[0].clientX);
 
-const f = (h) => {
+const f = (h, w) => {
   if (swiping) {
     const height = 1 - h / document.documentElement.scrollHeight - swipingFix;
     if (height > 0.1) {
@@ -52,9 +55,22 @@ const f = (h) => {
       window.location.hash = "#map";
     }
   }
-
+  if (menuSwipe) {
+    const x = w;
+    menuDiv.style.translate = null;
+    menuDiv.style.transition = null;
+    map.dragging.enable();
+    if (menuSwipeMode) {
+      if (x > 50) {
+        window.location = "#mainmenu";
+      }
+    } else if (x < document.documentElement.scrollWidth - 50) {
+      window.location = "#map";
+    }
+  }
   swiping = false;
   tabswiping = false;
+  menuSwipe = false;
 };
 
 document.onmousemove = (e) => {
@@ -67,6 +83,7 @@ document.onmousemove = (e) => {
 };
 
 document.ontouchmove = (e) => {
+  console.log("called");
   if (swiping) {
     var height = 1 - e.changedTouches[0].clientY / document.documentElement.scrollHeight - swipingFix;
     if (tabswiping) {
@@ -78,5 +95,27 @@ document.ontouchmove = (e) => {
     }
     tooltips.style.transition = "0ms";
     tooltips.style.height = height * 100 + "%";
+  }
+  if (menuSwipe) {
+    const x = 1 - (e.changedTouches[0].clientX - menuSwipeStart) / document.documentElement.scrollWidth;
+    menuDiv.style.translate = `-${x * 100}% 0px`;
+  }
+};
+
+var menuSwipe = false;
+var menuSwipeStart = null;
+var menuSwipeMode = null;
+
+document.ontouchstart = (e) => {
+  if (swiping) return;
+  const x = e.changedTouches[0].clientX;
+  const mode = mainmenu.classList.contains("hidden");
+
+  if (mode ? x < 30 : x > document.documentElement.scrollWidth - 30) {
+    menuSwipe = true;
+    menuSwipeStart = mode ? x : document.documentElement.scrollWidth - x;
+    menuDiv.style.transition = "0ms";
+    map.dragging.disable();
+    menuSwipeMode = mode;
   }
 };
