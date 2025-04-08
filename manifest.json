@@ -1,0 +1,25 @@
+{
+  "name": "Ciekawe Katowice - zanurz się w historii",
+  "short_name": "Ciekawe Katowice",
+  "description": "Katowice w jednym miejscu: mapa turystyczna, historia, kultura, zabytki i wiele innych. Znajdź ciekawostki, planuj trasy i odkrywaj nieznane zakątki miasta. Idealne dla miłośników historii i turystów poszukujących nowych wrażeń.",
+  "start_url": "https://konradowypl.github.io/katowice",
+  "display": "standalone",
+  "background_color": "#105203",
+  "theme_color": "#105203",
+  "icons": [
+    {
+      "src": "https://konradowypl.github.io/katowice/src/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://konradowypl.github.io/katowice/src/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "portrait",
+  "scope": "/katowice/",
+  "lang": "pl",
+  "purpose": "any"
+}
